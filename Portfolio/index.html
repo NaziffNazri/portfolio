@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazif Nazri — UIUX & Creative Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        dark: '#0e0e10',
+                        light: '#fafafa',
+                        accent: '#ff5500'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #0d0d0d;
+            overflow-x: hidden;
+        }
+
+        h2, h3 {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        .font-display {
+            font-family: 'Syne', sans-serif;
+        }
+
+        .font-style {
+            font-family: 'Poppins', sans-serif ;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        /* Custom arch pill styling for hero image columns */
+        .hero-card {
+            border-top-left-radius: 4rem;
+            border-top-right-radius: 4rem;
+            border-bottom-left-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Smooth marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #111;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="selection:bg-black selection:text-white antialiased">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            <!-- Logo -->
+             <img src="asset/logo.png" class="" alt="logo" style="width: 50px; height: auto;">
+        
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                <a href="#about" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">about</a>
+                <a href="#project" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">project</a>
+                <a href="#service" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">service</a>
+                <a href="#career" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">career</a>
+                <a href="#contact" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">contact</a>
+            </nav>
+
+            <!-- Action / Mobile Menu Toggle Icon -->
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-mono tracking-wider uppercase border border-black rounded-full hover:bg-black hover:text-white transition-all">
+                    Let's Talk
+                </a>
+                <button id="menuBtn" class="p-2 text-black hover:opacity-70 transition-opacity focus:outline-none" aria-label="Toggle Menu">
+                    <i data-lucide="plus" id="menuIcon" class="w-7 h-7 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobileDrawer" class="fixed inset-0 bg-black text-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 md:hidden">
+        <div class="pt-24 flex flex-col gap-6">
+            <span class="text-xs font-mono uppercase text-neutral-500 tracking-widest mb-2">// NAVIGATION</span>
+            <a href="#about" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">About</a>
+            <a href="#project" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Project</a>
+            <a href="#service" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Service</a>
+            <a href="#career" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Career</a>
+            <a href="#contact" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Contact</a>
+        </div>
+        <div class="border-t border-neutral-800 pt-6 flex justify-between items-center text-xs font-mono text-neutral-400">
+            <span>NAZIF NAZRI © 2026</span>
+            <div class="flex gap-4">
+                <a href="https://behance.net" target="_blank" class="hover:text-white">BE</a>
+                <a href="https://dribbble.com" target="_blank" class="hover:text-white">DR</a>
+                <a href="https://x.com" target="_blank" class="hover:text-white">X</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen pt-28 pb-12 flex flex-col justify-between overflow-hidden">
+
+
+        <!-- Main Content Wrapper -->
+        <div class="max-w-[1700px] mx-auto w-full px-6 lg:px-12 flex-1 flex flex-col justify-center items-center text-center pt-4 pb-6">
+            
+            <!-- Hero Main Title -->
+            <div class="relative inline-block mb-4 pt-16">
+                <h1 class="font-display text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[6rem] font-extrabold tracking-tighter leading-none text-black select-none">
+                    Nazif Nazri<span class="text-[0.35em] align-top relative -top-4 sm:-top-8 font-mono font-normal ml-1"></span>
+                </h1>
+            </div>
+
+
+            <!-- Subtitle -->
+            <p class="text-base sm:text-lg md:text-xl font-normal text-neutral-800 tracking-tight max-w-xl mb-8 sm:mb-12">
+                UI/UX and Creative Designer.
+            </p>
+
+            <!-- 8 Visual Columns Pill Grid -->
+            <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 h-[320px] sm:h-[380px] lg:h-[440px]">
+                
+                <!-- Pillar 1: Pink Fluid Swirl -->
+                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Soft Fluid Canvas', 'Brand Identity & Visual Exploration', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop')">
+                    <img src="asset/pillar1.jpeg" 
+                         alt="Abstract Pink Fluid" 
+                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.src='https://placehold.co/400x800/f3e8ee/111111?text=Design+1'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
+                        <span class="text-[10px] font-mono uppercase tracking-widest">01 / Fluid Art</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Blue Texture Macro -->
+                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Botanical Micro Structure', 'UI Design System Micro Details', 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=800&auto=format&fit=crop" 
+                         alt="Blue Texture Macro" 
+                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.src='https://placehold.co/400x800/dbeaff/111111?text=Design+2'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
+                        <span class="text-[10px] font-mono uppercase tracking-widest">02 / Texture</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Orange Warm Portrait -->
+                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Warm Editorial Portrait', 'Creative Direction & Fashion Editorial', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
+                         alt="Editorial Portrait" 
+                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.src='https://placehold.co/400x800/ffe4d6/111111?text=Design+3'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
+                        <span class="text-[10px] font-mono uppercase tracking-widest">03 / Editorial</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Surreal Swing Art -->
+                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Surreal Dreamscape', '3D Scene Design & Concept', 'https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=800&auto=format&fit=crop" 
+                         alt="3D Surreal Art" 
+                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.src='https://placehold.co/400x800/d6f5ff/111111?text=Design+4'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
+                        <span class="text-[10px] font-mono uppercase tracking-widest">04 / 3D Concept</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 5: Minimal Tree 3D -->
+                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Minimal Oasis', 'Spatial Experience & 3D Lighting', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
+                         alt="Minimal Tree 3D Scene" 
+                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.src='https://placehold.co/400x800/e2f3e7/111111?text=Design+5'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
+                        <span class="text-[10px] font-mono uppercase tracking-widest">05 / Minimal</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 6: Skincare Macro Close Up -->
+                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Purity Macro Photography', 'E-commerce UI & Product Design', 'https://images.unsplash.com/photo-1512290900673-7002ff321d27?q=80&w=800&auto=format&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1512290900673-7002ff321d27?q=80&w=800&auto=format&fit=crop" 
+                         alt="Macro Close Up" 
+                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                         onerror="this.src='https://placehold.co/400x800/f5eedc/111111?text=Design+6'">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
+                        <span class="text-[10px] font-mono uppercase tracking-widest">06 / Macro Product</span>
+                    </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE RUNNING TEXT -->
+    <div class="w-full bg-black text-white py-4 overflow-hidden border-y border-black">
+        <div class="flex whitespace-nowrap animate-marquee font-display text-2xl uppercase tracking-wider font-bold">
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Creative Direction</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Design Systems</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Webflow & Frontend</span>
+            <!-- Repeat for seamless scroll -->
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
+            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 01 ABOUT NAZIF</span>
+                    <h2 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black leading-tight">
+                        Building intuitive digital products with strategic visual precision.
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-8 space-y-8 text-neutral-700 text-lg leading-relaxed">
+                    
+                    <p>
+                        Hi! I’m Nazif Nazri. For the last 5 years, I’ve been crafting designs that sit right at the intersection of product, brand, and growth. Whether I’m mapping out a user flow, designing a brand system, or tweaking a marketing funnel, my goal is always the same: make complex ideas feel effortless and impactful.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-neutral-200">
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">05</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Years Experience</span>
+                        </div>
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">30+</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Projects Delivered</span>
+                        </div>
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">8+</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Expertise</span>
+                        </div>
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">99%</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="project" class="py-24 sm:py-32 bg-neutral-50 border-t border-neutral-200">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 02 SELECTED WORKS</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black">
+                        Featured Projects
+                    </h2>
+                </div>
+                <div class="flex gap-2 font-mono text-xs uppercase tracking-wider">
+                    <button class="px-4 py-2 rounded-full bg-black text-white">All Works</button>
+                    <button class="px-4 py-2 rounded-full bg-white text-neutral-600 hover:text-black border border-neutral-200">UI/UX</button>
+                    <button class="px-4 py-2 rounded-full bg-white text-neutral-600 hover:text-black border border-neutral-200">Branding</button>
+                </div>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6">
+                
+                <!-- Project 1 -->
+                <div class="group cursor-pointer" onclick="openLightbox('Aether AI Platform', 'Next-gen SaaS Dashboard & Design System', 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop')">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card1.jpeg" 
+                             alt="Boatmu platform" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                             onerror="this.src='https://placehold.co/1200x800/222222/ffffff?text=Project+Aether'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                            UI/UX Design
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Boatmu Trip Booking Platform</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Saas, Web app, Dashboard, Design System & Interactive Prototypes</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2023</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group cursor-pointer" onclick="openLightbox('Kumo FinTech App', 'Mobile Banking & Wealth Management Experience', 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1200&auto=format&fit=crop')">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card2.jpeg" 
+                             alt="Festmu platform" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                             onerror="this.src='https://placehold.co/1200x800/111111/ffffff?text=Project+Kumo'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                           UI/UX Design
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Festmu Event Ticketing Platform</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Saas, Web app, Dashboard, Design System & Interactive Prototypes</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2025</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group cursor-pointer" onclick="openLightbox('Oasis Luxury E-Commerce', 'Editorial Shopping Experience & Web Motion', 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop')">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card3.jpg" 
+                             alt="web design" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                             onerror="this.src='https://placehold.co/1200x800/333333/ffffff?text=Project+Oasis'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                            Web Development
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Web Design & Development</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Webflow, Landing Page, Modern Design</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2025</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group cursor-pointer" onclick="openLightbox('Verve Studio Brand', 'Complete Visual Identity & Graphic Language', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop')">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card4.png" 
+                             alt="Creative deisgn" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                             onerror="this.src='https://placehold.co/1200x800/444444/ffffff?text=Project+Verve'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                            Creative design
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Creative Design Expertise</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Graphic Design, Brand Strategy, Marketing, Digital Printed, Typography & Visual Guidelines</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2022</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="service" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="max-w-2xl mb-16">
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 03 CAPABILITIES</span>
+                <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black">
+                    Services Offered
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    <div>
+                        <span class="font-mono text-xs text-neutral-400 block mb-6">01 / DIGITAL</span>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">UI/UX & Product Design</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            User research, wireframing, interactive prototyping, and cross-platform UI systems for mobile apps, web applications, and SaaS platforms.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Figma Design Systems</li>
+                        <li>→ User Journey Mapping</li>
+                        <li>→ Interactive Prototypes</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    <div>
+                        <span class="font-mono text-xs text-neutral-400 block mb-6">02 / VISUAL</span>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Creative Direction & Branding</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Crafting strong visual identities, typography guidelines, art direction, and digital brand collateral that stands out in crowded markets.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Brand Guidelines</li>
+                        <li>→ Typography & Art Direction</li>
+                        <li>→ Editorial & Digital Assets</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    <div>
+                        <span class="font-mono text-xs text-neutral-400 block mb-6">03 / DEVELOPMENT</span>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Webflow & Front-end Motion</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Translating high-fidelity designs into pixel-perfect responsive web pages with custom interaction models and micro-animations.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Webflow Development</li>
+                        <li>→ Micro-interactions & Animations</li>
+                        <li>→ Responsive Layouts</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAREER SECTION -->
+    <section id="career" class="py-24 sm:py-32 bg-neutral-900 text-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">// 04 EXPERIENCE</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight">
+                        Career Journey
+                    </h2>
+                </div>
+                <p class="text-neutral-400 text-sm max-w-sm">
+                    A timeline of creative leadership and design impact across agencies and innovation labs.
+                </p>
+            </div>
+
+            <div class="divide-y divide-neutral-800 border-y border-neutral-800">
+                
+                <!-- Career Item 1 -->
+                <div class="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 items-center hover:bg-neutral-800/40 transition-colors px-4 rounded-xl">
+                    <div class="md:col-span-3 font-mono text-xs text-neutral-400">2023 — PRESENT</div>
+                    <div class="md:col-span-4 font-display text-xl font-bold">Lead Product & UI/UX Designer</div>
+                    <div class="md:col-span-3 text-neutral-400 text-sm">Monolith Digital Agency</div>
+                    <div class="md:col-span-2 text-right font-mono text-xs text-neutral-500">FULL-TIME</div>
+                </div>
+
+                <!-- Career Item 2 -->
+                <div class="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 items-center hover:bg-neutral-800/40 transition-colors px-4 rounded-xl">
+                    <div class="md:col-span-3 font-mono text-xs text-neutral-400">2021 — 2023</div>
+                    <div class="md:col-span-4 font-display text-xl font-bold">Senior UI/UX Designer</div>
+                    <div class="md:col-span-3 text-neutral-400 text-sm">Hyperion Studio</div>
+                    <div class="md:col-span-2 text-right font-mono text-xs text-neutral-500">REMOTE</div>
+                </div>
+
+                <!-- Career Item 3 -->
+                <div class="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 items-center hover:bg-neutral-800/40 transition-colors px-4 rounded-xl">
+                    <div class="md:col-span-3 font-mono text-xs text-neutral-400">2019 — 2021</div>
+                    <div class="md:col-span-4 font-display text-xl font-bold">Visual & Product Designer</div>
+                    <div class="md:col-span-3 text-neutral-400 text-sm">Pulse Creative Lab</div>
+                    <div class="md:col-span-2 text-right font-mono text-xs text-neutral-500">HYBRID</div>
+                </div>
+
+                <!-- Career Item 4 -->
+                <div class="py-8 sm:py-10 grid grid-cols-1 md:grid-cols-12 gap-4 items-center hover:bg-neutral-800/40 transition-colors px-4 rounded-xl">
+                    <div class="md:col-span-3 font-mono text-xs text-neutral-400">2017 — 2019</div>
+                    <div class="md:col-span-4 font-display text-xl font-bold">Junior Graphic & Web Designer</div>
+                    <div class="md:col-span-3 text-neutral-400 text-sm">Vanguard Interactive</div>
+                    <div class="md:col-span-2 text-right font-mono text-xs text-neutral-500">ONSITE</div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 05 GET IN TOUCH</span>
+                        <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black leading-none mb-6">
+                            Let's create something iconic together.
+                        </h2>
+                        <p class="text-neutral-600 text-base leading-relaxed mb-8">
+                            Available for freelance projects, lead design consultation, and senior creative opportunities.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 font-mono text-sm">
+                        <div>
+                            <span class="text-xs text-neutral-400 uppercase block">DIRECT EMAIL</span>
+                            <a href="mailto:hello@nazifnazri.com" class="text-lg font-bold text-black hover:underline">hello@nazifnazri.com</a>
+                        </div>
+                        <div>
+                            <span class="text-xs text-neutral-400 uppercase block">LOCATION</span>
+                            <span class="text-neutral-800">Kuala Lumpur / Available Worldwide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-neutral-50 p-8 sm:p-12 rounded-3xl border border-neutral-200">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-neutral-500 mb-2">Your Name *</label>
+                                <input type="text" required placeholder="John Doe" class="w-full px-4 py-3.5 bg-white border border-neutral-300 rounded-xl focus:outline-none focus:border-black text-sm transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-neutral-500 mb-2">Your Email *</label>
+                                <input type="email" required placeholder="john@example.com" class="w-full px-4 py-3.5 bg-white border border-neutral-300 rounded-xl focus:outline-none focus:border-black text-sm transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase text-neutral-500 mb-2">Project Type</label>
+                            <select class="w-full px-4 py-3.5 bg-white border border-neutral-300 rounded-xl focus:outline-none focus:border-black text-sm transition-colors">
+                                <option>UI/UX & Product Design</option>
+                                <option>Brand Identity & Graphic Design</option>
+                                <option>Webflow / Frontend Development</option>
+                                <option>Design System Architecture</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase text-neutral-500 mb-2">Project Brief & Details *</label>
+                            <textarea required rows="4" placeholder="Tell me about your project goals, timelines, and budget..." class="w-full px-4 py-3.5 bg-white border border-neutral-300 rounded-xl focus:outline-none focus:border-black text-sm transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full sm:w-auto px-8 py-4 bg-black text-white rounded-xl font-mono text-xs uppercase tracking-widest hover:bg-neutral-800 transition-colors flex items-center justify-center gap-3">
+                            Send Message <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                    
+                    <div id="formSuccess" class="hidden p-6 bg-black text-white rounded-2xl font-mono text-sm text-center">
+                        ✓ Message received! Nazif will get back to you within 24 hours.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-white border-t border-neutral-200 text-xs font-mono">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-neutral-500">
+            <div>
+                © 2026 NAZIF NAZRI. ALL RIGHTS RESERVED.
+            </div>
+            <div class="flex gap-6 uppercase tracking-wider">
+                <a href="https://behance.net" target="_blank" class="hover:text-black transition-colors">Behance</a>
+                <a href="https://dribbble.com" target="_blank" class="hover:text-black transition-colors">Dribbble</a>
+                <a href="https://linkedin.com" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+                <a href="https://x.com" target="_blank" class="hover:text-black transition-colors">X / Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL FOR HERO PILLARS AND PROJECTS -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden relative shadow-2xl transform scale-95 transition-transform duration-300" id="lightboxContent">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-black transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="max-h-[60vh] overflow-hidden bg-neutral-100">
+                <img id="lightboxImg" src="" alt="Preview" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:p-8">
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-1" id="lightboxSub">Category</span>
+                <h3 class="font-display text-2xl font-bold text-black mb-2" id="lightboxTitle">Title</h3>
+                <p class="text-neutral-600 text-sm">Visual showcase designed with custom grid layouts and interactive high-resolution assets.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Drawer Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const drawerLinks = document.querySelectorAll('.drawer-link');
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuIcon.style.transform = 'rotate(45deg)';
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuIcon.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileDrawer.classList.add('translate-x-full');
+                menuIcon.style.transform = 'rotate(0deg)';
+            });
+        });
+
+        // Lightbox Modal Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightboxContent');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxSub = document.getElementById('lightboxSub');
+
+        function openLightbox(title, subtitle, imgUrl) {
+            lightboxImg.src = imgUrl;
+            lightboxTitle.innerText = title;
+            lightboxSub.innerText = subtitle;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxContent.classList.remove('scale-95');
+                lightboxContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            lightboxContent.classList.remove('scale-100');
+            lightboxContent.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
