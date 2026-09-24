@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio & Expertise | Minimalist Editorial Showcase</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#000000',
+                            white: '#FFFFFF',
+                            gray: '#111111',
+                            muted: '#666666',
+                            border: '#E5E5E5',
+                            lightBg: '#F9F9F9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Poppins', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+         <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Syne', sans-serif;
+        }
+
+        .font-mono-custom {
+            font-family: 'Space Grotesk', monospace;
+        }
+
+        /* Editorial hairline grid borders inspired by high fashion & minimalist studios */
+        .editorial-border-b {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-border-t {
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-border-l {
+            border-left: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-border-r {
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-grid-item {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover image scale animation */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img, .img-zoom-container video, .img-zoom-container .visual-mockup {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-container:hover img, .img-zoom-container:hover video, .img-zoom-container:hover .visual-mockup {
+            transform: scale(1.04);
+        }
+
+        /* Marquee banner animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: 200%;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Custom badge pills */
+        .category-pill {
+            transition: all 0.25s ease;
+        }
+        .category-pill.active {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Subtle noise texture over dark modal overlays */
+        .backdrop-editorial {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.94);
+        }
+
+                /* Ambient subtle light grain background overlay */
+        .bg-grain {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="antialiased  selection:bg-black selection:text-white">
+
+
+        <!-- Navigation Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
+            <div class="max-w-[1700px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <img src="asset/logo.png" class="" alt="logo" style="width: 50px; height: auto;">
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                    <!-- 1. Home -->
+                    <a href="index.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">home</a>
+
+                    <!-- 2. UIUX Dropdown -->
+                    <div class="relative group py-1">
+                        <button class="text-sm uppercase tracking-widest font-medium text-neutral-600 group-hover:text-black transition-colors flex items-center gap-1.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black group-hover:after:w-full after:transition-all focus:outline-none">
+                            UI/UX
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full pt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-black/5 p-2 flex flex-col gap-1">
+                                <a href="boatmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Boatmu</a>
+                                <a href="festmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Festmu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Web Development -->
+                    <a href="web-development.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Web Development</a>
+
+                    <!-- 4. Creative Design -->
+                    <a href="creative-design.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Creative Design</a>
+                </nav>
+
+                                <button id="menuBtn" class="p-2 text-black hover:opacity-70 transition-opacity focus:outline-none" aria-label="Toggle Menu">
+                    <i data-lucide="plus" id="menuIcon" class="w-7 h-7 transition-transform duration-300"></i>
+                </button>
+
+            </div>
+        </header>
+
+        <!-- Mobile Drawer Overlay -->
+        <div id="mobileDrawer" class="fixed inset-0 bg-black text-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 md:hidden overflow-y-auto">
+            <div class="pt-24 flex flex-col gap-6">
+                <span class="text-xs font-mono uppercase text-neutral-500 tracking-widest mb-2">// NAVIGATION</span>
+                
+                <!-- 1. Home -->
+                <a href="index.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Home</a>
+
+                <!-- 2. UI/UX Dropdown Accordion -->
+                <details class="group">
+                    <summary class="flex items-center justify-between text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400 cursor-pointer list-none">
+                        <span>UI/UX</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open:rotate-180 text-neutral-400"></i>
+                    </summary>
+                    <div class="flex flex-col gap-3 pt-4 pl-4 border-l border-neutral-800 my-2">
+                        <a href="boatmu.html" class="drawer-link text-xl font-medium text-neutral-300 hover:text-white uppercase tracking-wider">Boatmu</a>
+                        <a href="festmu.html" class="drawer-link text-xl font-medium text-neutral-300 hover:text-white uppercase tracking-wider">Festmu</a>
+                    </div>
+                </details>
+
+                <!-- 3. Web Development -->
+                <a href="web-development.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Web Development</a>
+
+                <!-- 4. Creative Design -->
+                <a href="creative-design.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Creative Design</a>
+            </div>
+
+            <!-- Footer / Social Links -->
+            <div class="border-t border-neutral-800 pt-6 flex justify-between items-center text-xs font-mono text-neutral-400 mt-8">
+                <span>NAZIF NAZRI © 2026</span>
+                <div class="flex gap-4">
+                    <a href="https://behance.net" target="_blank" class="hover:text-white">BE</a>
+                    <a href="https://dribbble.com" target="_blank" class="hover:text-white">DR</a>
+                    <a href="https://x.com" target="_blank" class="hover:text-white">X</a>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 px-4 sm:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto ">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+                
+                <!-- Main Statement -->
+                <div class="lg:col-span-8 space-y-8">
+                <!-- Tagline Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs font-semibold tracking-widest text-slate-700 uppercase">
+                    <span class="w-2 h-2 rounded-full bg-white-500 animate-pulse border-black"></span>
+                    Web Design & Development
+                </div>
+                    
+                    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-black tracking-tight uppercase leading-[0.95]">
+                        VISUAL ARTIST, BRAND DESIGNER & DIGITAL STRATEGIST.
+                    </h1>
+
+                    <p class="text-neutral-700 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Delivering high-end visual experiences across branding, custom apparel design, multi-platform digital marketing, studio photo editing, and motion graphics. Designed with precision, scaled for impact.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- Top Announcement Ticker Bar -->
+    <div class="bg-black text-white text-md font-mono-custom tracking-wider uppercase py-2.5 overflow-hidden border-b border-black">
+        <div class="animate-marquee whitespace-nowrap flex items-center gap-12">
+            <span>/// CREATIVE DIRECTION & EXPERTISE SHOWCASE</span>
+            <span>★ BRAND IDENTITY</span>
+            <span>★ GRAPHIC DESIGN & VECTOR</span>
+            <span>★ APPAREL & SUBLIMATION DESIGN</span>
+            <span>★ DIGITAL MARKETING & ADS</span>
+            <span>★ STUDIO PHOTO EDITING</span>
+            <span>★ VIDEO & MOTION GRAPHICS</span>
+            <span>/// ACCEPTING NEW CLIENTS FOR 2026</span>
+            <span>/// CREATIVE DIRECTION & EXPERTISE SHOWCASE</span>
+            <span>★ BRAND IDENTITY</span>
+            <span>★ GRAPHIC DESIGN & VECTOR</span>
+            <span>★ APPAREL & SUBLIMATION DESIGN</span>
+            <span>★ DIGITAL MARKETING & ADS</span>
+            <span>★ STUDIO PHOTO EDITING</span>
+            <span>★ VIDEO & MOTION GRAPHICS</span>
+        </div>
+    </div>
+
+
+    <!-- Expertise Overview Section (Items 1, 2, 3, 5, 6, 7) -->
+    <section id="expertise" class="py-20 editorial-border-b bg-white pt-36 pb-20 px-4 sm:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto ">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4">
+                <div>
+                    <span class="font-mono-custom text-xs text-neutral-500 tracking-widest uppercase">01 / CAPABILITIES & SERVICES</span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-extrabold uppercase tracking-tight mt-2">
+                        SPECIALIZED EXPERTISE
+                    </h2>
+                </div>
+                <p class="text-neutral-600 text-sm max-w-md mt-4 md:mt-0 font-light">
+                    End-to-end creative solutions built for brands, apparel labels, corporate clients, and high-impact digital campaigns.
+                </p>
+            </div>
+
+            <!-- Expertise Grid (6 Cards based on user list) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10 border  border-black-400">
+                
+                <!-- 1. Brand Identity -->
+                <div class="bg-white p-8 hover:bg-neutral-50 transition-colors group relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono-custom text-2xl font-bold text-black">01</span>
+                            <i class="fa-solid fa-layer-group text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-extrabold uppercase mb-3">Brand Identity</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+                            Crafting complete visual identities that establish high brand equity. Strategic logo design, color systems, visual guidelines, and typography.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono-custom space-y-2 text-neutral-700 border-t border-black/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Visual Identity Systems</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Logo Design & Mark</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Brand Guidelines & Manuals</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Corporate Stationery</li>
+                    </ul>
+                </div>
+
+                <!-- 2. Graphic Design -->
+                <div class="bg-white p-8 hover:bg-neutral-50 transition-colors group relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono-custom text-2xl font-bold text-black">02</span>
+                            <i class="fa-solid fa-pen-nib text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-extrabold uppercase mb-3">Graphic Design</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+                            Precision visual design across digital and print mediums. High-impact promotional posters, crisp vector artwork, and iconic logos.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono-custom space-y-2 text-neutral-700 border-t border-black/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Event & Editorial Posters</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Precision Vector Illustrations</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Custom Logo Creation</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Print & Digital Collateral</li>
+                    </ul>
+                </div>
+
+                <!-- 3. Apparel Design -->
+                <div class="bg-white p-8 hover:bg-neutral-50 transition-colors group relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono-custom text-2xl font-bold text-black">03</span>
+                            <i class="fa-solid fa-shirt text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-extrabold uppercase mb-3">Apparel Design</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+                            Ready-for-production apparel technical packs and graphics. Full sublimation kits, athletic bibs, graphic tees, and branded lanyards.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono-custom space-y-2 text-neutral-700 border-t border-black/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Custom Shirts & Streetwear</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Full Sublimation Designs</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Athletic Bibs & Cycling Wear</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Event Lanyards & Accessories</li>
+                    </ul>
+                </div>
+
+                <!-- 5. Digital Marketing -->
+                <div class="bg-white p-8 hover:bg-neutral-50 transition-colors group relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono-custom text-2xl font-bold text-black">04</span>
+                            <i class="fa-solid fa-chart-line text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-extrabold uppercase mb-3">Digital Marketing</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+                            Performance-driven marketing management and creative strategy. Ads manager setup, conversion-focused creative assets, and campaigns.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono-custom space-y-2 text-neutral-700 border-t border-black/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Social Media Management</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Meta & Google Ads Manager</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Campaign Strategy & Execution</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> High-Converting Ad Assets</li>
+                    </ul>
+                </div>
+
+                <!-- 6. Photo Editor -->
+                <div class="bg-white p-8 hover:bg-neutral-50 transition-colors group relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono-custom text-2xl font-bold text-black">05</span>
+                            <i class="fa-solid fa-wand-magic-sparkles text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-extrabold uppercase mb-3">Photo Editor</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+                            High-end studio photo editing and retouching. High-fashion lookbooks, commercial product photography, tone mapping, and clean keying.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono-custom space-y-2 text-neutral-700 border-t border-black/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Studio Photo Retouching</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Advanced Skin & Texture Edit</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Color Grading & Tone Matching</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Product Background Extraction</li>
+                    </ul>
+                </div>
+
+                <!-- 7. Video Editor & Simple Motion Graphic -->
+                <div class="bg-white p-8 hover:bg-neutral-50 transition-colors group relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="font-mono-custom text-2xl font-bold text-black">06</span>
+                            <i class="fa-solid fa-film text-2xl text-black group-hover:scale-110 transition-transform"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-extrabold uppercase mb-3">Video & Motion</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-6 font-light">
+                            Dynamic video editing and motion graphics for social media reels, promotional promos, kinetic typography, and animated brand titles.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono-custom space-y-2 text-neutral-700 border-t border-black/10 pt-4">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Commercial Video Editing</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> TikTok & Instagram Reels Edit</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Kinetic Typography & Titles</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-black"></span> Motion Graphic Ident Animations</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Works Gallery Section -->
+    <section id="works" class="py-20 editorial-border-b bg-white pt-20 pb-20 px-4 sm:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 pb-6 ">
+                <div>
+                    <span class="font-mono-custom text-xs text-neutral-500 tracking-widest uppercase">02 / PORTFOLIO CATALOGUE</span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-extrabold uppercase tracking-tight mt-2">
+                        SELECTED PREVIOUS WORKS
+                    </h2>
+                </div>
+                
+                <!-- Search & Counter -->
+                <div class="mt-4 lg:mt-0 flex items-center gap-4">
+                    <div class="relative">
+                        <input type="text" id="work-search-input"  class="pl-8 pr-4 py-2 text-xs font-mono-custom w-48 sm:w-64">
+                    </div>
+                    <span id="project-count-badge" class="font-mono-custom text-xs font-bold bg-white text-white px-3 py-2">
+                        SHOWING 12 PROJECTS
+                    </span>
+                </div>
+            </div>
+
+            <!-- Category Filter Bar (Monochrome pill tabs) -->
+            <div class="flex flex-wrap gap-2 mb-10 pb-4 border-b border-black/10" id="category-filter-bar">
+                <button data-category="all" class="category-pill active rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold">
+                    All Works (12)
+                </button>
+                <button data-category="brand-identity" class="category-pill rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold hover:bg-black hover:text-white">
+                    Brand Identity
+                </button>
+                <button data-category="graphic-design" class="category-pill rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold hover:bg-black hover:text-white">
+                    Graphic Design
+                </button>
+                <button data-category="apparel-design" class="category-pill rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold hover:bg-black hover:text-white">
+                    Apparel Design
+                </button>
+                <button data-category="digital-marketing" class="category-pill rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold hover:bg-black hover:text-white">
+                    Digital Marketing
+                </button>
+                <button data-category="photo-editor" class="category-pill rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold hover:bg-black hover:text-white">
+                    Photo Editor
+                </button>
+                <button data-category="video-motion" class="category-pill rounded-full border border-black px-4 py-2 text-xs font-mono-custom uppercase tracking-wider font-semibold hover:bg-black hover:text-white">
+                    Video & Motion
+                </button>
+            </div>
+
+            <!-- Portfolio Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Javascript will inject projects here -->
+            </div>
+
+            <!-- No results state -->
+            <div id="no-results" class="hidden text-center py-16 border border-dashed border-black/20 my-8">
+                <i class="fa-solid fa-folder-open text-4xl text-neutral-400 mb-3"></i>
+                <p class="font-mono-custom text-sm font-bold uppercase text-black">No projects matched your search criteria.</p>
+                <button onclick="resetFilters()" class="mt-4 bg-black text-white px-4 py-2 text-xs font-mono-custom uppercase tracking-wider">Clear Filters</button>
+            </div>
+
+        </div>
+    </section>
+
+    
+
+    <!-- Workflow / Process Section -->
+    <section id="process" class="py-20 editorial-border-b bg-white pt-20 pb-20 px-4 sm:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-6 ">
+                <div>
+                    <span class="font-mono-custom text-xs text-neutral-500 tracking-widest uppercase">03 / METHODOLOGY</span>
+                    <h2 class="font-display text-3xl sm:text-5xl font-extrabold uppercase tracking-tight mt-2">
+                        DESIGN WORKFLOW
+                    </h2>
+                </div>
+                <p class="text-neutral-600 text-sm max-w-md mt-4 md:mt-0 font-light">
+                    A structured step-by-step approach ensuring precision execution from initial briefing to final delivery.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/10 border border-black-200">
+                
+                <!-- Step 1 -->
+                <div class="bg-white p-8">
+                    <span class="font-mono-custom text-3xl font-extrabold text-black">01</span>
+                    <h3 class="font-display text-lg font-bold uppercase mt-4 mb-2">Discovery & Brief</h3>
+                    <p class="text-neutral-600 text-xs font-light leading-relaxed">
+                        In-depth consultation to analyze brand goals, target audience, style references, and technical specifications.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8">
+                    <span class="font-mono-custom text-3xl font-extrabold text-black">02</span>
+                    <h3 class="font-display text-lg font-bold uppercase mt-4 mb-2">Concept & Vector</h3>
+                    <p class="text-neutral-600 text-xs font-light leading-relaxed">
+                        Exploratory design drafting, moodboard synthesis, logo sketching, technical apparel mockups, or video scripting.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8">
+                    <span class="font-mono-custom text-3xl font-extrabold text-black">03</span>
+                    <h3 class="font-display text-lg font-bold uppercase mt-4 mb-2">Refinement & Edit</h3>
+                    <p class="text-neutral-600 text-xs font-light leading-relaxed">
+                        Iterative polishing, studio color retouching, sublimation print scaling, ad asset variations, and motion tuning.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-8">
+                    <span class="font-mono-custom text-3xl font-extrabold text-black">04</span>
+                    <h3 class="font-display text-lg font-bold uppercase mt-4 mb-2">Final Master Delivery</h3>
+                    <p class="text-neutral-600 text-xs font-light leading-relaxed">
+                        Handoff of production-ready vector files, print-ready apparel technical files, high-res photos, or 4K master video edits.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+     <!-- CONTACT SECTION -->
+        <section id="contact" class="py-24 sm:py-32 bg-white text-center">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto space-y-12">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 05 GET IN TOUCH</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black leading-none mb-6">
+                        Let's create something iconic together.
+                    </h2>
+                    
+                </div>
+
+                <div class="space-y-4 font-mono text-sm">
+                    <div>
+                        <span class="text-xs text-neutral-400 uppercase block">DIRECT EMAIL</span>
+                        <a href="mailto:hello@nazifnazri.com" class="text-lg font-bold text-black hover:underline">nazifnazri@gmail.com</a>
+                    </div>
+                    <div class="py-6">
+                        <span class="text-xs text-neutral-400 uppercase block">Cotact Number</span>
+                        <a href="http://wa.me/60139319561" class="text-lg font-bold text-black hover:underline">+60 13-931 9561</a>
+                    </div>
+                    <div>
+                        <span class="text-xs text-neutral-400 uppercase block">LOCATION</span>
+                        <span class="text-neutral-800">Kuala Lumpur / Selangor</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-white border-t border-neutral-200 text-xs font-mono ">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-neutral-500 ">
+            <div>
+                © 2026 NAZIF NAZRI. ALL RIGHTS RESERVED.
+            </div>
+            
+        </div>
+    </footer>
+
+
+    <script>
+        const PROJECTS = [
+            // Category 1: Brand Identity
+            {
+                id: 'p1',
+                title: 'BOATMU - BOAT TICKETING PLATFORM',
+                category: 'brand-identity',
+                categoryLabel: 'Brand Identity',
+                client: 'Boatmu Sdn. Bhd.',
+                year: '2023',
+                deliverables: 'Logo, Brand Guidelines & Dynamic Brand System',
+                tools: 'Illustrator, InDesign, Photoshop',
+                description: 'Full visual identity creation for a modern minimalism and modern tech company. Includes bespoke typography guidelines, color systems, grid structure, and stationery layout.',
+                tags: ['Custom Logo','Visual Identity', 'Typography System'],
+                visualType: 'brand-aura',
+                imageColor: '#111111'
+            },
+            {
+                id: 'p2',
+                title: 'FESTMU - EVENT TICKETING PLATFORM',
+                category: 'brand-identity',
+                categoryLabel: 'Brand Identity',
+                client: 'Boatmu Sdn. Bhd.',
+                year: '2024',
+                deliverables: 'Logo, Brand Guidelines & Dynamic Brand System',
+                tools: 'Illustrator, InDesign, Photoshop',
+                description: 'A dynamic visual identity system created for a high-performance tech firm featuring modular geometric mark construction and responsive brand assets.',
+                tags: ['Custom Logo','Visual Identity', 'Typography System'],
+                visualType: 'brand-kinetic',
+                imageColor: '#0A0A0A'
+            },
+
+            // Category 2: Graphic Design (poster, vector and logo)
+            {
+                id: 'p3',
+                title: 'POSTER DESIGN',
+                category: 'graphic-design',
+                categoryLabel: 'Graphic Design',
+                client: 'BOATMU & FESTMU',
+                year: '2023',
+                deliverables: 'Concert Poster & Vector Artwork',
+                tools: 'Photoshop, Illustrator',
+                description: 'Large-scale typographic and vector poster design for an avant-garde digital audio exhibition. Combines precision vector shapes with high-contrast typography.',
+                tags: ['Poster Design', 'Vector Illustration', 'Logo Mark', 'Typography'],
+                visualType: 'graphic-poster',
+                imageColor: '#000000'
+            },
+            {
+                id: 'p4',
+                title: 'MINIMAL VECTOR & LOGO COLLECTION',
+                category: 'graphic-design',
+                categoryLabel: 'Graphic Design',
+                client: 'Editorial Series',
+                year: '2025',
+                deliverables: 'Vector Artwork & Logo Suite',
+                tools: 'Illustrator',
+                description: 'Curated collection of mathematical vector illustrations and clean iconographic logos built for publishing and digital media.',
+                tags: ['Vector Graphics', 'Logo Suite', 'Iconography', 'Editorial Print'],
+                visualType: 'graphic-vector',
+                imageColor: '#1A1A1A'
+            },{
+                id: 'p4',
+                title: 'MINIMAL VECTOR & LOGO COLLECTION',
+                category: 'graphic-design',
+                categoryLabel: 'Graphic Design',
+                client: 'Editorial Series',
+                year: '2025',
+                deliverables: 'Vector Artwork & Logo Suite',
+                tools: 'Illustrator',
+                description: 'Curated collection of mathematical vector illustrations and clean iconographic logos built for publishing and digital media.',
+                tags: ['Vector Graphics', 'Logo Suite', 'Iconography', 'Editorial Print'],
+                visualType: 'graphic-run1',
+                imageColor: '#1A1A1A'
+            },{
+                id: 'p4',
+                title: 'MINIMAL VECTOR & LOGO COLLECTION',
+                category: 'graphic-design',
+                categoryLabel: 'Graphic Design',
+                client: 'Editorial Series',
+                year: '2025',
+                deliverables: 'Vector Artwork & Logo Suite',
+                tools: 'Illustrator',
+                description: 'Curated collection of mathematical vector illustrations and clean iconographic logos built for publishing and digital media.',
+                tags: ['Vector Graphics', 'Logo Suite', 'Iconography', 'Editorial Print'],
+                visualType: 'graphic-print',
+                imageColor: '#1A1A1A'
+            },
+
+
+            // Category 3: Apparel Design (shirt, sublimation design, bib, lanyard)
+            {
+                id: 'p5',
+                title: 'APEX RACE KIT SUBLIMATION',
+                category: 'apparel-design',
+                categoryLabel: 'Apparel Design',
+                client: 'Apex Endurance Apparel',
+                year: '2026',
+                deliverables: 'Shirt, Sublimation Pattern, Bib & Lanyard',
+                tools: 'Illustrator, CLO 3D, Photoshop',
+                description: 'Complete athletic apparel package featuring technical sublimation shirt vector layouts, ergonomic cycling bib print patterns, and event access lanyards.',
+                tags: ['Sublimation Shirt', 'Cycling Bib', 'Technical Apparel', 'Lanyard'],
+                visualType: 'apparel-apex',
+                imageColor: '#0F0F0F'
+            },
+            {
+                id: 'p5',
+                title: 'APEX RACE KIT SUBLIMATION',
+                category: 'apparel-design',
+                categoryLabel: 'Apparel Design',
+                client: 'Apex Endurance Apparel',
+                year: '2026',
+                deliverables: 'Shirt, Sublimation Pattern, Bib & Lanyard',
+                tools: 'Illustrator, CLO 3D, Photoshop',
+                description: 'Complete athletic apparel package featuring technical sublimation shirt vector layouts, ergonomic cycling bib print patterns, and event access lanyards.',
+                tags: ['Sublimation Shirt', 'Cycling Bib', 'Technical Apparel', 'Lanyard'],
+                visualType: 'apparel-new',
+                imageColor: '#0F0F0F'
+            },
+            {
+                id: 'p6',
+                title: 'URBAN STREETWEAR MERCH LINE',
+                category: 'apparel-design',
+                categoryLabel: 'Apparel Design',
+                client: 'Nocturne Clothing Co.',
+                year: '2025',
+                deliverables: 'Heavyweight T-Shirt & Accessories',
+                tools: 'Photoshop, Illustrator',
+                description: 'Monochrome high-density screen print graphic design for oversized tees, embroidered patches, tech caps, and printed lanyards.',
+                tags: ['Shirt Graphics', 'Tech Packs', 'Sublimation', 'Custom Lanyard'],
+                visualType: 'apparel-street',
+                imageColor: '#050505'
+            },
+
+            // Category 5: Digital Marketing (social media manager, ads manager, marketing campaign, social media asset)
+            {
+                id: 'p7',
+                title: 'LUMINA BEAUTY DIGITAL CAMPAIGN',
+                category: 'digital-marketing',
+                categoryLabel: 'Digital Marketing',
+                client: 'Lumina Skincare',
+                year: '2026',
+                deliverables: 'Social Media Management & Ads',
+                tools: 'Meta Ads Manager, Photoshop, Analytics',
+                description: 'End-to-end digital marketing campaign management. Strategy, targeted Meta & TikTok ads manager execution, conversion copy, and 40+ social media creative assets.',
+                tags: ['Ads Manager', 'Social Media Manager', 'Marketing Campaign', 'Ad Assets'],
+                visualType: 'marketing-lumina',
+                imageColor: '#181818'
+            },
+
+
+            // Category 6: Photo Editor (studio photo editing)
+            {
+                id: 'p9',
+                title: 'STUDIO LOOKBOOK RETOUCHING',
+                category: 'photo-editor',
+                categoryLabel: 'Photo Editor',
+                client: 'Vogue Editorial & Studio',
+                year: '2026',
+                deliverables: 'Studio Photo Retouching & Color Grade',
+                tools: 'Photoshop, Capture One',
+                description: 'Master studio photo editing for commercial high-fashion lookbook. Precise skin texture retouching, background cleanup, specular highlight control, and color grading.',
+                tags: ['Studio Photo Editing', 'Color Grading', 'Skin Retouching', 'Frequency Separation'],
+                visualType: 'photo-lookbook',
+                imageColor: '#121212'
+            },
+
+            // Category 7: Video Editor & Simple Motion Graphic
+            {
+                id: 'p11',
+                title: 'NEON PULSE MOTION TEASER',
+                category: 'video-motion',
+                categoryLabel: 'Video & Motion',
+                client: 'Pulse Music Festival',
+                year: '2026',
+                deliverables: 'Promo Video & Kinetic Motion',
+                tools: 'Premiere Pro, After Effects',
+                description: 'Fast-paced promo video editing integrated with custom kinetic typography, sound design, logo reveal animations, and motion graphic overlays.',
+                tags: ['Video Editing', 'Motion Graphics', 'Kinetic Typography', 'Social Reels'],
+                visualType: 'motion-pulse',
+                imageColor: '#0E0E0E'
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjects(PROJECTS);
+            setupCategoryFilters();
+            setupSearch();
+            setupMobileMenu();
+            setupScopeCalculator();
+            setupForm();
+        });
+
+        function renderProjects(items) {
+            const grid = document.getElementById('portfolio-grid');
+            const noResults = document.getElementById('no-results');
+            const countBadge = document.getElementById('project-count-badge');
+
+            grid.innerHTML = '';
+            countBadge.innerText = `SHOWING ${items.length} PROJECTS`;
+
+            if (items.length === 0) {
+                grid.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'editorial-grid-item bg-white rounded-xl group cursor-pointer flex flex-col justify-between hover:shadow-xl transition-all duration-300';
+                card.onclick = () => openModal(item.id);
+
+                // Visual Mockup Banner
+                const visualHtml = generateMockVisual(item.visualType, item.title, item.categoryLabel);
+
+                card.innerHTML = `
+                    <div class="img-zoom-container relative bg-black rounded-xl border-b border-black aspect-[4/3] flex items-center justify-center p-4">
+                        ${visualHtml}
+                        <div class="absolute top-3 left-3 bg-black text-white text-[10px] font-mono-custom tracking-wider uppercase px-2.5 py-1 z-10">
+                            ${item.categoryLabel}
+                        </div>
+
+                    </div>
+
+                    <div class="p-6 flex flex-col justify-between flex-1 space-y-4">
+                        <div>
+                            <div class="flex items-center justify-between text-[11px] font-mono-custom text-neutral-500 uppercase mb-2">
+                                <span>CLIENT: ${item.client}</span>
+                                <span>${item.year}</span>
+                            </div>
+                            <h3 class="font-display text-lg font-bold uppercase text-black group-hover:underline underline-offset-4 leading-snug">
+                                ${item.title}
+                            </h3>
+                            <p class="text-neutral-600 text-xs font-light mt-2 line-clamp-2">
+                                ${item.description}
+                            </p>
+                        </div>
+
+                        <div class="pt-4 border-t border-black/10 flex flex-wrap gap-1.5">
+                            ${item.tags.map(t => `<span class="bg-neutral-100 border border-black/10 text-[10px] font-mono-custom px-2 py-0.5 text-neutral-800">${t}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        function generateMockVisual(type, title, category) {
+            // Generating high-end monochrome vector mockups inside cards
+            switch(type) {
+                case 'brand-aura':
+                    return `
+                    <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product1.jpg" alt="boatmu logo branding">
+                    </div>
+                    `;
+                case 'brand-kinetic':
+                    return `
+                        <div class="visual-mockup w-full h-full flex flex-col items-center justify-center bg-black text-white p-6 relative">
+                        <img src="asset/product2.jpg" alt="festmu logo branding">
+                        </div>
+                    `;
+                case 'graphic-poster':
+                    return `
+                    <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product3.jpg" alt="graphic poster">
+                    </div>
+                    `;
+                case 'graphic-run1':
+                    return `
+                        <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product7.jpg" alt="graphic poster">
+                    </div>
+                    `;
+                case 'graphic-vector':
+                    return `
+                        <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product8.jpg" alt="graphic poster">
+                    </div>
+                    `;
+
+                case 'graphic-print':
+                    return `
+                        <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product11.jpg" alt="graphic poster">
+                    </div>
+                    `;
+                case 'apparel-apex':
+                    return `
+                    <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product4.jpg" alt="graphic poster">
+                    </div>
+                    `;
+                   
+                case 'apparel-new':
+                    return `
+                    <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product6.jpg" alt="graphic poster">
+                    </div>
+                    `;
+                case 'apparel-street':
+                    return `
+                  <div class="visual-mockup w-full h-full bg-black text-white p-4 flex items-center justify-center font-mono-custom">
+                        <img src="asset/product5.jpg" alt="graphic poster">
+                    </div>
+                    `;
+                case 'marketing-lumina':
+                    return `
+                        <div class="visual-mockup w-full h-full bg-neutral-950 text-white p-4 flex items-center justify-center font-mono-custom">
+                            <img src="asset/product10.jpg" alt="">
+                        </div>
+                    `;
+                case 'photo-lookbook':
+                    return `
+                        <div class="visual-mockup w-full h-full bg-neutral-950 text-white p-4 flex items-center justify-center font-mono-custom">
+                            <img src="asset/product9.jpg" alt="">
+                        </div>
+                    `;
+                case 'motion-pulse':
+                    return `
+                        <div class="visual-mockup w-full h-full bg-neutral-950 text-white p-4 flex items-center justify-center font-mono-custom">
+                            <video src="asset/vid1.mp4" autoplay loop muted playsinline class="max-h-full max-w-full object-contain rounded-md">
+                            </video>
+                        </div>
+
+                        <div class="visual-mockup w-full h-full bg-neutral-950 text-white p-4 flex items-center justify-center font-mono-custom">
+                            <video src="asset/vid2.mp4" autoplay loop muted playsinline class="max-h-full max-w-full object-contain rounded-md">
+                            </video>
+                        </div>
+                        
+                        <div class="visual-mockup w-full h-full bg-neutral-950 text-white p-4 flex items-center justify-center font-mono-custom">
+                            <video src="asset/vid3.mp4" autoplay loop muted playsinline class="max-h-full max-w-full object-contain rounded-md">
+                            </video>
+                        </div>
+                    `;
+ 
+            }
+        }
+
+        function setupCategoryFilters() {
+            const filterBtns = document.querySelectorAll('#category-filter-bar button');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active', 'bg-black', 'text-white'));
+                    btn.classList.add('active', 'bg-black', 'text-white');
+
+                    const category = btn.getAttribute('data-category');
+                    filterProjects(category, document.getElementById('work-search-input').value);
+                });
+            });
+        }
+
+        function setupSearch() {
+            const input = document.getElementById('work-search-input');
+            input.addEventListener('input', (e) => {
+                const activeBtn = document.querySelector('#category-filter-bar button.active');
+                const activeCategory = activeBtn ? activeBtn.getAttribute('data-category') : 'all';
+                filterProjects(activeCategory, e.target.value);
+            });
+        }
+
+        function filterProjects(category, searchQuery) {
+            const query = searchQuery.toLowerCase().trim();
+            const filtered = PROJECTS.filter(item => {
+                const matchesCategory = (category === 'all' || item.category === category);
+                const matchesSearch = query === '' || 
+                    item.title.toLowerCase().includes(query) ||
+                    item.client.toLowerCase().includes(query) ||
+                    item.description.toLowerCase().includes(query) ||
+                    item.tags.some(t => t.toLowerCase().includes(query));
+                
+                return matchesCategory && matchesSearch;
+            });
+
+            renderProjects(filtered);
+        }
+
+        function resetFilters() {
+            document.getElementById('work-search-input').value = '';
+            const allBtn = document.querySelector('#category-filter-bar button[data-category="all"]');
+            if (allBtn) allBtn.click();
+        }
+
+        function openModal(projectId) {
+            const project = PROJECTS.find(p => p.id === projectId);
+            if (!project) return;
+
+            document.getElementById('modal-title').innerText = project.title;
+            document.getElementById('modal-category').innerText = project.categoryLabel;
+            document.getElementById('modal-client').innerText = project.client;
+            document.getElementById('modal-deliverables').innerText = project.deliverables;
+            document.getElementById('modal-year').innerText = project.year;
+            document.getElementById('modal-tools').innerText = project.tools;
+            document.getElementById('modal-description').innerText = project.description;
+
+            // Visual Container
+            const visualContainer = document.getElementById('modal-visual-container');
+            visualContainer.innerHTML = generateMockVisual(project.visualType, project.title, project.categoryLabel);
+
+            // Tags
+            const tagsContainer = document.getElementById('modal-tags');
+            tagsContainer.innerHTML = project.tags.map(tag => 
+                `<span class="bg-black text-white text-xs font-mono-custom px-3 py-1 font-bold uppercase">${tag}</span>`
+            ).join('');
+
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+        document.getElementById('project-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'project-modal') closeModal();
+        });
+
+        function setupScopeCalculator() {
+            const checkboxes = document.querySelectorAll('.scope-calc-check');
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', updateCalculatorSummary);
+            });
+        }
+
+        function updateCalculatorSummary() {
+            const checkboxes = document.querySelectorAll('.scope-calc-check:checked');
+            let totalPrice = 0;
+            let totalDays = 0;
+            let count = checkboxes.length;
+
+            checkboxes.forEach(cb => {
+                totalPrice += parseInt(cb.getAttribute('data-price') || 0);
+                totalDays += parseInt(cb.getAttribute('data-days') || 0);
+            });
+
+            document.getElementById('calc-services-count').innerText = `${count} Service${count === 1 ? '' : 's'}`;
+            document.getElementById('calc-turnaround').innerText = count > 0 ? `~${totalDays} Business Days` : '0 Business Days';
+            document.getElementById('calc-total-price').innerText = `$${totalPrice} USD`;
+        }
+
+        function applyEstimateToContact() {
+            const checkboxes = document.querySelectorAll('.scope-calc-check:checked');
+            if (checkboxes.length === 0) {
+                alert('Please select at least one service in the scope calculator first.');
+                return;
+            }
+
+            const messageBox = document.getElementById('form-message');
+            const selectedServices = [];
+            let totalPrice = document.getElementById('calc-total-price').innerText;
+            let totalDays = document.getElementById('calc-turnaround').innerText;
+
+            checkboxes.forEach(cb => {
+                const label = cb.closest('label').querySelector('.font-bold').innerText;
+                selectedServices.push(label);
+            });
+
+            messageBox.value = `Hi Nazif,\n\nI calculated an estimated project scope on your website:\n\n- Selected Services: ${selectedServices.join(', ')}\n- Estimated Budget: ${totalPrice}\n- Estimated Timeframe: ${totalDays}\n\nProject details:\n[Please elaborate on your project requirements here]`;
+
+            // Scroll to contact section
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close on link click
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+
+        function setupForm() {
+            const form = document.getElementById('contact-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                document.getElementById('form-success-alert').classList.remove('hidden');
+                form.reset();
+            });
+        }
+
+        function copyToClipboard(text) {
+            // Using standard execCommand fallback for seamless copying in restricted environments
+            const dummy = document.createElement('textarea');
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            const emailText = document.getElementById('email-text');
+            const original = emailText.innerText;
+            emailText.innerText = 'COPIED TO CLIPBOARD!';
+            setTimeout(() => {
+                emailText.innerText = original;
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

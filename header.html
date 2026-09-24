@@ -1,0 +1,47 @@
+<!-- Navigation Header -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
+    <div class="max-w-[1700px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html">
+            <img src="asset/logo.png" alt="logo" style="width: 50px; height: auto;">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+            <!-- 1. Home -->
+            <a href="index.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">home</a>
+
+            <!-- 2. UIUX Dropdown -->
+            <div class="relative group py-1">
+                <button class="text-sm uppercase tracking-widest font-medium text-neutral-600 group-hover:text-black transition-colors flex items-center gap-1.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black group-hover:after:w-full after:transition-all focus:outline-none">
+                    UIUX
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"></i>
+                </button>
+
+                <!-- Submenu -->
+                <div class="absolute left-0 top-full pt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-black/5 p-2 flex flex-col gap-1">
+                        <a href="boatmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Boatmu</a>
+                        <a href="festmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Festmu</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Web Development -->
+            <a href="web-development.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Web Development</a>
+
+            <!-- 4. Creative Design -->
+            <a href="creative-design.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Creative Design</a>
+        </nav>
+
+        <!-- Action / Mobile Menu Toggle Icon -->
+        <div class="flex items-center gap-4">
+            <a href="index.html#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-mono tracking-wider uppercase border border-black rounded-full hover:bg-black hover:text-white transition-all">
+                Let's Talk
+            </a>
+            <button id="menuBtn" class="p-2 text-black hover:opacity-70 transition-opacity focus:outline-none" aria-label="Toggle Menu">
+                <i data-lucide="plus" id="menuIcon" class="w-7 h-7 transition-transform duration-300"></i>
+            </button>
+        </div>
+    </div>
+</header>

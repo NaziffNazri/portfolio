@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazif Nazri — UIUX & Creative Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -87,57 +89,103 @@
             background: #111;
             border-radius: 3px;
         }
+
+        
     </style>
 </head>
 <body class="selection:bg-black selection:text-white antialiased">
+    
 
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
-        <div class="max-w-[1700px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-            <!-- Logo -->
-             <img src="asset/logo.png" class="" alt="logo" style="width: 50px; height: auto;">
-        
+        <!-- Navigation Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
+            <div class="max-w-[1700px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <img src="asset/logo.png" class="" alt="logo" style="width: 50px; height: auto;">
 
-            <!-- Desktop Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 lg:gap-12">
-                <a href="#about" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">about</a>
-                <a href="#project" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">project</a>
-                <a href="#service" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">service</a>
-                <a href="#career" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">career</a>
-                <a href="#contact" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">contact</a>
-            </nav>
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                    <!-- 1. Home -->
+                    <a href="index.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">home</a>
 
-            <!-- Action / Mobile Menu Toggle Icon -->
-            <div class="flex items-center gap-4">
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-xs font-mono tracking-wider uppercase border border-black rounded-full hover:bg-black hover:text-white transition-all">
-                    Let's Talk
-                </a>
-                <button id="menuBtn" class="p-2 text-black hover:opacity-70 transition-opacity focus:outline-none" aria-label="Toggle Menu">
+                    <!-- 2. UIUX Dropdown -->
+                    <div class="relative group py-1">
+                        <button class="text-sm uppercase tracking-widest font-medium text-neutral-600 group-hover:text-black transition-colors flex items-center gap-1.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black group-hover:after:w-full after:transition-all focus:outline-none">
+                            UI/UX
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full pt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-black/5 p-2 flex flex-col gap-1">
+                                <a href="boatmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Boatmu</a>
+                                <a href="festmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Festmu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Web Development -->
+                    <a href="web-development.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Web Development</a>
+
+                    <!-- 4. Creative Design -->
+                    <a href="creative-design.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Creative Design</a>
+                </nav>
+
+                                <button id="menuBtn" class="p-2 text-black hover:opacity-70 transition-opacity focus:outline-none" aria-label="Toggle Menu">
                     <i data-lucide="plus" id="menuIcon" class="w-7 h-7 transition-transform duration-300"></i>
                 </button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Mobile Drawer Overlay -->
-    <div id="mobileDrawer" class="fixed inset-0 bg-black text-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 md:hidden">
-        <div class="pt-24 flex flex-col gap-6">
-            <span class="text-xs font-mono uppercase text-neutral-500 tracking-widest mb-2">// NAVIGATION</span>
-            <a href="#about" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">About</a>
-            <a href="#project" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Project</a>
-            <a href="#service" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Service</a>
-            <a href="#career" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Career</a>
-            <a href="#contact" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Contact</a>
-        </div>
-        <div class="border-t border-neutral-800 pt-6 flex justify-between items-center text-xs font-mono text-neutral-400">
-            <span>NAZIF NAZRI © 2026</span>
-            <div class="flex gap-4">
-                <a href="https://behance.net" target="_blank" class="hover:text-white">BE</a>
-                <a href="https://dribbble.com" target="_blank" class="hover:text-white">DR</a>
-                <a href="https://x.com" target="_blank" class="hover:text-white">X</a>
+            </div>
+        </header>
+
+    
+
+        <!-- Mobile Drawer Overlay -->
+        <div id="mobileDrawer" class="fixed inset-0 bg-black text-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 md:hidden overflow-y-auto">
+            <div class="pt-24 flex flex-col gap-6">
+                <span class="text-xs font-mono uppercase text-neutral-500 tracking-widest mb-2">// NAVIGATION</span>
+                
+                <!-- 1. Home -->
+                <a href="index.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Home</a>
+
+                <!-- 2. UI/UX Dropdown Accordion -->
+                <details class="group">
+                    <summary class="flex items-center justify-between text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400 cursor-pointer list-none">
+                        <span>UI/UX</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open:rotate-180 text-neutral-400"></i>
+                    </summary>
+                    <div class="flex flex-col gap-3 pt-4 pl-4 border-l border-neutral-800 my-2">
+                        <a href="boatmu.html" class="drawer-link text-xl font-medium text-neutral-300 hover:text-white uppercase tracking-wider">Boatmu</a>
+                        <a href="festmu.html" class="drawer-link text-xl font-medium text-neutral-300 hover:text-white uppercase tracking-wider">Festmu</a>
+                    </div>
+                </details>
+
+                <!-- 3. Web Development -->
+                <a href="web-development.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Web Development</a>
+
+                <!-- 4. Creative Design -->
+                <a href="creative-design.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Creative Design</a>
+            </div>
+
+            <!-- Footer / Social Links -->
+            <div class="border-t border-neutral-800 pt-6 flex justify-between items-center text-xs font-mono text-neutral-400 mt-8">
+                <span>NAZIF NAZRI © 2026</span>
+                <div class="flex gap-4">
+                    <a href="https://behance.net" target="_blank" class="hover:text-white">BE</a>
+                    <a href="https://dribbble.com" target="_blank" class="hover:text-white">DR</a>
+                    <a href="https://x.com" target="_blank" class="hover:text-white">X</a>
+                </div>
             </div>
         </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- HERO SECTION -->
     <section class="relative min-h-screen pt-28 pb-12 flex flex-col justify-between overflow-hidden">
@@ -338,8 +386,7 @@
                     <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
                         <img src="asset/card2.jpeg" 
                              alt="Festmu platform" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                             onerror="this.src='https://placehold.co/1200x800/111111/ffffff?text=Project+Kumo'">
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
                            UI/UX Design
                         </div>
@@ -351,15 +398,15 @@
                         </div>
                         <span class="font-mono text-xs text-neutral-400">2025</span>
                     </div>
-                </div>
+                 </a>
+
 
                 <!-- Project 3 -->
-                <div class="group cursor-pointer" onclick="openLightbox('Oasis Luxury E-Commerce', 'Editorial Shopping Experience & Web Motion', 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop')">
+                <a href="web-development.html" class="group block cursor-pointer">
                     <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
                         <img src="asset/card3.jpg" 
                              alt="web design" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                             onerror="this.src='https://placehold.co/1200x800/333333/ffffff?text=Project+Oasis'">
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
                             Web Development
                         </div>
@@ -371,22 +418,22 @@
                         </div>
                         <span class="font-mono text-xs text-neutral-400">2025</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Project 4 -->
-                <div class="group cursor-pointer" onclick="openLightbox('Verve Studio Brand', 'Complete Visual Identity & Graphic Language', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop')">
+                <a href="creative-design.html" class="group block cursor-pointer">                    
                     <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
                         <img src="asset/card4.png" 
                              alt="Creative deisgn" 
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                             onerror="this.src='https://placehold.co/1200x800/444444/ffffff?text=Project+Verve'">
+                             >
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
                             Creative design
                         </div>
                     </div>
                     <div class="flex items-start justify-between">
                         <div>
-                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Creative Design Expertise</h3>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Creative Design </h3>
                             <p class="text-neutral-500 text-sm mt-1">Graphic Design, Brand Strategy, Marketing, Digital Printed, Typography & Visual Guidelines</p>
                         </div>
                         <span class="font-mono text-xs text-neutral-400">2022</span>
@@ -807,6 +854,19 @@
             document.getElementById('contactForm').classList.add('hidden');
             document.getElementById('formSuccess').classList.remove('hidden');
         }
+
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+                
+                // Re-initialize Lucide Icons after header is inserted
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+
     </script>
 </body>
 </html>

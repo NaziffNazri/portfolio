@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" class="light scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design & Development — Selected Works</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#f8fafc',
+                            card: '#ffffff',
+                            border: 'rgba(0, 0, 0, 0.08)',
+                            gold: '#b48a1d',
+                            emerald: '#059669',
+                            amber: '#d97706',
+                            cyan: '#0891b2',
+                            accent: '#0f172a',
+                            orange: '#df7d3b',
+                            gold: '#e3c770'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Poppins"', 'sans-serif']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Ambient subtle light grain background overlay */
+        .bg-grain {
+            background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        /* Glassmorphism light utility */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+        }
+
+        .glass-card {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.04);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 0, 0, 0.18);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Custom scrollbar for light theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+    </style>
+</head>
+<body class="min-h-screen bg-grain antialiased selection:bg-slate-900 selection:text-white">
+
+
+        <!-- Navigation Header -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md transition-all duration-300 border-b border-black/5">
+            <div class="max-w-[1700px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <img src="asset/logo.png" class="" alt="logo" style="width: 50px; height: auto;">
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8 lg:gap-12">
+                    <!-- 1. Home -->
+                    <a href="index.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">home</a>
+
+                    <!-- 2. UIUX Dropdown -->
+                    <div class="relative group py-1">
+                        <button class="text-sm uppercase tracking-widest font-medium text-neutral-600 group-hover:text-black transition-colors flex items-center gap-1.5 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black group-hover:after:w-full after:transition-all focus:outline-none">
+                            UI/UX
+                            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300 group-hover:rotate-180"></i>
+                        </button>
+
+                        <!-- Submenu -->
+                        <div class="absolute left-0 top-full pt-3 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-black/5 p-2 flex flex-col gap-1">
+                                <a href="boatmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Boatmu</a>
+                                <a href="festmu.html" class="px-4 py-2.5 text-xs uppercase tracking-wider font-medium text-neutral-600 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors">Festmu</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Web Development -->
+                    <a href="web-development.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Web Development</a>
+
+                    <!-- 4. Creative Design -->
+                    <a href="creative-design.html" class="text-sm uppercase tracking-widest font-medium text-neutral-600 hover:text-black transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-black hover:after:w-full after:transition-all">Creative Design</a>
+                </nav>
+
+                                <button id="menuBtn" class="p-2 text-black hover:opacity-70 transition-opacity focus:outline-none" aria-label="Toggle Menu">
+                    <i data-lucide="plus" id="menuIcon" class="w-7 h-7 transition-transform duration-300"></i>
+                </button>
+
+            </div>
+        </header>
+
+        <!-- Mobile Drawer Overlay -->
+        <div id="mobileDrawer" class="fixed inset-0 bg-black text-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 md:hidden overflow-y-auto">
+            <div class="pt-24 flex flex-col gap-6">
+                <span class="text-xs font-mono uppercase text-neutral-500 tracking-widest mb-2">// NAVIGATION</span>
+                
+                <!-- 1. Home -->
+                <a href="index.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Home</a>
+
+                <!-- 2. UI/UX Dropdown Accordion -->
+                <details class="group">
+                    <summary class="flex items-center justify-between text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400 cursor-pointer list-none">
+                        <span>UI/UX</span>
+                        <i data-lucide="chevron-down" class="w-6 h-6 transition-transform duration-300 group-open:rotate-180 text-neutral-400"></i>
+                    </summary>
+                    <div class="flex flex-col gap-3 pt-4 pl-4 border-l border-neutral-800 my-2">
+                        <a href="boatmu.html" class="drawer-link text-xl font-medium text-neutral-300 hover:text-white uppercase tracking-wider">Boatmu</a>
+                        <a href="festmu.html" class="drawer-link text-xl font-medium text-neutral-300 hover:text-white uppercase tracking-wider">Festmu</a>
+                    </div>
+                </details>
+
+                <!-- 3. Web Development -->
+                <a href="web-development.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Web Development</a>
+
+                <!-- 4. Creative Design -->
+                <a href="creative-design.html" class="drawer-link text-3xl font-display font-bold uppercase tracking-tight hover:text-neutral-400">Creative Design</a>
+            </div>
+
+            <!-- Footer / Social Links -->
+            <div class="border-t border-neutral-800 pt-6 flex justify-between items-center text-xs font-mono text-neutral-400 mt-8">
+                <span>NAZIF NAZRI © 2026</span>
+                <div class="flex gap-4">
+                    <a href="https://behance.net" target="_blank" class="hover:text-white">BE</a>
+                    <a href="https://dribbble.com" target="_blank" class="hover:text-white">DR</a>
+                    <a href="https://x.com" target="_blank" class="hover:text-white">X</a>
+                </div>
+            </div>
+        </div>
+    
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="pt-36 pb-20 px-4 sm:px-8 relative overflow-hidden">
+        <!-- Ambient Glow Backdrops -->
+
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col items-start gap-6">
+                <!-- Tagline Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel text-xs font-semibold tracking-widest text-slate-700 uppercase">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Web Design & Development
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] max-w-4xl">
+                    DESIGNING PREMIUM WEB PLATFORMS & DIGITAL EXPERIENCES
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-slate-600 text-base sm:text-lg max-w-2xl leading-relaxed font-normal">
+                    An curated showcase featuring web design & front-end engineering for <span class="text-slate-900 font-bold">myHadi</span>, <span class="text-slate-900 font-bold">Bayu Pagi</span>, and <span class="text-slate-900 font-bold">Malayan Tech Labs</span>. Precision UI/UX with seamless interactivity.
+                </p>
+
+                <!-- Key Metrics Bar -->
+                <div class="grid grid-cols-3 md:grid-cols-3 gap-4 w-full mt-6">
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between bg-black">
+                        <span class="text-xs uppercase tracking-wider text-slate-300 font-bold">Delivered Works</span>
+                        <div class="text-2xl sm:text-3xl font-display font-bold text-white mt-2">03 Major</div>
+                        <span class="text-[11px] text-slate-300 mt-1">Full-stack & Landing Pages</span>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between bg-black">
+                        <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold ">Avg Performance</span>
+                        <div class="text-2xl sm:text-3xl font-display font-bold text-white mt-2">99/100</div>
+                        <span class="text-[11px] text-slate-300 mt-1">Google Lighthouse Score</span>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-5 flex flex-col justify-between bg-black">
+                        <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Responsiveness</span>
+                        <div class="text-2xl sm:text-3xl font-display font-bold text-white mt-2">100% Fluid</div>
+                        <span class="text-[11px] text-slate-300 mt-1">Mobile, Tablet, 4K Display</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTED PROJECTS SHOWCASE SECTION -->
+    <section id="projects" class="py-20 px-4 sm:px-8 border-t border-slate-200/80 relative">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header & Filter Bar -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="font-display text-3xl sm:text-5xl font-bold text-slate-900 mt-1">Selected Web Projects</h2>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- PROJECT 1: MYHADI LANDING PAGE -->
+                <div class="project-card health lg:col-span-12 glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group border border-emerald-500/20">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- Left Info Column -->
+                        <div class="lg:col-span-5 flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    Islamic Faith
+                                </span>
+                                <span class="text-xs text-slate-500 font-medium"><i class="fa-regular fa-clock mr-1"></i> 2026 Deliverable</span>
+                            </div>
+
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                                myHadi Landing Page
+                            </h3>
+
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                A serene digital platform showcasing daily prayer schedules and modern Islamic apps, beautifully optimized for every device.
+                            </p>
+
+                            <!-- Tech Stack Badges -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">HTML</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">CSS</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">Java Script</span>
+                            </div>
+
+                            <!-- Color Palette Tokens -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <span class="text-xs text-slate-500 font-medium">Palette:</span>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-5 h-5 rounded-full bg-[#006828] border border-slate-300" title="Emerald #006828"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#71a437] border border-slate-300" title="Emerald Accent #71a437"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#c9d342] border border-slate-300" title="Warm Gold #c9d342"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#F8FAFC] border border-slate-300" title="Light Slate #F8FAFC"></div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons -->
+                            <div class="flex items-center gap-4 pt-4">
+                                <a href="https://myhadi.malayantechlabs.com/" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2.5 rounded-xl glass-panel text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-700 transition-all">
+                                    Live Preview
+                                <i class="fa-solid fa-arrow-up-right-from-square pl-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Visual Frame Mockup -->
+                        <div class="lg:col-span-7">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl relative group-hover:border-emerald-400 transition-all">
+                                <!-- Browser Header -->
+                                <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+                                    <div class="flex items-center gap-1.5">
+                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                    </div>
+                                    <div class="text-[11px] text-slate-600 font-mono px-3 py-0.5 rounded-md bg-slate-100 border border-slate-200">
+                                        https://myhadi.malayantechlabs.com/
+                                    </div>
+                                    <div class="text-xs text-emerald-600 font-mono font-semibold"><i class="fa-solid fa-lock text-[10px]"></i> Secure</div>
+                                </div>
+
+                                <!-- Mockup Screen Content inside -->
+                                <div class="bg-gradient-to-br from-[#0c2e24] to-[#061813] rounded-xl border border-emerald-400 text-left min-h-[260px] flex flex-col justify-between relative overflow-hidden text-white">
+                                    <img src="asset/webdev1.jpg" alt="Web Dev MyHadi" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2: MALAYAN TECH LABS LANDING PAGE -->
+                <div class="project-card health lg:col-span-12 glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group border border-gold-500/20">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- Left Info Column -->
+                        <div class="lg:col-span-5 flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-orange-200 text-orange-900 border border-orange-400">
+                                    tech industry
+                                </span>
+                                <span class="text-xs text-slate-500 font-medium"><i class="fa-regular fa-clock mr-1"></i> 2026 Deliverable</span>
+                            </div>
+
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 group-hover:text-orange-500 transition-colors">
+                                Malayan Tech Labs Landing Page
+                            </h3>
+
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                We build enterprise software, AI-powered solutions, mobile applications and cloud platforms that help businesses innovate, automate and scale with confidence.
+                            </p>
+
+                            <!-- Tech Stack Badges -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">HTML</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">CSS</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">Java Script</span>
+                            </div>
+
+                            <!-- Color Palette Tokens -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <span class="text-xs text-slate-500 font-medium">Palette:</span>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-5 h-5 rounded-full bg-[#a84400] border border-slate-300" title="Orange Primary #a84400"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#df7d3b] border border-slate-300" title="Orange Accent #71a437"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[Black] border border-slate-300" title="Background Gold black"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#F8FAFC] border border-slate-300" title="Light Slate #F8FAFC"></div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons -->
+ 
+                            <div class="flex items-center gap-4 pt-4">
+                                <a href="https://malayantechlabs.com/" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2.5 rounded-xl glass-panel text-xs font-semibold text-white bg-orange-600 hover:bg-orange-700 transition-all">
+                                    Live Preview
+                                <i class="fa-solid fa-arrow-up-right-from-square pl-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Visual Frame Mockup -->
+                        <div class="lg:col-span-7">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl relative group-hover:border-orange-400 transition-all">
+                                <!-- Browser Header -->
+                                <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+                                    <div class="flex items-center gap-1.5">
+                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                    </div>
+                                    <div class="text-[11px] text-slate-600 font-mono px-3 py-0.5 rounded-md bg-slate-100 border border-slate-200">
+                                        https://malayantechlabs.com/
+                                    </div>
+                                    <div class="text-xs text-orange-600 font-mono font-semibold"><i class="fa-solid fa-lock text-[10px]"></i> Secure</div>
+                                </div>
+
+                                <!-- Mockup Screen Content inside -->
+                                <div class="bg-gradient-to-br from-[#df7d3b] to-[#061813] rounded-xl border border-orange-400 text-left min-h-[260px] flex flex-col justify-between relative overflow-hidden text-white">
+                                    <img src="asset/webdev2.jpg" alt="Web Dev MyHadi" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3: MALAYAN TECH LABS LANDING PAGE -->
+                <div class="project-card health lg:col-span-12 glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden group border border-amber-500/20">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- Left Info Column -->
+                        <div class="lg:col-span-5 flex flex-col gap-6">
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-amber-100 text-amber-900 border border-amber-400">
+                                    tech industry
+                                </span>
+                                <span class="text-xs text-slate-500 font-medium"><i class="fa-regular fa-clock mr-1"></i> 2026 Deliverable</span>
+                            </div>
+
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 group-hover:text-amber-500 transition-colors">
+                                Bayu Pagi Landing Page
+                            </h3>
+
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                A beautifully optimized digital hub for daily prayer times and modern Islamic apps.
+                            </p>
+
+                            <!-- Tech Stack Badges -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">HTML</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">CSS</span>
+                                <span class="px-2.5 py-1 rounded-lg bg-slate-100 border border-slate-200 text-[11px] font-medium text-slate-700">Java Script</span>
+                            </div>
+
+                            <!-- Color Palette Tokens -->
+                            <div class="flex items-center gap-3 pt-2">
+                                <span class="text-xs text-slate-500 font-medium">Palette:</span>
+                                <div class="flex items-center gap-1.5">
+                                    <div class="w-5 h-5 rounded-full bg-[#e3c871] border border-slate-300" title="amber Primary #e3c871"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#af8c30] border border-slate-300" title="amber Accent #af8c30"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[Black] border border-slate-300" title="Background Gold black"></div>
+                                    <div class="w-5 h-5 rounded-full bg-[#F8FAFC] border border-slate-300" title="Light Slate #F8FAFC"></div>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons -->
+                            <div class="flex items-center gap-4 pt-4">
+                                <a href="https://malayantechlabs.com/" target="_blank" rel="noopener noreferrer" class="inline-block px-5 py-2.5 rounded-xl glass-panel text-xs font-semibold text-white bg-amber-600 hover:bg-amber-700 transition-all">
+                                    Live Preview
+                                <i class="fa-solid fa-arrow-up-right-from-square pl-2"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right Visual Frame Mockup -->
+                        <div class="lg:col-span-7">
+                            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-xl relative group-hover:border-amber-400 transition-all">
+                                <!-- Browser Header -->
+                                <div class="flex items-center justify-between pb-3 border-b border-slate-200 mb-4">
+                                    <div class="flex items-center gap-1.5">
+                                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                    </div>
+                                    <div class="text-[11px] text-slate-600 font-mono px-3 py-0.5 rounded-md bg-slate-100 border border-slate-200">
+                                        https://bayupagi.teklinx.com/
+                                    </div>
+                                    <div class="text-xs text-orange-600 font-mono font-semibold"><i class="fa-solid fa-lock text-[10px]"></i> Secure</div>
+                                </div>
+
+                                <!-- Mockup Screen Content inside -->
+                                <div class="bg-gradient-to-br from-[#df7d3b] to-[#061813] rounded-xl border border-amber-400 text-left min-h-[260px] flex flex-col justify-between relative overflow-hidden text-white">
+                                    <img src="asset/webdev3.jpg" alt="Web Dev Bayu Pagi" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-24 sm:py-32 bg-white text-center">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto space-y-12">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 05 GET IN TOUCH</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black leading-none mb-6">
+                        Let's create something iconic together.
+                    </h2>
+                    
+                </div>
+
+                <div class="space-y-4 font-mono text-sm">
+                    <div>
+                        <span class="text-xs text-neutral-400 uppercase block">DIRECT EMAIL</span>
+                        <a href="mailto:hello@nazifnazri.com" class="text-lg font-bold text-black hover:underline">nazifnazri@gmail.com</a>
+                    </div>
+                    <div class="py-6">
+                        <span class="text-xs text-neutral-400 uppercase block">Cotact Number</span>
+                        <a href="http://wa.me/60139319561" class="text-lg font-bold text-black hover:underline">+60 13-931 9561</a>
+                    </div>
+                    <div>
+                        <span class="text-xs text-neutral-400 uppercase block">LOCATION</span>
+                        <span class="text-neutral-800">Kuala Lumpur / Selangor</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+        <!-- FOOTER -->
+    <footer class="py-12 bg-white border-t border-neutral-200 text-xs font-mono ">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-neutral-500 ">
+            <div>
+                © 2026 NAZIF NAZRI. ALL RIGHTS RESERVED.
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- CASE STUDY DETAIL MODAL OVERLAY -->
+    <div id="modal-overlay" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6 transition-all">
+        <div class="bg-white w-full max-w-4xl rounded-3xl border border-slate-200 max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl text-slate-900">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-6 right-6 w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-all">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Modal Content Slot -->
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- INQUIRY / START PROJECT MODAL -->
+    <div id="inquiry-overlay" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden flex items-center justify-center p-4 transition-all">
+        <div class="bg-white w-full max-w-lg rounded-3xl border border-slate-200 p-6 sm:p-8 relative shadow-2xl text-slate-900">
+            <button onclick="toggleInquiryModal()" class="absolute top-6 right-6 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:text-slate-900">
+                <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+
+            <span class="text-xs font-semibold text-amber-600 uppercase tracking-widest">Start a Project</span>
+            <h3 class="font-display text-2xl font-bold text-slate-900 mt-1">Let's build something extraordinary</h3>
+            <p class="text-slate-600 text-xs mt-2">Interested in custom web design and development similar to MYHADI, Bayu Pagi, or Malayan Tech Labs?</p>
+
+            <form onsubmit="handleInquirySubmit(event)" class="mt-6 flex flex-col gap-4">
+                <div>
+                    <label class="text-xs text-slate-700 font-semibold block mb-1">Your Name</label>
+                    <input type="text" required placeholder="e.g. Sarah Ahmad" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <label class="text-xs text-slate-700 font-semibold block mb-1">Email Address</label>
+                    <input type="email" required placeholder="sarah@example.com" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <label class="text-xs text-slate-700 font-semibold block mb-1">Project Details</label>
+                    <textarea rows="3" placeholder="Tell us about your brand or landing page scope..." class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs focus:outline-none focus:border-amber-500"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-all mt-2 shadow-md">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE JAVASCRIPT ENGINE -->
+    <script>
+        /* Project Data Store */
+        const projectData = {
+            myhadi: {
+                title: "MYHADI Landing Page",
+                category: "HealthTech & Islamic Companion",
+                accentColor: "#059669",
+                palette: ["#0F382C", "#10B981", "#FEF08A", "#F8FAFC"],
+                url: "https://myhadi.app",
+                summary: "A sleek, tranquil landing experience tailored for MYHADI's digital platform. Emphasizing high readability, spiritual utility tools, integrated prayer time sync, and effortless onboarding.",
+                deliverables: [
+                    "High-conversion hero section with device preview",
+                    "Custom Islamic calendar & location-based prayer timing widget",
+                    "Interactive feature comparison grid",
+                    "Verified user testimonial carousel & FAQ accordion"
+                ],
+                lighthouse: { perf: 100, access: 99, seo: 100, best: 98 },
+                previewHTML: `
+                    <div class="text-center max-w-xl mx-auto py-8 text-white">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs mb-4 border border-emerald-400/30">
+                            <i class="fa-solid fa-moon"></i> Islamic Digital Suite
+                        </div>
+                        <h2 class="font-display text-3xl font-bold text-white">Your Daily Companion for Purposeful Living</h2>
+                        <p class="text-emerald-100/80 text-xs mt-3 leading-relaxed">Experience seamless prayer synchronization, community events, and guided reflection in one beautiful app.</p>
+                        <div class="flex justify-center gap-3 mt-6">
+                            <button class="px-5 py-2.5 rounded-xl bg-emerald-500 text-slate-900 text-xs font-bold shadow-md">Download for iOS</button>
+                            <button class="px-5 py-2.5 rounded-xl bg-white/10 text-white text-xs font-semibold hover:bg-white/20">Explore Web Portal</button>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10 text-left">
+                            <div class="p-4 rounded-xl bg-black/40 border border-emerald-500/30">
+                                <i class="fa-solid fa-clock text-emerald-400 text-base mb-2"></i>
+                                <div class="text-white font-bold text-xs">Prayer Sync</div>
+                                <div class="text-[11px] text-emerald-200">GPS Auto Detection</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-black/40 border border-emerald-500/30">
+                                <i class="fa-solid fa-compass text-emerald-400 text-base mb-2"></i>
+                                <div class="text-white font-bold text-xs">Qibla Direction</div>
+                                <div class="text-[11px] text-emerald-200">Precision Compass</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-black/40 border border-emerald-500/30 col-span-2 sm:col-span-1">
+                                <i class="fa-solid fa-book-quran text-emerald-400 text-base mb-2"></i>
+                                <div class="text-white font-bold text-xs">Quran & Duas</div>
+                                <div class="text-[11px] text-emerald-200">Audio Recitations</div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            bayupagi: {
+                title: "Bayu Pagi Landing Page",
+                category: "Lifestyle & Artisanal Coffee",
+                accentColor: "#d97706",
+                palette: ["#D97706", "#F59E0B", "#FEF3C7", "#1C1917"],
+                url: "https://bayupagi.com",
+                summary: "An evocative landing site for Bayu Pagi lifestyle brand. Capturing the aesthetic essence of tropical resortwear and artisanal sunrise coffee roastings through warm earth tones and modern minimalism.",
+                deliverables: [
+                    "Fluid visual story layout with ambient mood videos",
+                    "Dynamic lookbook modal showcase",
+                    "E-commerce quick-buy drawer integration",
+                    "Interactive coffee roast picker & store locator"
+                ],
+                lighthouse: { perf: 98, access: 100, seo: 99, best: 97 },
+                previewHTML: `
+                    <div class="text-center max-w-xl mx-auto py-8 text-white">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs mb-4 border border-amber-400/30">
+                            <i class="fa-solid fa-mug-hot"></i> Artisanal Lifestyle & Coffee
+                        </div>
+                        <h2 class="font-display text-3xl font-bold text-amber-100 tracking-wide uppercase">BAYU PAGI</h2>
+                        <p class="text-amber-200/80 text-xs mt-2 italic">"Awaken to warmth, styled in effortless simplicity."</p>
+                        <div class="flex justify-center gap-3 mt-6">
+                            <button class="px-5 py-2.5 rounded-xl bg-amber-500 text-slate-900 text-xs font-bold shadow-md">Shop New Season</button>
+                            <button class="px-5 py-2.5 rounded-xl bg-white/10 text-white text-xs font-semibold hover:bg-white/20">Reserve Beans</button>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-10 text-left">
+                            <div class="p-4 rounded-xl bg-black/40 border border-amber-500/30">
+                                <span class="text-[10px] text-amber-400 font-bold uppercase">Resortwear</span>
+                                <div class="text-white font-bold text-sm mt-1">Linen Sun Shirt</div>
+                                <div class="text-amber-300 text-xs mt-1">RM 189.00</div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-black/40 border border-amber-500/30">
+                                <span class="text-[10px] text-amber-400 font-bold uppercase">Signature Roast</span>
+                                <div class="text-white font-bold text-sm mt-1">Sunrise Espresso Blend</div>
+                                <div class="text-amber-300 text-xs mt-1">RM 55.00</div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            malayan: {
+                title: "Malayan Tech Labs",
+                category: "AI & Enterprise Software Studio",
+                accentColor: "#0891b2",
+                palette: ["#06B6D4", "#3B82F6", "#0F172A", "#E2E8F0"],
+                url: "https://malayantechlabs.io",
+                summary: "A cyber-chic B2B enterprise landing page for Malayan Tech Labs. Designed to highlight high-throughput AI API capabilities, client case studies, research benchmarks, and interactive code snippets.",
+                deliverables: [
+                    "Interactive live code playground and benchmark dashboard",
+                    "WebGL node network hero backdrop",
+                    "Enterprise security & compliance matrix",
+                    "Developer API key request pipeline"
+                ],
+                lighthouse: { perf: 99, access: 98, seo: 100, best: 100 },
+                previewHTML: `
+                    <div class="text-center max-w-xl mx-auto py-8 text-white">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs mb-4 border border-cyan-400/30 font-mono">
+                            <i class="fa-solid fa-code"></i> AI Research Studio
+                        </div>
+                        <h2 class="font-display text-3xl font-bold text-white">Next-Gen Enterprise Infrastructure</h2>
+                        <p class="text-cyan-100/80 text-xs mt-3 leading-relaxed">Deploy fine-tuned AI language models with zero-latency streaming and enterprise grade security.</p>
+                        <div class="flex justify-center gap-3 mt-6">
+                            <button class="px-5 py-2.5 rounded-xl bg-cyan-500 text-slate-900 text-xs font-bold shadow-md">Get API Key</button>
+                            <button class="px-5 py-2.5 rounded-xl bg-white/10 text-white text-xs font-semibold font-mono hover:bg-white/20">View Docs &rarr;</button>
+                        </div>
+                        <div class="mt-8 bg-black/70 rounded-xl p-4 border border-cyan-500/30 text-left font-mono text-[11px] text-cyan-300 overflow-x-auto">
+                            <div><span class="text-slate-400">// Initialize MTL Model Client</span></div>
+                            <div><span class="text-purple-400">const</span> mtl = <span class="text-purple-400">new</span> MalayanAI({ apiKey: <span class="text-emerald-400">'mtl_live_992'</span> });</div>
+                            <div><span class="text-purple-400">const</span> response = <span class="text-purple-400">await</span> mtl.generate({ prompt: <span class="text-emerald-400">'Analyze trend'</span> });</div>
+                            <div class="text-slate-400 mt-1">// Status: 200 OK — Latency 14ms</div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        let currentSimProject = 'myhadi';
+
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.className = 'filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all';
+            });
+
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.className = 'filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-white bg-slate-900 transition-all shadow-sm';
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function switchSimProject(projKey) {
+            currentSimProject = projKey;
+            const data = projectData[projKey];
+            
+            // Update button styles
+            document.querySelectorAll('.sim-proj-btn').forEach(btn => {
+                btn.className = "sim-proj-btn px-4 py-2 rounded-xl text-xs font-semibold text-slate-600 hover:text-slate-900 glass-card transition-all";
+            });
+
+            const activeBtn = document.getElementById(`sim-btn-${projKey}`);
+            if (activeBtn) {
+                if (projKey === 'myhadi') activeBtn.className = "sim-proj-btn px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white shadow-md transition-all";
+                if (projKey === 'bayupagi') activeBtn.className = "sim-proj-btn px-4 py-2 rounded-xl text-xs font-semibold bg-amber-600 text-white shadow-md transition-all";
+                if (projKey === 'malayan') activeBtn.className = "sim-proj-btn px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-600 text-white shadow-md transition-all";
+            }
+
+            document.getElementById('sim-url').innerText = data.url;
+            document.getElementById('sim-frame').innerHTML = data.previewHTML;
+        }
+
+        function setViewport(mode) {
+            const container = document.getElementById('sim-container');
+            const btns = ['desktop', 'tablet', 'mobile'];
+            
+            btns.forEach(m => {
+                const btn = document.getElementById(`vp-${m}`);
+                btn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900";
+            });
+
+            document.getElementById(`vp-${mode}`).className = "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-900 bg-white shadow-sm";
+
+            if (mode === 'desktop') {
+                container.style.maxWidth = '100%';
+            } else if (mode === 'tablet') {
+                container.style.maxWidth = '768px';
+            } else if (mode === 'mobile') {
+                container.style.maxWidth = '380px';
+            }
+        }
+
+        function scrollToSimulator(projKey) {
+            switchSimProject(projKey);
+            document.getElementById('sandbox').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function reloadSim() {
+            const frame = document.getElementById('sim-frame');
+            frame.style.opacity = '0.3';
+            setTimeout(() => {
+                switchSimProject(currentSimProject);
+                frame.style.opacity = '1';
+            }, 300);
+        }
+
+        function openModal(projKey) {
+            const data = projectData[projKey];
+            const modalSlot = document.getElementById('modal-content');
+            
+            modalSlot.innerHTML = `
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold uppercase" style="background-color: ${data.accentColor}15; color: ${data.accentColor}; border: 1px solid ${data.accentColor}40">
+                            ${data.category}
+                        </span>
+                        <span class="text-xs text-slate-500 font-mono">${data.url}</span>
+                    </div>
+
+                    <h2 class="font-display text-3xl font-bold text-slate-900">${data.title}</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">${data.summary}</p>
+
+                    <!-- Design Color Palette Bar -->
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                        <span class="text-xs text-slate-600 font-semibold block mb-2">Design Tokens & Color Palette:</span>
+                        <div class="flex items-center gap-4 flex-wrap">
+                            ${data.palette.map(hex => `
+                                <div class="flex items-center gap-2">
+                                    <div class="w-6 h-6 rounded-lg border border-slate-300 shadow-sm" style="background-color: ${hex}"></div>
+                                    <span class="text-xs font-mono text-slate-700">${hex}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Deliverables Checklist -->
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-900 mb-3">Key Deliverables & Features</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            ${data.deliverables.map(item => `
+                                <div class="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
+                                    <i class="fa-solid fa-check text-emerald-600 mt-0.5"></i>
+                                    <span>${item}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- Lighthouse Performance Metrics -->
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-900 mb-3">Audit Performance Scorecard</h4>
+                        <div class="grid grid-cols-4 gap-3 text-center">
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="text-xs text-slate-500 font-medium">Performance</div>
+                                <div class="text-lg font-bold text-emerald-600 mt-1">${data.lighthouse.perf}%</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="text-xs text-slate-500 font-medium">Accessibility</div>
+                                <div class="text-lg font-bold text-emerald-600 mt-1">${data.lighthouse.access}%</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="text-xs text-slate-500 font-medium">SEO</div>
+                                <div class="text-lg font-bold text-emerald-600 mt-1">${data.lighthouse.seo}%</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                                <div class="text-xs text-slate-500 font-medium">Best Practice</div>
+                                <div class="text-lg font-bold text-emerald-600 mt-1">${data.lighthouse.best}%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between pt-4 border-t border-slate-200">
+                        <button onclick="scrollToSimulator('${projKey}'); closeModal();" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 shadow-md">
+                            Launch Interactive Viewport &rarr;
+                        </button>
+                        <button onclick="closeModal()" class="text-xs text-slate-500 hover:text-slate-900 font-semibold">Close</button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('modal-overlay').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.add('hidden');
+        }
+
+        function toggleInquiryModal() {
+            const el = document.getElementById('inquiry-overlay');
+            el.classList.toggle('hidden');
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            alert("Thank you! Your project inquiry has been recorded. Nazif Nazri will get back to you shortly.");
+            toggleInquiryModal();
+        }
+
+        function copyEmail() {
+            const emailText = "hello@nazifnazri.com";
+            const tempInput = document.createElement("input");
+            tempInput.value = emailText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const btnText = document.getElementById('email-text');
+            btnText.innerText = "Copied to Clipboard!";
+            setTimeout(() => {
+                btnText.innerText = emailText;
+            }, 2000);
+        }
+
+        window.onload = function() {
+            switchSimProject('myhadi');
+        };
+    </script>
+</body>
+</html>
