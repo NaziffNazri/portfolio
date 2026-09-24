@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazif Nazri — UIUX & Creative Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,8 +140,6 @@
             </div>
         </header>
 
-    
-
         <!-- Mobile Drawer Overlay -->
         <div id="mobileDrawer" class="fixed inset-0 bg-black text-white z-40 transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col justify-between p-8 md:hidden overflow-y-auto">
             <div class="pt-24 flex flex-col gap-6">
@@ -180,123 +181,50 @@
 
 
 
-
-
-
-
-
-
-
     <!-- HERO SECTION -->
-    <section class="relative min-h-screen pt-28 pb-12 flex flex-col justify-between overflow-hidden">
+    <section class="relative min-h-screen pt-28 flex flex-col justify-between overflow-hidden">
 
-
-        <!-- Main Content Wrapper -->
-        <div class="max-w-[1700px] mx-auto w-full px-6 lg:px-12 flex-1 flex flex-col justify-center items-center text-center pt-4 pb-6">
+        <!-- Main Content Wrapper (flex-col-reverse puts text top & image bottom on mobile) -->
+        <div class="max-w-[1700px] mx-auto w-full px-6 lg:px-12 flex-1 flex flex-col-reverse lg:flex-row justify-center items-center gap-8 lg:gap-16 pt-4 pb-0">
             
-            <!-- Hero Main Title -->
-            <div class="relative inline-block mb-4 pt-16">
-                <h1 class="font-display text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[6rem] font-extrabold tracking-tighter leading-none text-black select-none">
-                    Nazif Nazri<span class="text-[0.35em] align-top relative -top-4 sm:-top-8 font-mono font-normal ml-1"></span>
-                </h1>
+            <!-- Left Column (Desktop) / Bottom Column (Mobile): Image -->
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end self-end">
+                <img src="asset/hero-new.png" class="w-full max-w-[560px] h-auto object-contain block" alt="Nazif Nazri">
             </div>
 
-
-            <!-- Subtitle -->
-            <p class="text-base sm:text-lg md:text-xl font-normal text-neutral-800 tracking-tight max-w-xl mb-8 sm:mb-12">
-                UI/UX and Creative Designer.
-            </p>
-
-            <!-- 8 Visual Columns Pill Grid -->
-            <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 h-[320px] sm:h-[380px] lg:h-[440px]">
-                
-                <!-- Pillar 1: Pink Fluid Swirl -->
-                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Soft Fluid Canvas', 'Brand Identity & Visual Exploration', 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop')">
-                    <img src="asset/pillar1.jpeg" 
-                         alt="Abstract Pink Fluid" 
-                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                         onerror="this.src='https://placehold.co/400x800/f3e8ee/111111?text=Design+1'">
-                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
-                        <span class="text-[10px] font-mono uppercase tracking-widest">01 / Fluid Art</span>
-                    </div>
+            <!-- Right Column (Desktop) / Top Column (Mobile): Text -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left self-center py-6 lg:py-12">
+                <!-- Hero Main Title -->
+                <div class="relative inline-block mb-4">
+                    <h1 class="font-display text-[12vw] sm:text-[10vw] lg:text-[7rem] font-extrabold tracking-tighter leading-none text-black select-none">
+                        Nazif <span class="">Nazri</span>
+                    </h1>
                 </div>
 
-                <!-- Pillar 2: Blue Texture Macro -->
-                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Botanical Micro Structure', 'UI Design System Micro Details', 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=800&auto=format&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?q=80&w=800&auto=format&fit=crop" 
-                         alt="Blue Texture Macro" 
-                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                         onerror="this.src='https://placehold.co/400x800/dbeaff/111111?text=Design+2'">
-                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
-                        <span class="text-[10px] font-mono uppercase tracking-widest">02 / Texture</span>
-                    </div>
-                </div>
+                <!-- Subtitle -->
+                <p class="text-2xl sm:text-xl md:text-2xl lg:text-4xl font-normal text-neutral-800 tracking-tight max-w-2xl mx-auto lg:mx-0">
+                    UI/UX and Creative Designer
+                </p>
+            </div>
 
-                <!-- Pillar 3: Orange Warm Portrait -->
-                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Warm Editorial Portrait', 'Creative Direction & Fashion Editorial', 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" 
-                         alt="Editorial Portrait" 
-                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                         onerror="this.src='https://placehold.co/400x800/ffe4d6/111111?text=Design+3'">
-                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
-                        <span class="text-[10px] font-mono uppercase tracking-widest">03 / Editorial</span>
-                    </div>
-                </div>
+        </div>
 
-                <!-- Pillar 4: Surreal Swing Art -->
-                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Surreal Dreamscape', '3D Scene Design & Concept', 'https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=800&auto=format&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=800&auto=format&fit=crop" 
-                         alt="3D Surreal Art" 
-                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                         onerror="this.src='https://placehold.co/400x800/d6f5ff/111111?text=Design+4'">
-                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
-                        <span class="text-[10px] font-mono uppercase tracking-widest">04 / 3D Concept</span>
-                    </div>
-                </div>
-
-                <!-- Pillar 5: Minimal Tree 3D -->
-                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Minimal Oasis', 'Spatial Experience & 3D Lighting', 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" 
-                         alt="Minimal Tree 3D Scene" 
-                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                         onerror="this.src='https://placehold.co/400x800/e2f3e7/111111?text=Design+5'">
-                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
-                        <span class="text-[10px] font-mono uppercase tracking-widest">05 / Minimal</span>
-                    </div>
-                </div>
-
-                <!-- Pillar 6: Skincare Macro Close Up -->
-                <div class="hero-card group relative overflow-hidden bg-neutral-100 cursor-pointer h-full" onclick="openLightbox('Purity Macro Photography', 'E-commerce UI & Product Design', 'https://images.unsplash.com/photo-1512290900673-7002ff321d27?q=80&w=800&auto=format&fit=crop')">
-                    <img src="https://images.unsplash.com/photo-1512290900673-7002ff321d27?q=80&w=800&auto=format&fit=crop" 
-                         alt="Macro Close Up" 
-                         class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
-                         onerror="this.src='https://placehold.co/400x800/f5eedc/111111?text=Design+6'">
-                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3 text-white">
-                        <span class="text-[10px] font-mono uppercase tracking-widest">06 / Macro Product</span>
-                    </div>
-                </div>
-
-               
-
+        <!-- MARQUEE RUNNING TEXT -->
+        <div class="w-full bg-black text-white py-4 overflow-hidden border-y border-black">
+            <div class="flex whitespace-nowrap animate-marquee font-display text-2xl uppercase tracking-wider font-bold">
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Creative Direction</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Design Systems</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Webflow & Frontend</span>
+                <!-- Repeat for seamless scroll -->
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
             </div>
         </div>
     </section>
-
-    <!-- MARQUEE RUNNING TEXT -->
-    <div class="w-full bg-black text-white py-4 overflow-hidden border-y border-black">
-        <div class="flex whitespace-nowrap animate-marquee font-display text-2xl uppercase tracking-wider font-bold">
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Creative Direction</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Design Systems</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Webflow & Frontend</span>
-            <!-- Repeat for seamless scroll -->
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
-        </div>
-    </div>
 
     <!-- ABOUT SECTION -->
     <section id="about" class="py-24 sm:py-32 bg-white">
@@ -305,7 +233,7 @@
                 
                 <div class="lg:col-span-4">
                     <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 01 ABOUT NAZIF</span>
-                    <h2 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-black leading-tight">
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black leading-tight">
                         Building intuitive digital products with strategic visual precision.
                     </h2>
                 </div>
@@ -341,7 +269,7 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="project" class="py-24 sm:py-32 bg-neutral-50 border-t border-neutral-200">
+    <section id="project" class="py-24 sm:py-32 bg-neutral-50 ">
         <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -351,11 +279,7 @@
                         Featured Projects
                     </h2>
                 </div>
-                <div class="flex gap-2 font-mono text-xs uppercase tracking-wider">
-                    <button class="px-4 py-2 rounded-full bg-black text-white">All Works</button>
-                    <button class="px-4 py-2 rounded-full bg-white text-neutral-600 hover:text-black border border-neutral-200">UI/UX</button>
-                    <button class="px-4 py-2 rounded-full bg-white text-neutral-600 hover:text-black border border-neutral-200">Branding</button>
-                </div>
+
             </div>
 
             <!-- Project Cards Grid -->
@@ -364,10 +288,9 @@
                 <!-- Project 1 -->
                 <a href="boatmu.html" class="group block cursor-pointer">
                     <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
-                        <img src="asset/card1.jpeg" 
+                        <img src="asset/pillar2-1.png" 
                              alt="Boatmu platform" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                             onerror="this.src='https://placehold.co/1200x800/222222/ffffff?text=Project+Aether'">
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                         <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
                             UI/UX Design
                         </div>
@@ -438,7 +361,7 @@
                         </div>
                         <span class="font-mono text-xs text-neutral-400">2022</span>
                     </div>
-                </div>
+                </a>
 
             </div>
         </div>
@@ -461,10 +384,8 @@
                 <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
                     
                     <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
-                        </div>
+                        <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                    </div>
                     
                     <div>
                         <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">UI/UX & Product Design</h3>
@@ -483,10 +404,8 @@
                 <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
                     
                     <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
-                        </div>
+                        <i data-lucide="frame" class="w-6 h-6 text-white"></i>
+                    </div>
                     
                     <div>
                         <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Brand Identity</h3>
@@ -505,9 +424,7 @@
                 <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
                     
                     <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
+                            <i data-lucide="vector-square" class="w-6 h-6 text-white"></i>
                         </div>
                     
                     <div>
@@ -527,9 +444,7 @@
                 <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
                     
                     <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
+                            <i data-lucide="panels-top-left" class="w-6 h-6 text-white"></i>
                         </div>
                     
                     <div>
@@ -549,10 +464,8 @@
                 <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
                     
                     <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
-                        </div>
+                        <i data-lucide="ad" class="w-6 h-6 text-white"></i>
+                    </div>
 
                     <div>
                         <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Digital Marketing </h3>
@@ -571,9 +484,7 @@
                 <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
                     
                     <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
+                        <i data-lucide="shirt" class="w-6 h-6 text-white"></i>
                         </div>
                     
                     <div>
@@ -594,9 +505,7 @@
                     <div>
                         
                         <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
+                        <i data-lucide="image-play" class="w-6 h-6 text-white"></i>
                         </div>
 
                         <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Photo Editing</h3>
@@ -616,9 +525,7 @@
                     <div>
                         
                         <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                            </svg>
+                        <i data-lucide="clapperboard" class="w-6 h-6 text-white"></i>
                         </div>
 
                         <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Video Editing</h3>
@@ -721,8 +628,6 @@
     </div>
 </div>
     </section>
-
-    
 
     <!-- CONTACT SECTION -->
         <section id="contact" class="py-24 sm:py-32 bg-white text-center">

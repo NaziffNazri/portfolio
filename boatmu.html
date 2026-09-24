@@ -1823,14 +1823,11 @@ booking experience.</p>
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
         // Mobile Menu Drawer Logic
         const menuBtn = document.getElementById('menuBtn');
         const menuIcon = document.getElementById('menuIcon');
         const mobileDrawer = document.getElementById('mobileDrawer');
-        const drawerLinks = document.querySelectorAll('.drawer-link');
+
         let isMenuOpen = false;
 
         menuBtn.addEventListener('click', () => {
