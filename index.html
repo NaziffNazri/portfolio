@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazif Nazri — UIUX & Creative Designer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        dark: '#0e0e10',
+                        light: '#fafafa',
+                        accent: '#ff5500'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="selection:bg-black selection:text-white antialiased">
+    
+
+<div id="site-header"></div>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen pt-28 flex flex-col justify-between overflow-hidden">
+
+    <!-- Main Content Wrapper -->
+        <div class="max-w-[1700px] mx-auto w-full px-6 lg:px-12 flex-1 flex flex-col-reverse lg:flex-row justify-center items-center gap-8 lg:gap-16 pt-4 pb-0">
+            
+            <!-- Image Column: Pinned to bottom on desktop, flows naturally to bottom on mobile -->
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end lg:self-end">
+                <img src="asset/hero-new.png" class="w-full max-w-[560px] h-auto object-contain block" alt="Nazif Nazri">
+            </div>
+
+            <!-- Text Column: On top for mobile, centered vertically on desktop -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left lg:self-center py-6 lg:py-12">
+                <!-- Hero Main Title -->
+                <div class="relative inline-block mb-4">
+                    <h1 class="font-display text-[12vw] sm:text-[10vw] lg:text-[7rem] font-extrabold tracking-tighter leading-none text-black select-none">
+                        Nazif <span class="">Nazri</span>
+                    </h1>
+                </div>
+
+                <!-- Subtitle -->
+                <p class="text-2xl sm:text-xl md:text-2xl lg:text-4xl font-normal text-neutral-800 tracking-tight max-w-2xl mx-auto lg:mx-0">
+                    UI/UX and Creative Designer
+                </p>
+            </div>
+
+        </div>
+
+        <!-- MARQUEE RUNNING TEXT -->
+        <div class="w-full bg-black text-white py-4 overflow-hidden border-y border-black">
+            <div class="flex whitespace-nowrap animate-marquee font-display text-2xl uppercase tracking-wider font-bold">
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Creative Direction</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Design Systems</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Webflow & Frontend</span>
+                <!-- Repeat for seamless scroll -->
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
+                <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                
+                <div class="lg:col-span-4">
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 01 ABOUT NAZIF</span>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black leading-tight">
+                        Building intuitive digital products with strategic visual precision.
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-8 space-y-8 text-neutral-700 text-lg leading-relaxed">
+                    
+                    <p>
+                        Hi! I’m Nazif Nazri. For the last 5 years, I’ve been crafting designs that sit right at the intersection of product, brand, and growth. Whether I’m mapping out a user flow, designing a brand system, or tweaking a marketing funnel, my goal is always the same: make complex ideas feel effortless and impactful.
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-neutral-200">
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">05</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Years Experience</span>
+                        </div>
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">30+</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Projects Delivered</span>
+                        </div>
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">8+</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Expertise</span>
+                        </div>
+                        <div>
+                            <span class="font-style font-extrabold text-4xl text-black block">99%</span>
+                            <span class="text-xs font-mono uppercase text-neutral-500">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="project" class="py-24 sm:py-32 bg-neutral-50 ">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 02 SELECTED WORKS</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black">
+                        Featured Projects
+                    </h2>
+                </div>
+
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6">
+                
+                <!-- Project 1 -->
+                <a href="boatmu.html" class="group block cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/pillar2-1.png" 
+                             alt="Boatmu platform" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                            UI/UX Design
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Boatmu Trip Booking Platform</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Saas, Web app, Dashboard, Design System & Interactive Prototypes</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2023</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="festmu.html" class="group block cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card2.jpeg" 
+                             alt="Festmu platform" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                           UI/UX Design
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Festmu Event Ticketing Platform</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Saas, Web app, Dashboard, Design System & Interactive Prototypes</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2025</span>
+                    </div>
+                 </a>
+
+
+                <!-- Project 3 -->
+                <a href="web-development.html" class="group block cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card3.jpg" 
+                             alt="web design" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                            Web Development
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Web Design & Development</h3>
+                            <p class="text-neutral-500 text-sm mt-1">Webflow, Landing Page, Modern Design</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2025</span>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="creative-design.html" class="group block cursor-pointer">                    
+                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
+                        <img src="asset/card4.png" 
+                             alt="Creative deisgn" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                             >
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
+                            Creative design
+                        </div>
+                    </div>
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Creative Design </h3>
+                            <p class="text-neutral-500 text-sm mt-1">Graphic Design, Brand Strategy, Marketing, Digital Printed, Typography & Visual Guidelines</p>
+                        </div>
+                        <span class="font-mono text-xs text-neutral-400">2022</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="service" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="max-w-2xl mb-16">
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 03 CAPABILITIES</span>
+                <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black">
+                    Services Offered
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                
+                <!-- Service Card 1 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    
+                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                        <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">UI/UX & Product Design</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            User research, wireframing, interactive prototyping, and cross-platform UI systems for mobile apps, web applications, and SaaS platforms.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Figma Design Systems</li>
+                        <li>→ User Journey Mapping</li>
+                        <li>→ Interactive Prototypes</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    
+                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                        <i data-lucide="frame" class="w-6 h-6 text-white"></i>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Brand Identity</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Visual positioning, logo design, typography selection, and cohesive brand guidelines for digital platforms, marketing channels, and physical touchpoints.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Brand Style Guides & Manuals</li>
+                        <li>→ Logo Systems</li>
+                        <li>→ Typography</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    
+                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                            <i data-lucide="vector-square" class="w-6 h-6 text-white"></i>
+                        </div>
+                    
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Graphic Design</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Marketing collateral, digital ad creatives, publication layouts, and custom visual content tailored to capture attention and communicate your brand message effectively.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Print & Marketing Materials</li>
+                        <li>→ Social & Digital Ad Creatives</li>
+                        <li>→ Custom Vector Poster</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    
+                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                            <i data-lucide="panels-top-left" class="w-6 h-6 text-white"></i>
+                        </div>
+                    
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Web Development</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Custom web applications, responsive site builds, headless CMS integrations, and clean code architecture optimized for high performance, security, and technical SEO.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Webflow Development</li>
+                        <li>→ Performance </li>
+                        <li>→ Technical SEO</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    
+                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                        <i data-lucide="ad" class="w-6 h-6 text-white"></i>
+                    </div>
+
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Digital Marketing </h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Data-driven campaigns, precise audience targeting, performance analytics, and multi-channel strategies designed to expand brand reach, generate qualified leads, and maximize return on ad spend.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Paid Media & Performance Ads</li>
+                        <li>→ SEO & Content Marketing</li>
+                        <li>→ Conversion & Growth Funnels</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    
+                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                        <i data-lucide="shirt" class="w-6 h-6 text-white"></i>
+                        </div>
+                    
+                    <div>
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">T-Shirt & Sublimation </h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            Eye-catching T-shirt graphics, all-over sublimation prints, and production-ready visual assets engineered for streetwear labels, sports team apparel, and custom merch lines.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Full-Bleed Sublimation Artwork</li>
+                        <li>→ Screen Print & Vector Graphics</li>
+                        <li>→ Print-Ready Files & Mockups</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    <div>
+                        
+                        <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                        <i data-lucide="image-play" class="w-6 h-6 text-white"></i>
+                        </div>
+
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Photo Editing</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            High-end image retouching, precise color correction, background removal, and commercial photo manipulation crafted to elevate product listings, campaign visuals, and brand assets.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ High-End Retouching</li>
+                        <li>→ Color Grading</li>
+                        <li>→ Creative Photo Manipulation</li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
+                    <div>
+                        
+                        <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
+                        <i data-lucide="clapperboard" class="w-6 h-6 text-white"></i>
+                        </div>
+
+                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Video Editing</h3>
+                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
+                            High-impact video editing, seamless transitions, and dynamic motion graphics designed to engage audiences across social media, marketing campaigns, and digital platforms.
+                        </p>
+                    </div>
+                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
+                        <li>→ Short-Form Content & Reels</li>
+                        <li>→ Motion Graphics & Visual Effects</li>
+                        <li>→ Color Grading</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAREER SECTION -->
+    <section id="career" class="py-24 sm:py-32 bg-neutral-900 text-white">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- LEFT COLUMN: Section Header & Subtitle -->
+        <div class="lg:col-span-5 lg:sticky lg:top-12">
+            <span class="text-xs font-mono uppercase tracking-widest block mb-3 text-neutral-400">// 04 EXPERIENCE</span>
+            <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
+                Career Journey
+            </h2>
+            <p class="text-lg text-neutral-300 max-w-sm">
+                5 Years of experience and dedicated to finding strategic, engaging creative solutions.
+            </p>
+        </div>
+
+        <!-- RIGHT COLUMN: Experience Timeline -->
+        <div class="lg:col-span-7">
+            <div class="space-y-4 border-l border-neutral-400/60 pl-6 ml-4">
+  
+                <!-- Active / Current Role -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-white ring-4 ring-neutral-950"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-white border border-neutral-300 hover:border-neutral-500 transition">
+                        <div>
+                            <h3 class="text-base font-bold text-neutral-800">UI/UX Designer</h3>
+                            <p class="text-sm text-neutral-600 mt-0.5">Malayan Tech Labs Sdn. Bhd.</p>
+                        </div>
+                        <span class="text-m font-mono text-neutral-600 mt-3 md:mt-0">2026 — Present</span>
+                    </div>
+                </div>
+
+                <!-- Previous Roles -->
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
+                        <div>
+                            <h3 class="text-base font-bold text-white">Creative & UI/UX Designer</h3>
+                            <p class="text-sm text-neutral-300 mt-0.5">Boatmu Sdn Bhd.</p>
+                        </div>
+                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2023 — 2026</span>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
+                        <div>
+                            <h3 class="text-base font-bold text-white">Senior Graphic Designer & Photo Editor</h3>
+                            <p class="text-sm text-neutral-300 mt-0.5">Sri Duyong Photo</p>
+                        </div>
+                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2022 — 2023</span>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
+                        <div>
+                            <h3 class="text-base font-bold text-white">Graphic Designer & Digital Marketing</h3>
+                            <p class="text-sm text-neutral-300 mt-0.5">Mofaz Dagang Sdn. Bhd.</p>
+                        </div>
+                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2021 — 2021</span>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
+                        <div>
+                            <h3 class="text-base font-bold text-white">Graphic Designer & Digital Marketing</h3>
+                            <p class="text-sm text-neutral-300 mt-0.5">Zarty Sdn. Bhd.</p>
+                        </div>
+                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2020 — 2021</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+        <section id="contact" class="py-24 sm:py-32 bg-white text-center">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
+            
+            <div class="flex flex-col items-center justify-center max-w-3xl mx-auto space-y-12">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 05 GET IN TOUCH</span>
+                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black leading-none mb-6">
+                        Let's create something iconic together.
+                    </h2>
+                    
+                </div>
+
+                <div class="space-y-4 font-mono text-sm">
+                    <div>
+                        <span class="text-xs text-neutral-400 uppercase block">DIRECT EMAIL</span>
+                        <a href="mailto:hello@nazifnazri.com" class="text-lg font-bold text-black hover:underline">nazifnazri@gmail.com</a>
+                    </div>
+                    <div class="py-6">
+                        <span class="text-xs text-neutral-400 uppercase block">Cotact Number</span>
+                        <a href="http://wa.me/60139319561" class="text-lg font-bold text-black hover:underline">+60 13-931 9561</a>
+                    </div>
+                    <div>
+                        <span class="text-xs text-neutral-400 uppercase block">LOCATION</span>
+                        <span class="text-neutral-800">Kuala Lumpur / Selangor</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-white border-t border-neutral-200 text-xs font-mono ">
+        <div class="max-w-[1700px] mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-6 text-neutral-500 ">
+            <div>
+                © 2026 NAZIF NAZRI. ALL RIGHTS RESERVED.
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL FOR HERO PILLARS AND PROJECTS -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden relative shadow-2xl transform scale-95 transition-transform duration-300" id="lightboxContent">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-black transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div class="max-h-[60vh] overflow-hidden bg-neutral-100">
+                <img id="lightboxImg" src="" alt="Preview" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 sm:p-8">
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-1" id="lightboxSub">Category</span>
+                <h3 class="font-display text-2xl font-bold text-black mb-2" id="lightboxTitle">Title</h3>
+                <p class="text-neutral-600 text-sm">Visual showcase designed with custom grid layouts and interactive high-resolution assets.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <!-- Load Lucide CDN once at the bottom -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        // 1. Initialize Lucide Icons for the main page content
+        lucide.createIcons();
+
+        // 2. Lightbox Modal Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightboxContent');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxSub = document.getElementById('lightboxSub');
+
+        function openLightbox(title, subtitle, imgUrl) {
+            if (!lightbox) return;
+            lightboxImg.src = imgUrl;
+            lightboxTitle.innerText = title;
+            lightboxSub.innerText = subtitle;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxContent.classList.remove('scale-95');
+                lightboxContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            if (!lightbox) return;
+            lightbox.classList.add('opacity-0');
+            lightboxContent.classList.remove('scale-100');
+            lightboxContent.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+        }
+
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        }
+
+        // 3. Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+
+        // 4. Fetch Header & Initialize Mobile Menu (All-in-One)
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                // Make sure your HTML has: <div id="site-header"></div>
+                document.getElementById('site-header').innerHTML = data;
+                
+                // Re-initialize Lucide Icons for the newly injected header
+                lucide.createIcons();
+
+                // Mobile Menu Drawer Logic (Runs safely after header elements are loaded)
+                const menuBtn = document.getElementById('menuBtn');
+                const menuIcon = document.getElementById('menuIcon');
+                const mobileDrawer = document.getElementById('mobileDrawer');
+                const drawerLinks = document.querySelectorAll('.drawer-link');
+                let isMenuOpen = false;
+
+                if (menuBtn && mobileDrawer) {
+                    menuBtn.addEventListener('click', () => {
+                        isMenuOpen = !isMenuOpen;
+                        if (isMenuOpen) {
+                            mobileDrawer.classList.remove('translate-x-full');
+                            if (menuIcon) menuIcon.style.transform = 'rotate(45deg)';
+                        } else {
+                            mobileDrawer.classList.add('translate-x-full');
+                            if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    drawerLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            isMenuOpen = false;
+                            mobileDrawer.classList.add('translate-x-full');
+                            if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                        });
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>

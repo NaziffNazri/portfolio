@@ -1,0 +1,81 @@
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #0d0d0d;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+        }
+
+        h2, h3 {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        .font-display {
+            font-family: 'Syne', sans-serif;
+        }
+
+        .font-style {
+            font-family: 'Poppins', sans-serif ;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        /* Custom arch pill styling for hero image columns */
+        .hero-card {
+            border-top-left-radius: 4rem;
+            border-top-right-radius: 4rem;
+            border-bottom-left-radius: 0.75rem;
+            border-bottom-right-radius: 0.75rem;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Smooth marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 25s linear infinite;
+        }
+
+                /* Editorial hairline grid borders inspired by high fashion & minimalist studios */
+        .editorial-border-b {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-border-t {
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-border-l {
+            border-left: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-border-r {
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+        }
+        .editorial-grid-item {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover image scale animation */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img, .img-zoom-container video, .img-zoom-container .visual-mockup {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-container:hover img, .img-zoom-container:hover video, .img-zoom-container:hover .visual-mockup {
+            transform: scale(1.04);
+        }
+
+
