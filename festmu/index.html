@@ -78,9 +78,9 @@
     <!-- Bottom Navigation Dock Bar -->
     <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-4xl bg-primary text-white backdrop-blur-lg px-6 py-3.5 rounded-full border border-white/10 shadow-2xl flex items-center justify-between text-xs font-medium">
         <!-- Table of Contents Toggle -->
-        <button id="btn-toggle-index" class="flex items-center gap-2 text-white/90 hover:text-boatmu-primary transition-colors py-1 px-3 rounded-full hover:bg-white/10">
+        <button id="" class="flex items-center gap-2 text-white/90 hover:text-boatmu-primary transition-colors py-1 px-3 rounded-full hover:bg-white/10">
             <i class="fa-solid fa-layer-group text-boatmu-primary"></i>
-            <span class="uppercase tracking-widest text-[11px] font-semibold">INDEX <span class="hidden sm:inline">[TOC]</span></span>
+            <span class="uppercase tracking-widest text-[11px] font-semibold">INDEX <span class="hidden sm:inline"></span></span>
         </button>
 
         <!-- Current Section Progress -->
@@ -95,7 +95,7 @@
 
         <!-- Next / Prev Controls & Keyboard Helper -->
         <div class="flex items-center gap-2">
-            <span class="hidden lg:inline text-[10px] text-white/40 tracking-widest uppercase mr-2"><i class="fa-solid fa-keyboard mr-1"></i> Arrows / J & K</span>
+            <span class="hidden lg:inline text-[10px] text-white tracking-widest uppercase mr-2"><i class="fa-solid fa-keyboard mr-1"></i> Navigations</span>
             <button id="btn-prev-section" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-white transition-all disabled:opacity-30">
                 <i class="fa-solid fa-arrow-up text-xs"></i>
             </button>
@@ -293,7 +293,7 @@
   
 
                 <!-- Pain Points Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-16">
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-4 mb-16">
                     <div class="p-8 rounded-2xl bg- border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
                         <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl font-bold mb-6">
                             <i data-lucide="ticket" class="w-6 h-6 text-white"></i>
@@ -347,7 +347,7 @@
                 <!-- User Persona Highlight 1-->
                 <div class="bg-primaryDark text-boatmu-textDark rounded-2xl p-8 md:p-6 shadow-2xl border border-white/10 mb-8">
                     <div class="flex flex-col lg:flex-row gap-8 items-start">
-                        <div class="flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
+                        <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
                             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-boatmu-primary p-1 bg-boatmu-lightBg">
                                 <img src="../asset/festmu-2.png" alt="Sarah Persona" class="w-full h-full object-cover rounded-full">
                             </div>
@@ -389,7 +389,7 @@
                 <!-- User Persona Highlight 1-->
                 <div class="bg-primaryDark text-boatmu-textDark rounded-2xl p-8 md:p-6 shadow-2xl border border-white/10 mb-8">
                     <div class="flex flex-col lg:flex-row gap-8 items-start">
-                        <div class="flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
+                        <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
                             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-boatmu-primary p-1 bg-boatmu-lightBg">
                                 <img src="../asset/festmu-1.png" alt="Sarah Persona" class="w-full h-full object-cover rounded-full">
                             </div>
@@ -431,22 +431,22 @@
         </section>
 
         <!-- SECTION 3: USER FLOW -->
-        <section id="sec-userflow" class="section-block min-h-screen py-24 px-6 md:px-16  bg-black flex flex-col justify-center">
-            <div class="max-w-6xl mx-auto w-full">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-xs uppercase tracking-[0.3em] text-primary font-extrabold">03. USER FLOW</span>
-                    <span class="h-px bg-boatmu-border flex-1"></span>
+            <section id="sec-userflow" class="section-block md:min-h-screen py-24 md:py-24 px-6 md:px-16 bg-black flex flex-col justify-center">
+                <div class="max-w-6xl mx-auto w-full">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-xs uppercase tracking-[0.3em] text-primary font-extrabold">03. USER FLOW</span>
+                        <span class="h-px bg-boatmu-border flex-1"></span>
+                    </div>
+
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-2">USER FLOW</h2>
+                    <p class="text-stone-400 text-sm md:text-base mb-12">Festmu simplifies the festival registration and ticketing experience into a seamless, high-conversion attendee journey: from Event Discovery and Ticket Selection (Variation & Quantity) to a frictionless Check-out (Attendee Details), concluding with secure payment and instant QR ticket registration.</p>
+
+                    <!-- Interactive User Flow Diagram -->
+
+                    <img src="../asset/festmu-flow.png" alt="User Flow Diagram">
+
                 </div>
-
-                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-2">USER FLOW</h2>
-                <p class="text-stone-400 text-sm md:text-base mb-12">Festmu simplifies the festival registration and ticketing experience into a seamless, high-conversion attendee journey: from Event Discovery and Ticket Selection (Variation & Quantity) to a frictionless Check-out (Attendee Details), concluding with secure payment and instant QR ticket registration.</p>
-
-                <!-- Interactive User Flow Diagram -->
-
-                <img src="../asset/festmu-flow.png" alt="User Flow Diagram">
-
-            </div>
-        </section>
+            </section>
 
         <!-- SECTION 5: BRAND IDENTITY -->
         <section id="sec-design-system" class="section-block min-h-screen py-24 px-6 md:px-16  bg-cardBg flex flex-col justify-center">
@@ -554,20 +554,20 @@
     
                     <!-- COLUMN 1: Left Phone & Text (Vertically Centered) -->
                     <div class="flex flex-col space-y-6 my-auto">
-                        <img src="../asset/mock.png" alt="Mockup Festmu 1" class="w-full drop-shadow-2xl">
+                        <img src="../asset/mock.png" alt="Mockup Festmu 1" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
 
                     </div>
 
                     <!-- COLUMN 2: Middle Stacked Phones & Text (Taller Column) -->
                     <div class="flex flex-col space-y-6">
-                        <img src="../asset/festmu-mock4.png" alt="Mockup Festmu 2" class="w-full drop-shadow-2xl">
+                        <img src="../asset/festmu-mock4.png" alt="Mockup Festmu 2" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
 
-                        <img src="../asset/festmu-mock2.png" alt="Mockup Festmu 3" class="w-full drop-shadow-2xl">
+                        <img src="../asset/festmu-mock2.png" alt="Mockup Festmu 3" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
                     </div>
 
                     <!-- COLUMN 3: Right Phone & Text (Vertically Centered) -->
                     <div class="flex flex-col space-y-6 my-auto">
-                        <img src="../asset/festmu-mock3.png" alt="Mockup Festmu 4" class="w-full drop-shadow-2xl">
+                        <img src="../asset/festmu-mock3.png" alt="Mockup Festmu 4" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
 
                     </div>
 

@@ -74,7 +74,7 @@
 
         <!-- Next / Prev Controls & Keyboard Helper -->
         <div class="flex items-center gap-2">
-            <span class="hidden lg:inline text-[10px] text-white/40 tracking-widest uppercase mr-2"><i class="fa-solid fa-keyboard mr-1"></i> Navigations</span>
+            <span class="hidden lg:inline text-[10px] text-white tracking-widest uppercase mr-2"><i class="fa-solid fa-keyboard mr-1 text-boatmu-primary"></i> Navigations</span>
             <button id="btn-prev-section" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-boatmu-navy transition-all disabled:opacity-30">
                 <i class="fa-solid fa-arrow-up text-xs"></i>
             </button>
@@ -221,61 +221,60 @@
                     DESIGN PROCESS
                 </h2>
   
-
-                <!-- Pain Points Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-                    <div class="p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-xl font-bold mb-6">
-                            <i data-lucide="user-search" class="w-6 h-6 text-white"></i>
+                    <!-- Pain Points Grid -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-16">
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="user-search" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 1</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Research</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>User Research</li>
+                                <li>User Persona</li>
+                                <li>Competitive Analysis</li>
+                            </ul>
                         </div>
-                        <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 1</span>
-                        <h3 class="text-xl font-bold mb-3">Research</h3>
-                        <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
-                            <li>User Research</li>
-                            <li>User Persona</li>
-                            <li>Competitive Analysis</li>
-                        </ul>
-                    </div>
 
-                    <div class="p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-xl font-bold mb-6">
-                            <i data-lucide="lightbulb" class="w-6 h-6 text-white"></i>
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="lightbulb" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 2</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Ideation</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>User Flow</li>
+                                <li>Design Direction</li>
+                                <li>Wireframe</li>
+                            </ul>
                         </div>
-                        <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 2</span>
-                        <h3 class="text-xl font-bold mb-3">Ideation</h3>
-                        <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
-                            <li>User Flow</li>
-                            <li>Design Direction</li>
-                            <li>Wireframe</li>
-                        </ul>
-                    </div>
 
-                    <div class="p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-xl font-bold mb-6">
-                            <i data-lucide="paintbrush  " class="w-6 h-6 text-white"></i>
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="paintbrush" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 3</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Design</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>Visual Concept</li>
+                                <li>Design system</li>
+                                <li>Icon Design</li>
+                                <li>Prototype</li>
+                            </ul>
                         </div>
-                        <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 3</span>
-                        <h3 class="text-xl font-bold mb-3">Design</h3>
-                        <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
-                            <li>Visual Concept</li>
-                            <li>Design system</li>
-                            <li>Icon Design</li>
-                            <li>Prototype</li>
-                        </ul>
-                    </div>
 
-                    <div class="p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
-                        <div class="w-12 h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-xl font-bold mb-6">
-                            <i data-lucide="file-user" class="w-6 h-6 text-white"></i>
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="file-user" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 4</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Evaluate</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>User Testing</li>
+                                <li>Gather Feedback</li>
+                            </ul>
                         </div>
-                        <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 4</span>
-                        <h3 class="text-xl font-bold mb-3">Evaluate</h3>
-                        <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
-                            <li>User Testing</li>
-                            <li>Gather Feedback</li>
-                        </ul>
                     </div>
-                </div>
 
                  <h2 class="text-3xl md:text-5xl font-extrabold leading-tight max-w-4xl mb-6">
                     USER PERSONA
@@ -284,7 +283,9 @@
                 <!-- User Persona Highlight 1-->
                 <div class="bg-white text-boatmu-textDark rounded-2xl p-8 md:p-6 shadow-2xl border border-boatmu-border mb-8">
                     <div class="flex flex-col lg:flex-row gap-8 items-start">
-                        <div class="flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
+                        
+                        <!-- First Row (Profile Section) - Added w-full lg:w-auto -->
+                        <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
                             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-boatmu-primary p-1 bg-boatmu-lightBg">
                                 <img src="../asset/boatmu1.png" alt="Sarah Persona" class="w-full h-full object-cover rounded-full">
                             </div>
@@ -294,10 +295,10 @@
                             <span class="text-xs text-boatmu-muted mt-1">4 Trips / Year</span>
                         </div>
 
-                        <div class="flex-1 space-y-4">
+                        <div class="flex-1 space-y-4 w-full">
                             <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary">Pain Points:</span>
                             <blockquote class="text-lg md:text-l font-medium italic text-boatmu-navy border-l-4 border-boatmu-primary pl-4">
-                               Hates hidden costs, fears getting scammed by unofficial agents, and finds bank-in slips annoying to track.
+                            Hates hidden costs, fears getting scammed by unofficial agents, and finds bank-in slips annoying to track.
                             </blockquote>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                                 <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
@@ -320,20 +321,23 @@
                 <!-- User Persona Highlight 2-->
                 <div class="bg-white text-boatmu-textDark rounded-2xl p-8 md:p-6 shadow-2xl border border-boatmu-border mb-8">
                     <div class="flex flex-col lg:flex-row gap-8 items-start">
-                        <div class="flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
+                        
+                        <!-- First Row (Profile Section) - Added w-full lg:w-auto -->
+                        <div class="w-full lg:w-auto flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
                             <div class="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-boatmu-primary p-1 bg-boatmu-lightBg">
-                                <img src="../asset/boatmu2.png" alt="Sarah Persona" class="w-full h-full object-cover rounded-full">
+                                <img src="../asset/boatmu2.png" alt="Wan Persona" class="w-full h-full object-cover rounded-full">
                             </div>
                             <h4 class="text-xl font-bold text-boatmu-navy">Wan, 42</h4>
                             <span class="text-xs uppercase tracking-widest text-boatmu-primary font-bold mt-1">Local Boat Owner</span>
                             <span class="text-xs text-boatmu-muted mt-1">Kuala Terengganu</span>
-                             <span class="text-xs text-boatmu-muted mt-1">25 Bookings / Month</span>
+                            <span class="text-xs text-boatmu-muted mt-1">25 Bookings / Month</span>
                         </div>
 
-                        <div class="flex-1 space-y-4">
+                        <!-- Content Section - Added w-full -->
+                        <div class="flex-1 space-y-4 w-full">
                             <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary">Pain Points:</span>
                             <blockquote class="text-lg md:text-l font-medium italic text-boatmu-navy border-l-4 border-boatmu-primary pl-4">
-                               Tired of checking his bank account for manual transfers, and hates writing out the passenger data by hand in a log book.
+                            Tired of checking his bank account for manual transfers, and hates writing out the passenger data by hand in a log book.
                             </blockquote>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                                 <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
@@ -359,7 +363,7 @@
         </section>
 
         <!-- SECTION 3: USER FLOW -->
-        <section id="sec-userflow" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+        <section id="sec-userflow" class="section-block md:min-h-screen py-24 md:py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
             <div class="max-w-6xl mx-auto w-full">
                 <div class="flex items-center gap-3 mb-6">
                     <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">03. USER FLOW</span>
@@ -367,12 +371,11 @@
                 </div>
 
                 <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-2">USER FLOW</h2>
-                <p class="text-stone-500 text-sm md:text-base mb-12">Boatmu streamlines the maritime booking experience into a high-conversion journey: from Discovery (Trip
+                <p class="text-stone-500 text-sm md:text-base mb-8 md:mb-12">Boatmu streamlines the maritime booking experience into a high-conversion journey: from Discovery (Trip
                     Selection) and Customization (Trip Details) to a seamless Fast-Track Check-out (Registration & Passenger
                     Info), concluding with a Secure Payment gateway.</p>
 
                 <!-- Interactive User Flow Diagram -->
-
                 <img src="../asset/user-flow-1.png" alt="User Flow Diagram">
 
             </div>
@@ -1114,15 +1117,15 @@
                 </div>
 
                 <!-- 3 Mobile Screen Prototypes Container -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start my-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start my-8">
                     <!-- Screen 1: Malaysia Selected -->
-                    <img src="../asset/mock1.png" alt="Mockup Boatmu 1 " class="drop-shadow-2xl" >
+                    <img src="../asset/mock1.png" alt="Mockup Boatmu 1" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
 
                     <!-- Screen 2: Thailand Selected -->
-                    <img src="../asset/mock2.png" alt="Mockup Boatmu 2" class="drop-shadow-2xl">
+                    <img src="../asset/mock2.png" alt="Mockup Boatmu 2" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
 
                     <!-- Screen 3: Dynamic Filter Modal -->
-                    <img src="../asset/mock3.png" alt="Mockup Boatmu 3" class="drop-shadow-2xl">
+                    <img src="../asset/mock3.png" alt="Mockup Boatmu 3" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
                 </div>
 
                 <!-- Key Takeaway Cards for Home Page -->
@@ -1205,7 +1208,7 @@
 
                         <!-- Center Mobile Mockup -->
                         <div class="lg:col-span-6 flex justify-center">
-                            <img src="../asset/mock4.png" alt="" class="w-70 drop-shadow-2xl">
+                            <img src="../asset/mock4.png" alt="" class="w-70 drop-shadow-2xl transition-transform duration-300 hover:scale-105">
                         </div>
 
                         <!-- Right Callouts 3, 4 & 5 (Desktop View) -->
@@ -1236,7 +1239,7 @@
                         </div>
 
                         <!-- Mobile Annotations List (For small screens) -->
-                        <div class="lg:hidden col-span-1 space-y-3 pt-4 border-t border-slate-300">
+                        <div class="hidden col-span-1 space-y-3 pt-4 border-t border-slate-300">
                             <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
                                 <strong>1. Date Selection:</strong> Only available boats on specific dates are selectable.
                             </div>
@@ -1341,31 +1344,28 @@
 
                     <!-- COLUMN 2: First Mobile Mockup -->
                     <div class="flex justify-center">
-                        <img src="../asset/mock5.png" alt="Mockup 5" class="w-full max-w-[280px] drop-shadow-2xl">
+                        <img src="../asset/mock5.png" alt="Mockup 5" class="w-full max-w-[280px] drop-shadow-2xl transition-transform duration-300 hover:scale-105">
                     </div>
 
                     <!-- COLUMN 3: Second Mobile Mockup -->
                     <div class="flex justify-center ">
-                        <img src="../asset/mock6.png" alt="Mockup 6" class="w-full max-w-[280px] drop-shadow-2xl">
+                        <img src="../asset/mock6.png" alt="Mockup 6" class="w-full max-w-[280px] drop-shadow-2xl transition-transform duration-300 hover:scale-105">
                     </div>
 
 
                         <!-- Mobile Annotations List (For small screens) -->
-                        <div class="lg:hidden col-span-1 space-y-3 pt-4 border-t border-slate-300">
+                        <div class="hidden col-span-1 space-y-3 pt-4 border-t border-slate-300">
                             <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
-                                <strong>1. Date Selection:</strong> Only available boats on specific dates are selectable.
+                                <strong>1. </strong> Order summary as a confrimation to the users.
                             </div>
                             <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
-                                <strong>2. Time Slot:</strong> Flexible trip schedules dependent on tour operator.
+                                <strong>2. </strong> User billing informations form.
                             </div>
                             <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
-                                <strong>3. Quantity Stepper:</strong> Real-time price calculation per passenger count.
+                                <strong>3. </strong> Payment Method (FPX & Card).
                             </div>
                             <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
-                                <strong>4. Complete Info:</strong> Type, service, checkpoints, and safety gear.
-                            </div>
-                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
-                                <strong>5. Input Validation:</strong> Mandatory selection before enabling checkout.
+                                <strong>4. </strong> Visible CTA button to the user.
                             </div>
                         </div>
 
