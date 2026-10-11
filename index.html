@@ -3,492 +3,1648 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazif Nazri — UIUX & Creative Designer</title>
-    <link rel="icon" type="image/png" href="asset/logo.png">
+    <title>Boatmu — UI/UX Case Study Narrative</title>
+    <link rel="icon" type="image/png" href="../asset/logo.png">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Syne', 'sans-serif'],
-                        poppins: ['Poppins', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
                     colors: {
-                        dark: '#0e0e10',
-                        light: '#fafafa',
-                        accent: '#ff5500'
+                        boatmu: {
+                            primary: '#00A3E0',     /* Vibrant Ocean Cyan */
+                            primaryDark: '#0082B3', /* Hover Deep Cyan */
+                            navy: '#0F2537',        /* Deep Obsidian Navy */
+                            navyCard: '#153148',    /* Elevated Navy Card */
+                            lightBg: '#F0F9FF',     /* Refreshing Light Sky Tint */
+                            cardBg: '#FFFFFF',      /* Crisp Pure White */
+                            textDark: '#0B1C2A',    /* Dark Navy Editorial Body */
+                            muted: '#5A6E7F',       /* Muted Slate Text */
+                            border: '#E2E8F0',      /* Soft Border */
+                            greenBg: '#F2FCE4',     /* Light Green Highlight Background */
+                            greenBorder: '#D9F99D', /* Light Green Border */
+                            greenText: '#15803D',   /* Deep Green Accent Text */
+                            greenIcon: '#16A34A',   /* Bright Green Accent Icon */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 
+  
 </head>
 <body class="selection:bg-black selection:text-white antialiased">
+
+    <div id="site-header"></div>
     
 
-<div id="site-header"></div>
+    <!-- Bottom Navigation Dock Bar -->
+    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-4xl bg-boatmu-navy/95 text-white backdrop-blur-lg px-6 py-3.5 rounded-full border border-white/10 shadow-2xl flex items-center justify-between text-xs font-medium">
+        <!-- Table of Contents Toggle -->
+        <button id="btn-toggle-index" class="flex items-center gap-2 text-white/90 hover:text-boatmu-primary transition-colors py-1 px-3 rounded-full hover:bg-white/10">
+            <i class="fa-solid fa-layer-group text-boatmu-primary"></i>
+            <span class="uppercase tracking-widest text-[11px] font-semibold">INDEX </span>
+        </button>
 
-<section class="relative pt-28 flex flex-col overflow-hidden bg-white">
-
-    <!-- Main Content Wrapper -->
-    <div class="max-w-[1700px] mx-auto w-full px-6 lg:px-12 flex flex-col-reverse lg:flex-row justify-center items-center gap-8 lg:gap-16 pt-12 pb-0">
-        
-        <!-- Image Column -->
-        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <img src="asset/hero-new.png" class="w-full max-w-[560px] h-auto object-contain block" alt="Nazif Nazri">
+        <!-- Current Section Progress -->
+        <div class="flex items-center gap-3 border-x border-white/10 px-4 py-1">
+            <span class="text-boatmu-primary font-bold text-base" id="current-section-num">01</span>
+            <span class="text-white/30">/</span>
+            <span class="text-white/50 text-[11px]">08</span>
+            <span id="current-section-title" class="hidden md:inline-block text-white/90 font-light truncate max-w-[180px] text-left">
+                Overview & Objectives
+            </span>
         </div>
 
-        <!-- Text Column -->
-        <div class="w-full lg:w-1/2 text-center lg:text-left py-6 lg:py-12">
-            <!-- Hero Main Title -->
-            <div class="relative inline-block mb-4">
-                <h1 class="font-display text-[12vw] sm:text-[10vw] lg:text-[7rem] font-extrabold tracking-tighter leading-none text-black select-none">
-                    Nazif <span class="">Nazri</span>
-                </h1>
-            </div>
-
-            <!-- Subtitle -->
-            <p class="text-2xl sm:text-xl md:text-2xl lg:text-4xl font-normal text-neutral-800 tracking-tight max-w-2xl mx-auto lg:mx-0">
-                UI/UX and Creative Designer
-            </p>
-        </div>
-
-    </div>
-
-    <!-- MARQUEE RUNNING TEXT (Touches bottom directly) -->
-    <div class="w-full bg-black text-white py-4 overflow-hidden border-t border-black mt-0">
-        <div class="flex whitespace-nowrap animate-marquee font-display text-2xl uppercase tracking-wider font-bold">
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5  text-neutral-400"></i> UI/UX Design</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Creative Direction</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Design Systems</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Webflow & Frontend</span>
-            <!-- Repeat for seamless scroll -->
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> UI/UX Design</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="asterisk" class="w-5 h-5 text-neutral-400"></i> Visual Identity</span>
-            <span class="mx-8 flex items-center gap-4"><i data-lucide="sparkles" class="w-5 h-5 text-neutral-400"></i> Interactive Prototypes</span>
+        <!-- Next / Prev Controls & Keyboard Helper -->
+        <div class="flex items-center gap-2">
+            <span class="hidden lg:inline text-[10px] text-white tracking-widest uppercase mr-2"><i class="fa-solid fa-keyboard mr-1 text-boatmu-primary"></i> Navigations</span>
+            <button id="btn-prev-section" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-boatmu-navy transition-all disabled:opacity-30">
+                <i class="fa-solid fa-arrow-up text-xs"></i>
+            </button>
+            <button id="btn-next-section" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-boatmu-navy transition-all">
+                <i class="fa-solid fa-arrow-down text-xs"></i>
+            </button>
         </div>
     </div>
-</section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 sm:py-32 bg-white">
-        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-                
-                <div class="lg:col-span-4">
-                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 01 ABOUT NAZIF</span>
-                    <h2 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-black leading-tight">
-                        Building intuitive digital products with strategic visual precision.
+
+
+    <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+    <main id="case-study-container" class="relative z-10 pt-12">
+
+        <!-- SECTION 1: OVERVIEW & BRIEF -->
+        <section id="sec-overview" class="section-block min-h-screen relative flex flex-col justify-between p-6 md:p-16 border-b border-boatmu-border bg-white pt-12">
+
+        <div class="max-w-6xl mx-auto w-full">
+            <!-- Hero Headline -->
+             <div class="relative overflow-hidden bg-[url('../asset/boatmu-hero.jpg')] bg-cover bg-center rounded-2xl">
+            <div class="my-auto p-8 md:p-12 max-w-5xl  ">
+                <!-- Overlay to keep text readable -->
+    
+
+                <!-- Content Wrapper (z-10 sits on top of overlay) -->
+                <div class="relative z-10">
+                    <img class="py-8" alt="logo" style=" width: 190px; height: auto;"src="../asset/boatmu-logo.png">
+                    <h2 class="text-4xl md:text-6xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white drop-shadow-lg">
+                        Seamless Boat Booking Experience for <span class="text-white drop-shadow-lg">Travel Enthusiasts</span>
                     </h2>
-                </div>
-
-                <div class="lg:col-span-8 space-y-8 text-neutral-700 text-lg leading-relaxed">
-                    
-                    <p>
-                        Hi! I’m Nazif Nazri. For the last 5 years, I’ve been crafting designs that sit right at the intersection of product, brand, and growth. Whether I’m mapping out a user flow, designing a brand system, or tweaking a marketing funnel, my goal is always the same: make complex ideas feel effortless and impactful.
+                    <p class="mt-6 text-base md:text-l text-white max-w-3xl font-normal leading-relaxed drop-shadow-md">
+                        Boatmu is an online boat ticket booking platform designed to streamline the process of finding, comparing, and booking boat trips across various island destinations with zero friction.
                     </p>
 
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-neutral-200">
-                        <div>
-                            <span class="font-style font-extrabold text-4xl text-black block">05</span>
-                            <span class="text-xs font-mono uppercase text-neutral-500">Years Experience</span>
-                        </div>
-                        <div>
-                            <span class="font-style font-extrabold text-4xl text-black block">30+</span>
-                            <span class="text-xs font-mono uppercase text-neutral-500">Projects Delivered</span>
-                        </div>
-                        <div>
-                            <span class="font-style font-extrabold text-4xl text-black block">8+</span>
-                            <span class="text-xs font-mono uppercase text-neutral-500">Expertise</span>
-                        </div>
-                        <div>
-                            <span class="font-style font-extrabold text-4xl text-black block">99%</span>
-                            <span class="text-xs font-mono uppercase text-neutral-500">Client Satisfaction</span>
-                        </div>
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <a href="https://boatmu.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-10 py-3.5 bg-boatmu-navy text-white text-xs font-bold uppercase tracking-wider rounded-full hover:bg-boatmu-primary transition-all shadow-md hover:shadow-lg group">
+                            <span>Visit Website</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </a>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section id="project" class="py-24 sm:py-32 bg-neutral-50 ">
-        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                <div>
-                    <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 02 SELECTED WORKS</span>
-                    <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black">
-                        Featured Projects
-                    </h2>
-                </div>
-
             </div>
 
-            <!-- Project Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6">
+
+            <!-- Executive Summary & Objectives Cards -->
+            <div class="pt-12">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-2 text-center">MAIN GOAL</h2>
+            <p class="text-stone-500 text-sm md:text-base mb-12 text-center">To digitize and streamline Malaysia’s marine tourism landscape by transitioning traditional boat operators to a centralized digital management system while giving travelers a seamless, reliable platform to discover and book island hopping, ferry transfers, private charters, and sea activities.</p>           
+             
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
                 
-                <!-- Project 1 -->
-                <a href="/boatmu" class="group block cursor-pointer">
-                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
-                        <img src="asset/pillar2-1.png" 
-                             alt="Boatmu platform" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
-                            UI/UX Design
+                <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-boatmu-primary text-white flex items-center justify-center font-bold mb-4 shadow-md">
+                            <i class="fa-solid fa-compass text-lg"></i>
                         </div>
-                    </div>
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Boatmu Trip Booking Platform</h3>
-                            <p class="text-neutral-500 text-sm mt-1">Saas, Web app, Dashboard, Design System & Interactive Prototypes</p>
-                        </div>
-                        <span class="font-mono text-xs text-neutral-400">2023</span>
-                    </div>
-                </a>
+                        <h3 class="text-lg font-bold text-boatmu-navy mb-2">Problems</h3>
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Manual Operations: </span> 
+                            Boat operators rely on paper logs, phone calls, WhatsApp messages, and cash payments, leading to double bookings and lost revenue.
+                        </p>
+                            <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Lack of Visibility: </span> 
 
-                <!-- Project 2 -->
-                <a href="/festmu" class="group block cursor-pointer">
-                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
-                        <img src="asset/card2.jpeg" 
-                             alt="Festmu platform" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
-                           UI/UX Design
-                        </div>
+                            Operators struggle to showcase their services
+                            and to stand out in the competitive market.
+                        </p>
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Fragmentation:</span> 
+
+                            Users have to "hunt" for prices in social media, as there is no central system dedicated specifically to marine tourism.
+                        </p >
+
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">The Payment Loop: </span> 
+
+                            Users must send a bank-in slip manually via
+                            WhatsApp and wait for a human to verify it.
+                            This creates "booking anxiety" Did they get my
+                            money? Is this a scam?
+                        </p>
+
                     </div>
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Festmu Event Ticketing Platform</h3>
-                            <p class="text-neutral-500 text-sm mt-1">Saas, Web app, Dashboard, Design System & Interactive Prototypes</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-full bg-boatmu-primary text-white flex items-center justify-center font-bold mb-4 shadow-md">
+                            <i class="fa-solid fa-shield-halved text-lg"></i>
                         </div>
-                        <span class="font-mono text-xs text-neutral-400">2025</span>
-                    </div>
-                 </a>
+                        <h3 class="text-lg font-bold text-boatmu-navy mb-2">Solutions</h3>
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Digitalize System: </span> 
+                            A single digital dashboard for boat operators to manage booking, seat availability, passenger manifests, and payments in real time.
+                        </p>
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Clarity: </span> 
+
+                            Product implementation on the Boatmu main
+                            page, and also create a special link for each
+                            provider to showcase all of their trips.
+                        </p>
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Centrelize: </span> 
+                            Implemented a trip card that provide all of the
+                            information about the trip that breaks down
+                            the itinerary, destinations, item include and
+                            map.
+                        </p>
+                        <p class="text-sm text-boatmu-muted leading-relaxed pb-4">
+                            <span class="font-bold">Automated Trust: </span> 
+
+                            Integration of local payment gateways
+                            (FPX/Card) with an Instant Confirmation
+                            Screen. No more sending screenshots of bank
+                            slips.
+                        </p>
 
 
-                <!-- Project 3 -->
-                <a href="/web-development" class="group block cursor-pointer">
-                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
-                        <img src="asset/card3.jpg" 
-                             alt="web design" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
-                            Web Development
-                        </div>
-                    </div>
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Web Design & Development</h3>
-                            <p class="text-neutral-500 text-sm mt-1">Webflow, Landing Page, Modern Design</p>
-                        </div>
-                        <span class="font-mono text-xs text-neutral-400">2025</span>
-                    </div>
-                </a>
 
-                <!-- Project 4 -->
-                <a href="/creative-design" class="group block cursor-pointer">                    
-                    <div class="relative overflow-hidden rounded-2xl bg-neutral-200 mb-5 aspect-[14/10]">
-                        <img src="asset/card4.png" 
-                             alt="Creative deisgn" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                             >
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-mono uppercase text-black">
-                            Creative design
-                        </div>
                     </div>
-                    <div class="flex items-start justify-between">
-                        <div>
-                            <h3 class="font-display text-2xl font-bold group-hover:text-neutral-600 transition-colors">Creative Design </h3>
-                            <p class="text-neutral-500 text-sm mt-1">Graphic Design, Brand Strategy, Marketing, Digital Printed, Typography & Visual Guidelines</p>
-                        </div>
-                        <span class="font-mono text-xs text-neutral-400">2022</span>
-                    </div>
-                </a>
-
+                </div>
             </div>
-        </div>
-    </section>
+            </div>
 
-    <!-- SERVICES SECTION -->
-    <section id="service" class="py-24 sm:py-32 bg-white">
-        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
-            
-            <div class="max-w-2xl mb-16">
-                <span class="text-xs font-mono uppercase tracking-widest text-neutral-500 block mb-3">// 03 CAPABILITIES</span>
-                <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-black">
-                    Services Offered
+        </div>
+        </section>
+
+        <!-- SECTION 2: Design process -->
+        <section id="sec-empathize" class="section-block  py-16 px-6 md:px-16 border-b border-boatmu-border bg-boatmu-navy text-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">02. Design Process</span>
+                    <span class="h-px bg-white/15 flex-1"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold leading-tight max-w-4xl mb-6">
+                    DESIGN PROCESS
                 </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                
-                <!-- Service Card 1 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    
-                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                        <i data-lucide="code" class="w-6 h-6 text-white"></i>
-                    </div>
-                    
-                    <div>
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">UI/UX & Product Design</h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            User research, wireframing, interactive prototyping, and cross-platform UI systems for mobile apps, web applications, and SaaS platforms.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Figma Design Systems</li>
-                        <li>→ User Journey Mapping</li>
-                        <li>→ Interactive Prototypes</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 2 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    
-                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                        <i data-lucide="frame" class="w-6 h-6 text-white"></i>
-                    </div>
-                    
-                    <div>
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Brand Identity</h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            Visual positioning, logo design, typography selection, and cohesive brand guidelines for digital platforms, marketing channels, and physical touchpoints.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Brand Style Guides & Manuals</li>
-                        <li>→ Logo Systems</li>
-                        <li>→ Typography</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    
-                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <i data-lucide="vector-square" class="w-6 h-6 text-white"></i>
-                        </div>
-                    
-                    <div>
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Graphic Design</h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            Marketing collateral, digital ad creatives, publication layouts, and custom visual content tailored to capture attention and communicate your brand message effectively.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Print & Marketing Materials</li>
-                        <li>→ Social & Digital Ad Creatives</li>
-                        <li>→ Custom Vector Poster</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    
-                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                            <i data-lucide="panels-top-left" class="w-6 h-6 text-white"></i>
-                        </div>
-                    
-                    <div>
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Web Development</h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            Custom web applications, responsive site builds, headless CMS integrations, and clean code architecture optimized for high performance, security, and technical SEO.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Webflow Development</li>
-                        <li>→ Performance </li>
-                        <li>→ Technical SEO</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    
-                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                        <i data-lucide="ad" class="w-6 h-6 text-white"></i>
-                    </div>
-
-                    <div>
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Digital Marketing </h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            Data-driven campaigns, precise audience targeting, performance analytics, and multi-channel strategies designed to expand brand reach, generate qualified leads, and maximize return on ad spend.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Paid Media & Performance Ads</li>
-                        <li>→ SEO & Content Marketing</li>
-                        <li>→ Conversion & Growth Funnels</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    
-                    <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                        <i data-lucide="shirt" class="w-6 h-6 text-white"></i>
-                        </div>
-                    
-                    <div>
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">T-Shirt & Sublimation </h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            Eye-catching T-shirt graphics, all-over sublimation prints, and production-ready visual assets engineered for streetwear labels, sports team apparel, and custom merch lines.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Full-Bleed Sublimation Artwork</li>
-                        <li>→ Screen Print & Vector Graphics</li>
-                        <li>→ Print-Ready Files & Mockups</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 7 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    <div>
-                        
-                        <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                        <i data-lucide="image-play" class="w-6 h-6 text-white"></i>
-                        </div>
-
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Photo Editing</h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            High-end image retouching, precise color correction, background removal, and commercial photo manipulation crafted to elevate product listings, campaign visuals, and brand assets.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ High-End Retouching</li>
-                        <li>→ Color Grading</li>
-                        <li>→ Creative Photo Manipulation</li>
-                    </ul>
-                </div>
-
-                <!-- Service Card 8 -->
-                <div class="p-8 sm:p-10 rounded-2xl border border-neutral-200 hover:border-black transition-colors duration-300 flex flex-col justify-between group">
-                    <div>
-                        
-                        <div class="w-12 h-12 rounded-2xl bg-neutral-900 flex items-center justify-center text-white mb-6 group-hover:translate-x-1 transition-transform">
-                        <i data-lucide="clapperboard" class="w-6 h-6 text-white"></i>
-                        </div>
-
-                        <h3 class="font-display text-2xl font-bold mb-4 group-hover:translate-x-1 transition-transform">Video Editing</h3>
-                        <p class="text-neutral-600 text-sm leading-relaxed mb-8">
-                            High-impact video editing, seamless transitions, and dynamic motion graphics designed to engage audiences across social media, marketing campaigns, and digital platforms.
-                        </p>
-                    </div>
-                    <ul class="text-xs font-mono text-neutral-500 space-y-2 pt-6 border-t border-neutral-100">
-                        <li>→ Short-Form Content & Reels</li>
-                        <li>→ Motion Graphics & Visual Effects</li>
-                        <li>→ Color Grading</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CAREER SECTION -->
-    <section id="career" class="py-24 sm:py-32 bg-neutral-900 text-white">
-        <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        
-        <!-- LEFT COLUMN: Section Header & Subtitle -->
-        <div class="lg:col-span-5 lg:sticky lg:top-12">
-            <span class="text-xs font-mono uppercase tracking-widest block mb-3 text-neutral-400">// 04 EXPERIENCE</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-                Career Journey
-            </h2>
-            <p class="text-lg text-neutral-300 max-w-sm">
-                5 Years of experience and dedicated to finding strategic, engaging creative solutions.
-            </p>
-        </div>
-
-        <!-- RIGHT COLUMN: Experience Timeline -->
-        <div class="lg:col-span-7">
-            <div class="space-y-4 border-l border-neutral-400/60 pl-6 ml-4">
   
-                <!-- Active / Current Role -->
-                <div class="relative group">
-                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-white ring-4 ring-neutral-950"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-white border border-neutral-300 hover:border-neutral-500 transition">
-                        <div>
-                            <h3 class="text-base font-bold text-neutral-800">UI/UX Designer</h3>
-                            <p class="text-sm text-neutral-600 mt-0.5">Malayan Tech Labs Sdn. Bhd.</p>
+                    <!-- Pain Points Grid -->
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mb-6">
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="user-search" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 1</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Research</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>User Research</li>
+                                <li>User Persona</li>
+                                <li>Competitive Analysis</li>
+                            </ul>
                         </div>
-                        <span class="text-m font-mono text-neutral-600 mt-3 md:mt-0">2026 — Present</span>
+
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="lightbulb" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 2</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Ideation</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>User Flow</li>
+                                <li>Design Direction</li>
+                                <li>Wireframe</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="paintbrush" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 3</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Design</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>Visual Concept</li>
+                                <li>Design system</li>
+                                <li>Icon Design</li>
+                                <li>Prototype</li>
+                            </ul>
+                        </div>
+
+                        <div class="p-5 md:p-6 lg:p-8 rounded-2xl bg-boatmu-navyCard border border-white/10 relative overflow-hidden group hover:border-boatmu-primary transition-all">
+                            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-boatmu-primary text-white flex items-center justify-center text-lg lg:text-xl font-bold mb-4 lg:mb-6">
+                                <i data-lucide="file-user" class="w-5 h-5 lg:w-6 lg:h-6 text-white"></i>
+                            </div>
+                            <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-1">Stage 4</span>
+                            <h3 class="text-lg lg:text-xl font-bold mb-3">Evaluate</h3>
+                            <ul class="list-disc pl-4 text-xs text-stone-300 space-y-1 leading-relaxed">
+                                <li>User Testing</li>
+                                <li>Gather Feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: USER Research -->
+        <section id="sec-userflow" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full space-y-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">03. Research & Discovery</span>
+                    <span class="h-px bg-boatmu-border flex-1"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-4">Field Research Report: <span class="text-boatmu-primary">Pulau Redang</span></h2>
+                <p class="text-stone-500 text-sm md:text-base mb-12">On-ground research conducted at key maritime gateways to validate ecosystem bottlenecks across boat operators and travelers.</p>
+
+
+                
+                <div class="p-6 md:p-8 rounded-2xl bg-white border border-boatmu-border shadow-sm grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Target Locations (2/5 ratio) -->
+                    <div class="space-y-3 border-b md:border-b-0 md:border-r border-boatmu-border pb-6 md:pb-0 md:pr-6 md:col-span-2">
+                        <div class="flex items-center gap-2 text-boatmu-navy font-bold text-sl">
+                            <i class="fa-solid fa-map-location-dot text-boatmu-primary"></i>
+                            <span>Target Locations</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="px-3 py-1 bg-boatmu-lightBg text-boatmu-navy font-semibold rounded-full border border-boatmu-primary/20">Merang Jetty</span>
+                            <span class="px-3 py-1 bg-boatmu-lightBg text-boatmu-navy font-semibold rounded-full border border-boatmu-primary/20">Redang Long Beach</span>
+                            <span class="px-3 py-1 bg-boatmu-lightBg text-boatmu-navy font-semibold rounded-full border border-boatmu-primary/20">Pasir Panjang</span>
+                            <span class="px-3 py-1 bg-boatmu-lightBg text-boatmu-navy font-semibold rounded-full border border-boatmu-primary/20">Teluk Dalam</span>
+                            <span class="px-3 py-1 bg-boatmu-lightBg text-boatmu-navy font-semibold rounded-full border border-boatmu-primary/20">Kampung Jetty</span>
+                        </div>
+                    </div>
+
+                    <!-- Methodology (3/5 ratio) -->
+                    <div class="space-y-3 md:col-span-3">
+                        <div class="flex items-center gap-2 text-boatmu-navy font-bold text-sl">
+                            <i class="fa-solid fa-clipboard-user text-boatmu-primary"></i>
+                            <span>Methodology</span>
+                        </div>
+                        
+                        <!-- Methodology content split left and right -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-boatmu-muted leading-relaxed">
+                            <div>
+                                <strong class="text-boatmu-navy">Operator Side:</strong>
+                                <p class="mt-1">On-ground qualitative interviews with boat owner, boat operator, and booth operators.</p>
+                            </div>
+                            <div>
+                                <strong class="text-boatmu-navy">User Side:</strong>
+                                <p class="mt-1">Structured quantitative/qualitative intercept surveys with domestic and international travelers.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Previous Roles -->
-                <div class="relative group">
-                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Creative & UI/UX Designer</h3>
-                            <p class="text-sm text-neutral-300 mt-0.5">Boatmu Sdn Bhd.</p>
+                <!-- 1. Boat Provider Interview Insights (Operator Side) -->
+                <div>
+                    <h3 class="text-xl font-bold text-boatmu-navy mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-ship text-boatmu-primary"></i> 1. Boat Provider Insights (Operator Side)
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 rounded-2xl bg-white border border-boatmu-border hover:border-boatmu-primary transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-cloud-sun-rain"></i></span>
+                                <h4 class="font-bold text-boatmu-navy text-sm">Tide & Monsoon Weather Uncertainty</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 leading-relaxed mb-2"><strong>Issue:</strong> Schedules frequently shift due to low river tides or sudden sea condition shifts.</p>
+                            <p class="text-xs text-red-600 font-medium bg-red-50 p-2.5 rounded-lg border border-red-100">
+                                <i class="fa-solid fa-circle-exclamation mr-1"></i> <strong>Current Friction:</strong> Operators manually inform dozens of travelers individually via WhatsApp/phone when trips delay, causing jetty chaos.
+                            </p>
                         </div>
-                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2023 — 2026</span>
+
+                        <div class="p-6 rounded-2xl bg-white border border-boatmu-border hover:border-boatmu-primary transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-network-wired"></i></span>
+                                <h4 class="font-bold text-boatmu-navy text-sm">Fragmented Direct & Resort Bookings</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 leading-relaxed mb-2"><strong>Issue:</strong> Operators balance walk-ins, resort package tie-ins, travel agencies, and direct WhatsApp chats.</p>
+                            <p class="text-xs text-red-600 font-medium bg-red-50 p-2.5 rounded-lg border border-red-100">
+                                <i class="fa-solid fa-circle-exclamation mr-1"></i> <strong>Current Friction:</strong> Overbooking and double-booked seats occur frequently during school holidays and long weekends.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-boatmu-border hover:border-boatmu-primary transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-file-signature"></i></span>
+                                <h4 class="font-bold text-boatmu-navy text-sm">Manual Manifests & Compliance</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 leading-relaxed mb-2"><strong>Issue:</strong> Marine authorities require accurate passenger lists (IC/passport numbers, names) prior to departure.</p>
+                            <p class="text-xs text-red-600 font-medium bg-red-50 p-2.5 rounded-lg border border-red-100">
+                                <i class="fa-solid fa-circle-exclamation mr-1"></i> <strong>Current Friction:</strong> Handwritten paper manifests at counters create long lines, delay departures, and risk compliance fines.
+                            </p>
+                        </div>
+
+                        <div class="p-6 rounded-2xl bg-white border border-boatmu-border hover:border-boatmu-primary transition-all shadow-sm">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs"><i class="fa-solid fa-cash-register"></i></span>
+                                <h4 class="font-bold text-boatmu-navy text-sm">Payment Reconciliation & Cash Dependency</h4>
+                            </div>
+                            <p class="text-xs text-stone-600 leading-relaxed mb-2"><strong>Issue:</strong> Walk-in passengers pay cash or individual DuitNow QR transfers on-site.</p>
+                            <p class="text-xs text-red-600 font-medium bg-red-50 p-2.5 rounded-lg border border-red-100">
+                                <i class="fa-solid fa-circle-exclamation mr-1"></i> <strong>Current Friction:</strong> Captains lose track of who paid online vs dock, creating major end-of-day accounting headaches.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Senior Graphic Designer & Photo Editor</h3>
-                            <p class="text-sm text-neutral-300 mt-0.5">Sri Duyong Photo</p>
+
+                <!-- 2. Traveler Survey Insights & Concept Validation -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-boatmu-navy flex items-center gap-2">
+                        <i class="fa-solid fa-users text-boatmu-primary"></i> 2. Traveler Survey Insights (User Side)
+                    </h3>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Current Booking Behaviors Breakdown -->
+                        <div class="p-6 rounded-2xl bg-white border border-boatmu-border space-y-4">
+                            <h4 class="text-xs uppercase tracking-widest font-bold text-boatmu-navy border-b pb-2">Current Booking Behaviors</h4>
+                            
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold text-boatmu-navy mb-1">
+                                        <span>WhatsApp / Social Media / Call</span>
+                                        <span class="text-boatmu-primary">60%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-boatmu-primary w-[60%]"></div>
+                                    </div>
+                                    <p class="text-[11px] text-stone-500 mt-1">Direct message from social media, and recurring customers.</p>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold text-boatmu-navy mb-1">
+                                        <span>Resort Packages</span>
+                                        <span class="text-amber-500">25%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-amber-500 w-[25%]"></div>
+                                    </div>
+                                    <p class="text-[11px] text-stone-500 mt-1">Direct walk-in purchase at Merang or in Pulau Redang</p>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-sm font-bold text-boatmu-navy mb-1">
+                                        <span>Jetty Counter / Walk-in</span>
+                                        <span class="text-slate-600">15%</span>
+                                    </div>
+                                    <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-slate-600 w-[15%]"></div>
+                                    </div>
+                                    <p class="text-[11px] text-stone-500 mt-1">General online travel agencies or messaging boatmen.</p>
+                                </div>
+                            </div>
                         </div>
-                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2022 — 2023</span>
+
+                        <!-- Concept Validation Stat Callout -->
+                        <div class="p-6 rounded-2xl bg-boatmu-navy text-white flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-boatmu-primary/20 rounded-full blur-2xl"></div>
+                            <div>
+                                <span class="text-[12px] uppercase tracking-widest text-boatmu-primary font-bold block mb-1">Market Validation</span>
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-5xl font-extrabold text-boatmu-primary">88%</span>
+                                    <span class="text-sm text-stone-300 font-semibold">Positive Interest</span>
+                                </div>
+                                <p class="text-sm text-stone-300 mt-3 leading-relaxed">
+                                    Surveyed travelers strongly favor a platform dedicated specifically to Malaysian marine tourism.
+                                </p>
+                            </div>
+                            <div class="pt-4 border-t border-white/10 space-y-1 text-[12px] text-stone-300">
+                                <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-boatmu-primary"></i> Built for island conditions</div>
+                                <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-boatmu-primary"></i> Centralized digital tickets</div>
+                                <div class="flex items-center gap-1.5"><i class="fa-solid fa-check text-boatmu-primary"></i> Real-time status & transparent fees</div>
+                            </div>
+                        </div>
+
+                        <!-- Traveler Pain Points Summary -->
+                        <div class="p-6 rounded-2xl bg-white border border-boatmu-border space-y-3">
+                            <h4 class="text-xs uppercase tracking-widest font-bold text-boatmu-navy border-b pb-2">Key Traveler Pain Points</h4>
+                            <ul class="space-y-2.5 text-sm text-boatmu-navy">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                    <span><strong>Schedule & Gate Confusion:</strong> Uncertainty over departure times, platform locations, and physical ticket passes.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                    <span><strong>Hidden Marine Park Fees:</strong> Unclear separation between Marine Park entrance fees, terminal fees, and boat fares.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-circle-xmark text-red-500 mt-0.5"></i>
+                                    <span><strong>Lack of On-Demand Activities:</strong> Snorkeling, turtle trips, and water taxis are hard to book without middleman markup.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Graphic Designer & Digital Marketing</h3>
-                            <p class="text-sm text-neutral-300 mt-0.5">Mofaz Dagang Sdn. Bhd.</p>
+                <!-- 3. Recommended Core Features Matrix -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-boatmu-navy flex items-center gap-2">
+                        <i class="fa-solid fa-wand-magic-sparkles text-boatmu-primary"></i> 3. Recommended Core Features (Field Feedback Driven)
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Merchant App / Operator Column -->
+                        <div class="p-8 rounded-2xl bg-boatmu-navy text-white space-y-6">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                                <div>
+                                    <span class="text-xs text-boatmu-primary uppercase font-bold tracking-widest block">OPERATOR SIDE</span>
+                                    <h4 class="text-lg font-bold">Merchant App / Admin Dashboard</h4>
+                                </div>
+                                <i class="fa-solid fa-laptop-code text-2xl text-boatmu-primary"></i>
+                            </div>
+
+                            <div class="space-y-4 text-xs">
+                                <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                                    <div class="font-bold text-boatmu-primary text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-water"></i> Dynamic Schedule & Tide Management
+                                    </div>
+                                    <p class="text-stone-300">Delay, cancel, or re-route departures with 1-tap, triggering automated SMS/WhatsApp alerts to all booked passengers.</p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                                    <div class="font-bold text-boatmu-primary text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-id-card"></i> Digital Manifest Generator
+                                    </div>
+                                    <p class="text-stone-300">Auto-collect IC/passport numbers at checkout and instantly export compliant PDF manifests for marine authorities.</p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                                    <div class="font-bold text-boatmu-primary text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-arrows-rotate"></i> Unified Inventory Sync
+                                    </div>
+                                    <p class="text-stone-300">Real-time seat allocation across direct sales, resort partners, and walk-in counters to completely eliminate overbooking.</p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-1">
+                                    <div class="font-bold text-boatmu-primary text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-qrcode"></i> QR Boarding Scanner
+                                    </div>
+                                    <p class="text-stone-300">Mobile scanner app for boat captains or jetty staff to scan digital QR tickets for frictionless check-in.</p>
+                                </div>
+                            </div>
                         </div>
-                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2021 — 2021</span>
+
+                        <!-- User App / Traveler Column -->
+                        <div class="p-8 rounded-2xl bg-white border border-boatmu-border shadow-md space-y-6">
+                            <div class="flex items-center justify-between border-b border-boatmu-border pb-4">
+                                <div>
+                                    <span class="text-xs text-boatmu-primary uppercase font-bold tracking-widest block">TRAVELER SIDE</span>
+                                    <h4 class="text-lg font-bold text-boatmu-navy">User App / Web Portal</h4>
+                                </div>
+                                <i class="fa-solid fa-mobile-screen-button text-2xl text-boatmu-primary"></i>
+                            </div>
+
+                            <div class="space-y-4 text-xs">
+                                <div class="p-4 rounded-xl bg-boatmu-lightBg border border-boatmu-primary/20 space-y-1">
+                                    <div class="font-bold text-boatmu-navy text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-basket-shopping text-boatmu-primary"></i> All-in-One Checkout
+                                    </div>
+                                    <p class="text-boatmu-muted">Pay boat fare, Marine Park fee, and jetty access fees together in a single transparent transaction.</p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-boatmu-lightBg border border-boatmu-primary/20 space-y-1">
+                                    <div class="font-bold text-boatmu-navy text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-location-crosshairs text-boatmu-primary"></i> Live Boat Tracker & Gate Info
+                                    </div>
+                                    <p class="text-boatmu-muted">Real-time boat status updates, designated jetty counter/platform numbers, and weather advisories.</p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-boatmu-lightBg border border-boatmu-primary/20 space-y-1">
+                                    <div class="font-bold text-boatmu-navy text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-person-swimming text-boatmu-primary"></i> Island Activity & Water Taxi Hub
+                                    </div>
+                                    <p class="text-boatmu-muted">Instant booking for local island-hopping, private charters, and snorkeling trips with verified local boatmen.</p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-boatmu-lightBg border border-boatmu-primary/20 space-y-1">
+                                    <div class="font-bold text-boatmu-navy text-sm flex items-center gap-2">
+                                        <i class="fa-solid fa-wifi font-bold text-boatmu-primary"></i> Offline E-Pass Access
+                                    </div>
+                                    <p class="text-boatmu-muted">Digital tickets saved offline with embedded QR codes—essential for low-coverage island jetty environments.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            
+        </section>
+
+        <!-- SECTION 4: User Persona -->
+        <section id="sec-empathize" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-boatmu-navy text-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">04. EMPATHIZE & DEFINE</span>
+                    <span class="h-px bg-white/15 flex-1"></span>
+                </div>
+
+  
+                 <h2 class="text-3xl md:text-5xl font-extrabold leading-tight max-w-4xl mb-6">
+                    USER PERSONA
+                </h2>
+
+                <!-- User Persona Highlight 1-->
+                <div class="bg-white text-boatmu-textDark rounded-2xl p-6 md:p-8 shadow-2xl border border-boatmu-border mb-8">
+                    <div class="flex flex-col lg:flex-row gap-8 items-start">
+                        
+                        <!-- Left Profile Column -->
+                        <div class="w-full lg:w-64 flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
+                            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-boatmu-primary p-1 bg-boatmu-lightBg">
+                                <img src="../asset/boatmu1.png" alt="Sarah Persona" class="w-full h-full object-cover rounded-full">
+                            </div>
+                            <h4 class="text-2xl font-bold text-boatmu-navy">Sarah, 27</h4>
+                            <span class="text-xs uppercase tracking-widest text-boatmu-primary font-bold mt-1">Professional</span>
+                            
+
+                            <span class="text-xs text-boatmu-muted mt-1">Kuala Lumpur</span>
+                            <span class="text-xs text-boatmu-muted mt-1">4 Trips / Year</span>
+
+                            <!-- Personality Tags -->
+                            <div class="mt-8 w-full text-center">
+                                <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-2">Personality</span>
+                                <div class="flex flex-wrap justify-center gap-1.5">
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Spontaneous</span>
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Tech-Savvy</span>
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Detail-Oriented</span>
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Social</span>
+                                </div>
+                            </div>
+                            <!-- Quote Block -->
+                            <div>
+                                <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mt-8">User Quote</span>
+                                <blockquote class="text-base md:text-sm font-medium italic text-boatmu-navy mt-2">
+                                    "I want a seamless, instant way to book island trips with my friends without worrying about scam agents, hidden fees, or sending manual bank-in slips."
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Right Content Area -->
+                        <div class="flex-1 space-y-6 w-full">
+                            
+
+
+                            <!-- Bio -->
+                            <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
+                                <h5 class="text-sm font-extrabold uppercase tracking-wider text-boatmu-navy mb-1.5">
+                                    <i class="fa-solid fa-user-check text-boatmu-primary mr-1.5"></i> Bio
+                                </h5>
+                                <p class="text-sm text-boatmu-muted leading-relaxed">
+                                    Sarah is a 27-year-old Kuala Lumpur professional who frequently organizes weekend island trips for her friends. Tech-savvy and safety-conscious, she relies on digital tools to plan itineraries but gets frustrated by manual booking steps, hidden costs, and unverified boat operators.                                </p>
+                            </div>
+
+                            <!-- 2x2 Grid for Core Details -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                
+                                <!-- Goals -->
+                                <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
+                                    <h5 class="text-sm font-bold uppercase tracking-wider text-boatmu-navy mb-2 flex items-center">
+                                        <i class="fa-solid fa-bullseye text-boatmu-primary mr-2"></i> Goals
+                                    </h5>
+                                    <ul class="list-disc pl-4 text-sm text-boatmu-muted space-y-1.5">
+                                        <li>Book group trips (e.g., snorkeling for 4 friends) in under 5 minutes without friction.</li>
+                                        <li>Easily distinguish between different service packages (e.g., "Sunset Cruise" vs. standard "Day Transfer").</li>
+                                        <li>Secure instant booking confirmation to guarantee seat availability before traveling.</li>
+                                        <li>Have a single, trusted platform for managing marine tourism activities across Malaysian islands.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Core Needs -->
+                                <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
+                                    <h5 class="text-sm font-bold uppercase tracking-wider text-boatmu-navy mb-2 flex items-center">
+                                        <i class="fa-solid fa-heart text-boatmu-primary mr-2"></i> Core Needs
+                                    </h5>
+                                    <ul class="list-disc pl-4 text-sm text-boatmu-muted space-y-1.5">
+                                        <li><strong>Transparent All-in-One Pricing:</strong> Upfront breakdown of boat tickets, marine park fees, and add-ons with zero hidden charges.</li>
+                                        <li><strong>Instant Digital Verification:</strong> Real-time seat allocation, direct e-tickets, and instant digital payment confirmation (FPX / e-Wallet).</li>
+                                        <li><strong>Curated & Visual Listings:</strong> High-quality photos, clear trip itineraries, and verified provider reviews for shareable, "Instagrammable" experiences.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Frustrations -->
+                                <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20 md:col-span-2">
+                                    <h5 class="text-sm font-bold uppercase tracking-wider text-boatmu-navy mb-2 flex items-center">
+                                        <i class="fa-solid fa-triangle-exclamation text-boatmu-primary mr-2"></i> Frustrations (Pain Points)
+                                    </h5>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-boatmu-muted">
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Manual Payment Workflows:</strong> Annoying manual bank-in slips and tracking payment receipts over WhatsApp.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Fear of Unofficial Agents:</strong> Threat of getting scammed by unlicensed middlemen or unofficial booking handles.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Price Ambiguity:</strong> Hidden fees popping up at jetty counters unexpectedly.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Uncertainty at Departure:</strong> Lack of real-time updates regarding weather delays, boat schedules, or jetty boarding platforms.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
-                <div class="relative group">
-                    <div class="absolute -left-[31px] top-10 w-2.5 h-2.5 rounded-full bg-neutral-400 ring-4 ring-neutral-950"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between p-5 rounded-2xl bg-neutral-900/40 border border-neutral-400/60 hover:border-neutral-700 transition">
-                        <div>
-                            <h3 class="text-base font-bold text-white">Graphic Designer & Digital Marketing</h3>
-                            <p class="text-sm text-neutral-300 mt-0.5">Zarty Sdn. Bhd.</p>
+                <!-- User Persona Highlight 2-->
+                <div class="bg-white text-boatmu-textDark rounded-2xl p-6 md:p-8 shadow-2xl border border-boatmu-border mb-8">
+                    <div class="flex flex-col lg:flex-row gap-8 items-start">
+                        
+                        <!-- Left Profile Column -->
+                        <div class="w-full lg:w-64 flex-shrink-0 flex flex-col items-center text-center lg:border-r lg:border-stone-200 lg:pr-8">
+                            <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-2 border-boatmu-primary p-1 bg-boatmu-lightBg">
+                                <img src="../asset/boatmu2.png" alt="Wan Persona" class="w-full h-full object-cover rounded-full">
+                            </div>
+                            <h4 class="text-2xl font-bold text-boatmu-navy">Wan, 42</h4>
+                            <span class="text-xs uppercase tracking-widest text-boatmu-primary font-bold mt-1">Professional</span>
+                            
+                            <span class="text-xs text-boatmu-muted mt-1">Local Boat Owner</span>
+                            <span class="text-xs text-boatmu-muted mt-1">Pulau Redang</span>
+                            <span class="text-xs text-boatmu-muted mt-1">25 Bookings / Month</span>
+
+                            <!-- Personality Tags -->
+                            <div class="mt-8 w-full text-center">
+                                <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mb-2">Personality</span>
+                                <div class="flex flex-wrap justify-center gap-1.5">
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Hardworking</span>
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Practical</span>
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Traditional</span>
+                                    <span class="px-2.5 py-1 bg-boatmu-lightBg border border-boatmu-primary/20 text-boatmu-navy text-[11px] font-semibold rounded-full">Resourceful</span>
+                                </div>
+                            </div>
+                            <!-- Quote Block -->
+                            <div>
+                                <span class="text-xs uppercase font-extrabold tracking-widest text-boatmu-primary block mt-8">User Quote</span>
+                                <blockquote class="text-base md:text-sm font-medium italic text-boatmu-navy mt-2">
+                                    Tired of checking his bank account for manual transfers, and hates writing out the passenger data by hand in a log book.
+                                </blockquote>
+                            </div>
                         </div>
-                        <span class="text-m font-mono text-neutral-300 mt-3 md:mt-0">2020 — 2021</span>
+
+                        <!-- Right Content Area -->
+                        <div class="flex-1 space-y-6 w-full">
+                            
+
+
+                            <!-- Bio -->
+                            <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
+                                <h5 class="text-sm font-extrabold uppercase tracking-wider text-boatmu-navy mb-1.5">
+                                    <i class="fa-solid fa-user-check text-boatmu-primary mr-1.5"></i> Bio
+                                </h5>
+                                <p class="text-sm text-boatmu-muted leading-relaxed">
+                                    Wan, 42, is a boat owner in Kuala Terengganu running about 25 island trips a month. While experienced on the water, he struggles with admin work and needs a simpler way to manage passenger details and payments outside of messy WhatsApp chats.</p>
+                            </div>
+
+                            <!-- 2x2 Grid for Core Details -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                
+                                <!-- Goals -->
+                                <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
+                                    <h5 class="text-sm font-bold uppercase tracking-wider text-boatmu-navy mb-2 flex items-center">
+                                        <i class="fa-solid fa-bullseye text-boatmu-primary mr-2"></i> Goals
+                                    </h5>
+                                    <ul class="list-disc pl-4 text-sm text-boatmu-muted space-y-1.5">
+                                        <li>Fill his boat to full capacity every day to maximize revenue.</li>
+                                        <li>Completely avoid "Double-Booking" drama and schedule overlapping.</li>
+                                        <li>Automate customer payments and receive direct payouts to his account.</li>
+                                        <li>Spend less time answering repetitive WhatsApp inquiries manually.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Core Needs -->
+                                <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20">
+                                    <h5 class="text-sm font-bold uppercase tracking-wider text-boatmu-navy mb-2 flex items-center">
+                                        <i class="fa-solid fa-heart text-boatmu-primary mr-2"></i> Core Needs
+                                    </h5>
+                                    <ul class="list-disc pl-4 text-sm text-boatmu-muted space-y-1.5">
+                                        <li><strong>Automated Payments & Payouts:</strong> System-handled transactions so he doesn't need to manually verify bank transfer slips.</li>
+                                        <li><strong>Digital Passenger Manifests:</strong> Complete passenger data reports automatically generated for marine safety compliance.</li>
+                                        <li><strong>Shareable Booking Links:</strong>A single link to send prospective customers via WhatsApp instead of typing out details one by one.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Frustrations -->
+                                <div class="bg-boatmu-lightBg p-4 rounded-xl border border-boatmu-primary/20 md:col-span-2">
+                                    <h5 class="text-sm font-bold uppercase tracking-wider text-boatmu-navy mb-2 flex items-center">
+                                        <i class="fa-solid fa-triangle-exclamation text-boatmu-primary mr-2"></i> Frustrations (Pain Points)
+                                    </h5>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-boatmu-muted">
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Manual Bank Slip Verification:</strong>Checking his bank account constantly to verify manual payment transfers.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Handwritten Manifests:</strong>Handwriting passenger names and IC/passport details into physical log books before every trip.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Time-Consuming WhatsApp Chats:</strong>Replying to individual inquiries one by one manually.</span>
+                                        </div>
+                                        <div class="flex items-start gap-2">
+                                            <span class="text-red-500 font-bold">•</span>
+                                            <span><strong>Double-Booking Risks:</strong> Managing seat counts across multiple channels without a centralized system.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+        </section>
 
-    </div>
-</div>
-    </section>
+        <!-- SECTION 3: USER FLOW -->
+        <section id="sec-userflow" class="section-block md:min-h-screen py-24 md:py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">03. USER FLOW</span>
+                    <span class="h-px bg-boatmu-border flex-1"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-2">USER FLOW</h2>
+                <p class="text-stone-500 text-sm md:text-base mb-8 md:mb-12">Boatmu streamlines the maritime booking experience into a high-conversion journey: from Discovery (Trip
+                    Selection) and Customization (Trip Details) to a seamless Fast-Track Check-out (Registration & Passenger
+                    Info), concluding with a Secure Payment gateway.</p>
+
+                <!-- Interactive User Flow Diagram -->
+                <img src="../asset/user-flow-1.png" alt="User Flow Diagram">
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: WIREFRAMES -->
+        <section id="sec-wireframes" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-boatmu-lightBg flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">04. WIREFRAMES</span>
+                    <span class="h-px bg-boatmu-primary/20 flex-1"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-2">WIREFRAMES</h2>
+                <p class="text-boatmu-muted text-sm md:text-base">Low-Fidelity Layouts & Visual Exploration focusing on mobile usability and clear call-to-action placement.</p>
+
+                <div class="my-12">
+                    <h3 class="text-xl font-bold text-boatmu-navy  flex items-center gap-2">
+                            1. Boatmu Main Page (User)</h3>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-6">
+                        <!-- Wireframe Card 1 -->
+                        <img src="../asset/boatmuwf-1.png" class="shadow-md w-full h-auto rounded-lg" alt="Wireframe 1">
+
+                        <!-- Wireframe Card 2 -->
+                        <img src="../asset/boatmuwf-2.png" class="shadow-md w-full h-auto rounded-lg" alt="Wireframe 2">
+
+                        <!-- Wireframe Card 3 -->
+                        <img src="../asset/boatmuwf-3.png" class="shadow-md w-full h-auto rounded-lg" alt="Wireframe 3">
+
+                        <!-- Wireframe Card 4 -->
+                        <img src="../asset/boatmuwf-4.png" class="shadow-md w-full h-auto rounded-lg" alt="Wireframe 4">
+                    </div>
+                </div>
+
+                <div class="my-12">
+                    <h3 class="text-xl font-bold text-boatmu-navy  flex items-center gap-2">
+                            2. Dashboard (Operator)</h3>
+
+                    <div class="flex flex-wrap justify-center gap-6 md:gap-8 mt-6">
+                        <!-- Wireframe Card 1 -->
+                        <img src="../asset/userfw-1.png" class="shadow-md w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)] h-auto rounded-lg object-cover" alt="Wireframe 1">
+
+                        <!-- Wireframe Card 2 -->
+                        <img src="../asset/userfw-2.png" class="shadow-md w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)] h-auto rounded-lg object-cover" alt="Wireframe 2">
+
+                        <!-- Wireframe Card 3 -->
+                        <img src="../asset/userfw-6.png" class="shadow-md w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)] h-auto rounded-lg object-cover" alt="Wireframe 3">
+
+                        <!-- Wireframe Card 4 -->
+                        <img src="../asset/userfw-4.png" class="shadow-md w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)] h-auto rounded-lg object-cover" alt="Wireframe 4">
+
+                        <!-- Wireframe Card 5 -->
+                        <img src="../asset/userfw-5.png" class="shadow-md w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)] h-auto rounded-lg object-cover" alt="Wireframe 5">
+
+                        <!-- Wireframe Card 6 -->
+                        <img src="../asset/userfw-3.png" class="shadow-md w-[calc(50%-0.75rem)] md:w-[calc(25%-1.5rem)] h-auto rounded-lg object-cover" alt="Wireframe 6">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: BRAND IDENTITY -->
+        <section id="sec-design-system" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">05. DESIGN SYSTEM</span>
+                    <span class="h-px bg-boatmu-border flex-1"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-2">BRAND IDENTITY</h2>
+                <p class="text-boatmu-muted text-sm md:text-base mb-12">The overall style is modern, clean and slightly adventurous to strike the balance between functional and friendly.</p>
+
+                <!-- Color Palette Tokens -->
+                <div class="mb-12">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Cyan Primary -->
+                        <div class="group cursor-pointer p-4 rounded-xl bg-[#1d406f] text-white flex flex-col justify-between h-36 shadow-md hover:scale-105 transition-transform">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-bold">Deep Blue</span>
+                                <i class="fa-regular fa-copy opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono font-bold uppercase">#1d406f</span>
+                                <span class="block text-[10px] text-white/80">Primary Brand</span>
+                            </div>
+                        </div>
+
+                        <!-- Dark Navy -->
+                        <div class="group cursor-pointer p-4 rounded-xl bg-[#3288c1] text-white flex flex-col justify-between h-36 shadow-md hover:scale-105 transition-transform">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-bold">Ocean Blue</span>
+                                <i class="fa-regular fa-copy opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono font-bold uppercase">#3288c1</span>
+                                <span class="block text-[10px] text-white/80">Secondary</span>
+                            </div>
+                        </div>
+
+                        <!-- Dark Navy -->
+                        <div class="group cursor-pointer p-4 rounded-xl bg-[#000000] text-white flex flex-col justify-between h-36 shadow-md hover:scale-105 transition-transform">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-bold">Deep Black</span>
+                                <i class="fa-regular fa-copy opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono font-bold uppercase">#000000</span>
+                                <span class="block text-[10px] text-white/80">Primary Text</span>
+                            </div>
+                        </div>
+
+                        <!-- Light Cyan Tint -->
+                        <div class="group cursor-pointer p-4 rounded-xl bg-[#ffffff] border border-boatmu-primary/30 text-boatmu-navy flex flex-col justify-between h-36 shadow-md hover:scale-105 transition-transform">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-bold">Deep Black</span>
+                                <i class="fa-regular fa-copy opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-mono font-bold uppercase">#ffffff</span>
+                                <span class="block text-[10px] text-neutral-800">Brand Accent</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Typography & Component Tokens -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="p-8 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 space-y-4">
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-boatmu-primary">Typography Standard</span>
+                        <h4 class="text-3xl font-extrabold text-boatmu-navy">Nunito-san</h4>
+                        <p class="text-xs text-boatmu-muted leading-relaxed">
+                            Chosen for geometric precision, high legibility on mobile screens, and approachable, modern travel brand identity.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <span class="px-3 py-1 bg-white rounded border border-boatmu-border text-xs font-extrabold text-boatmu-navy">Bold 800</span>
+                            <span class="px-3 py-1 bg-white rounded border border-boatmu-border text-xs font-semibold text-boatmu-navy">SemiBold 600</span>
+                            <span class="px-3 py-1 bg-white rounded border border-boatmu-border text-xs font-normal text-boatmu-navy">Regular 400</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 space-y-4">
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-boatmu-primary">Logo</span>
+                        <img src="../asset/boatmu-logo.png" class="" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5/2: DESIGN SYSTEM -->
+        <section id="sec-design-system" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">05. DESIGN SYSTEM</span>
+                    <span class="h-px bg-boatmu-border flex-1"></span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl font-extrabold text-boatmu-navy mb-2">DESIGN SYSTEM</h2>
+                <p class="text-boatmu-muted text-sm md:text-base mb-12">Design token and component library.</p>
+
+                <!-- Color Palette Tokens -->
+                 
+                <div class="max-w-7xl mx-auto space-y-6">
+    
+                    <!-- TOP CARD: COLORS -->
+                    <div class="bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm">
+                    <h2 class="text-xl font-bold mb-6 text-gray-900">Colors</h2>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                        
+                        <!-- Column 1: Background -->
+                        <div>
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Background</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-white border border-gray-200 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Primary</p>
+                                <p class="text-xs text-gray-400">Neutral 0</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-200 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Minimal</p>
+                                <p class="text-xs text-gray-400">Neutral 30</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-400 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Disable</p>
+                                <p class="text-xs text-gray-400">Neutral 70</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Column 2: Text -->
+                        <div>
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Text</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-black shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Primary</p>
+                                <p class="text-xs text-gray-400">Neutral 100</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-700 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Secondary</p>
+                                <p class="text-xs text-gray-400">Neutral 80</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-300 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Placeholder</p>
+                                <p class="text-xs text-gray-400">Neutral 60</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-white border border-gray-200 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Onbutton</p>
+                                <p class="text-xs text-gray-400">Neutral 0</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#1d406f] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Brand color</p>
+                                <p class="text-xs text-gray-400">Primary 80</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Column 3: Button -->
+                        <div>
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Button</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#1d406f] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Primary</p>
+                                <p class="text-xs text-gray-400">Primary 80</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#4A90E2] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Hover</p>
+                                <p class="text-xs text-gray-400">Primary 60</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-300 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Disable</p>
+                                <p class="text-xs text-gray-400">Neutral 60</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#CA3B3B] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Notify</p>
+                                <p class="text-xs text-gray-400">CA3B3B</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Column 4: Icon -->
+                        <div>
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Icon</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-600 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Primary</p>
+                                <p class="text-xs text-gray-400">Neutral 80</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-300 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Hover</p>
+                                <p class="text-xs text-gray-400">Neutral 60</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#1d406f] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Active</p>
+                                <p class="text-xs text-gray-400">Primary 80</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gray-400 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Disable</p>
+                                <p class="text-xs text-gray-400">Neutral 60</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-white border border-gray-200 shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Invert</p>
+                                <p class="text-xs text-gray-400">Neutral 0</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Column 5: Status -->
+                        <div>
+                        <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">Status</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#1DC800] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Success</p>
+                                <p class="text-xs text-gray-400">1DC800</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#004BB7] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Info</p>
+                                <p class="text-xs text-gray-400">Primary 80</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#EA9B08] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Warning</p>
+                                <p class="text-xs text-gray-400">EA9B08</p>
+                            </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-[#CA3B3B] shrink-0"></div>
+                            <div>
+                                <p class="text-xs font-semibold text-gray-800">Error</p>
+                                <p class="text-xs text-gray-400">CA3B3B</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        
+
+                    </div>
+                    </div>
+
+                    <!-- BOTTOM GRID: TYPOGRAPHY & SPACING -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                    
+                    <!-- LEFT CARD: TYPOGRAPHY -->
+                    <div class="bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+                        <h2 class="text-xl font-bold text-gray-900">Typography</h2>
+                        <p class="text-2xl text-gray-500">Nunito Sans</p>
+
+                        <div class="space-y-4 pt-2">
+                        <div class="text-[31px] font-bold text-gray-900 leading-[1.2]">
+                            H1 Bold - 31px/120%
+                        </div>
+                        <div class="text-[35px] font-bold text-gray-900 leading-[1.2]">
+                            H2 Bold - 35px /120%
+                        </div>
+                        <div class="text-[20px] font-semibold text-gray-900 leading-[1.2]">
+                            H3 Semi bold - 20px /120%
+                        </div>
+                        <div class="text-[16px] font-bold text-gray-900 leading-[1.2]">
+                            Body Bold- 16px/120%
+                        </div>
+                        <div class="text-[16px] font-semibold text-gray-800 leading-[1.2]">
+                            Body Semi bold- 16px/120%
+                        </div>
+                        <div class="text-[16px] font-normal text-gray-700 leading-[1.2]">
+                            Body Regular - 16px/120%
+                        </div>
+                        <div class="text-[13px] font-light text-gray-500 leading-[1.2]">
+                            Caption Light - 13px/120%
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT SIDE: RADIUS & ICON SIZES -->
+                    <div class="space-y-6">
+                        
+                        <!-- CARD 1: RADIUS AND SPACING -->
+                        <div class="bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+                        <h2 class="text-xl font-bold text-gray-900">Radius and Spacing</h2>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                            <div class="space-y-4">
+                            <div>
+                                <p class="font-bold text-gray-900">Cards:</p>
+                                <p class="text-gray-500">16px (rounded-lg)</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">Buttons & Image:</p>
+                                <p class="text-gray-500">10px (rounded)</p>
+                            </div>
+                            </div>
+
+                            <div class="space-y-4">
+                            <div>
+                                <p class="font-bold text-gray-900">Horizontal Gaps:</p>
+                                <p class="text-gray-500">40px / 32px / 24px / 16px / 8px</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">Pills:</p>
+                                <p class="text-gray-500">9999px (rounded-full)</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- CARD 2: ICON SIZE -->
+                        <div class="bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+                        <h2 class="text-xl font-bold text-gray-900">Icon Size</h2>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+                            <div class="space-y-4">
+                            <div>
+                                <p class="font-bold text-gray-900">Badges:</p>
+                                <p class="text-gray-500">34px</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">Social Media Icon:</p>
+                                <p class="text-gray-500">18px</p>
+                            </div>
+                            </div>
+
+                            <div class="space-y-4">
+                            <div>
+                                <p class="font-bold text-gray-900">Product Icon:</p>
+                                <p class="text-gray-500">62px</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">Avatar Icon Size:</p>
+                                <p class="text-gray-500">34px</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                    <!-- Last row 6: design image -->
+                         <img src="../asset/token.png" alt="">
+
+                </div>
+
+            </div>
+
+            
+        </section>
+
+        <!-- SECTION 6: PROTOTYPE - HOME PAGE -->
+        <section id="sec-homepage" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <!-- Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">06. PROTOTYPE</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-boatmu-navy mt-1">HOME PAGE</h2>
+                    <p class="text-boatmu-muted text-sm md:text-base mt-3">
+                        A user-friendly homepage prioritizes the user's needs on clarity, speed, and "frictionless" interaction.
+                    </p>
+                </div>
+
+                <!-- 3 Mobile Screen Prototypes Container -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start my-8">
+                    <!-- Screen 1: Malaysia Selected -->
+                    <img src="../asset/mock1.png" alt="Mockup Boatmu 1" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+
+                    <!-- Screen 2: Thailand Selected -->
+                    <img src="../asset/mock2.png" alt="Mockup Boatmu 2" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+
+                    <!-- Screen 3: Dynamic Filter Modal -->
+                    <img src="../asset/mock3.png" alt="Mockup Boatmu 3" class="w-2/3 md:w-full mx-auto drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+                </div>
+
+                <!-- Key Takeaway Cards for Home Page -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">Information Architecture:</h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                                Structured visual hierarchy and distinct section for filters and products.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">Encourage Engagement:</h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                                Filter system to act as a discovery tool, educating users on the variety of tour experiences and destination available in Boatmu.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">Centralized Control:</h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                                Compile all the trips and destination into a single, dedicated page, simplifying navigation.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+        </section>
+
+        <!-- SECTION 7: PROTOTYPE - PRODUCT PAGE -->
+        <section id="sec-productpage" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <!-- Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-boatmu-navy mt-1">PRODUCT PAGE</h2>
+                    <p class="text-boatmu-muted text-sm md:text-base mt-3">
+                        Every information of the trip that users need to know is in one place.
+                    </p>
+                </div>
+
+                <!-- Annotated Mockup Container -->
+                <div class="relative max-w-4xl mx-auto bg-slate-50 p-12 md:p-12 rounded-3xl border border-slate-200 shadow-xl my-6">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        
+                        <!-- Left Callouts 1 & 2 (Desktop View) -->
+                        <div class="lg:col-span-3 space-y-6 hidden lg:block">
+                            <!-- Annotation 1 -->
+                            <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md relative">
+                                <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">1</span>
+                                <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                    Choose the preferred date, only boats available on that specific date can be select.
+                                </p>
+                            </div>
+
+                            <!-- Annotation 2 -->
+                            <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md relative">
+                                <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">2</span>
+                                <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                    Time slot selection, depends on the trips, some may only have 1 and some have more than that.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Center Mobile Mockup -->
+                        <div class="lg:col-span-6 flex justify-center">
+                            <img src="../asset/mock4.png" alt="" class="w-70 drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+                        </div>
+
+                        <!-- Right Callouts 3, 4 & 5 (Desktop View) -->
+                        <div class="lg:col-span-3 space-y-6 hidden lg:block">
+                            <!-- Annotation 3 -->
+                            <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md">
+                                <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">3</span>
+                                <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                    Quantity selection will change the total price depends on how many passengers input.
+                                </p>
+                            </div>
+
+                            <!-- Annotation 4 -->
+                            <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md">
+                                <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">4</span>
+                                <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                    All information about the trip provided here, to make sure no users left out.
+                                </p>
+                            </div>
+
+                            <!-- Annotation 5 -->
+                            <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md">
+                                <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">5</span>
+                                <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                    User can't proceed until all the input inserted by the users.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Annotations List (For small screens) -->
+                        <div class="hidden col-span-1 space-y-3 pt-4 border-t border-slate-300">
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>1. Date Selection:</strong> Only available boats on specific dates are selectable.
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>2. Time Slot:</strong> Flexible trip schedules dependent on tour operator.
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>3. Quantity Stepper:</strong> Real-time price calculation per passenger count.
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>4. Complete Info:</strong> Type, service, checkpoints, and safety gear.
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>5. Input Validation:</strong> Mandatory selection before enabling checkout.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Bottom Key Takeaways Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">Visual Hierarchy:</h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                               Guide users with clear visual and steps to book the trip easily.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">Promotes Understanding:</h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                            Clear explanations each details of the trip that help users grasp the value one.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: PROTOTYPE - CHECKOUT -->
+        <section id="sec-productpage" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-boatmu-navy flex flex-col justify-center">
+            <div class="max-w-6xl mx-auto w-full">
+                <!-- Header -->
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white mt-1">CHECKOUT PAGE</h2>
+                    <p class="text-white text-sm md:text-base mt-3">
+                        A high-converting checkout page usually includes, order summary, billing information,
+                        payment gateway and place order button.
+                    </p>
+                </div>
+
+                <!-- Annotated Mockup Container -->
+                <div class="relative max-w-6xl mx-auto bg-slate-50 p-6 md:p-12 rounded-3xl border border-slate-200 shadow-xl my-6">
+                <!-- 3-Column Grid in 1 Row -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-2 items-center">
+                    
+                    <!-- COLUMN 1: Callouts / Annotations -->
+                    <div class="space-y-6">
+                        <!-- Annotation 1 -->
+                        <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md relative">
+                            <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">1</span>
+                            <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                Order summary as a confrimation to the users.
+                            </p>
+                        </div>
+
+                        <!-- Annotation 2 -->
+                        <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md relative">
+                            <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">2</span>
+                            <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                User billing informations form.
+                            </p>
+                        </div>
+
+                        <!-- Annotation 3 -->
+                        <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md relative">
+                            <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">3</span>
+                            <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                 Payment Method (FPX & Card).
+                            </p>
+                        </div>
+
+                        <!-- Annotation 4 -->
+                        <div class="p-4 rounded-xl bg-white border border-boatmu-primary/30 shadow-md relative">
+                            <span class="w-6 h-6 rounded-full bg-boatmu-navy text-white font-bold text-xs flex items-center justify-center mb-2">4</span>
+                            <p class="text-xs text-boatmu-muted font-medium leading-relaxed">
+                                Visible CTA button to the user.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 2: First Mobile Mockup -->
+                    <div class="flex justify-center">
+                        <img src="../asset/mock5.png" alt="Mockup 5" class="w-full max-w-[280px] drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+                    </div>
+
+                    <!-- COLUMN 3: Second Mobile Mockup -->
+                    <div class="flex justify-center ">
+                        <img src="../asset/mock6.png" alt="Mockup 6" class="w-full max-w-[280px] drop-shadow-2xl transition-transform duration-300 hover:scale-105">
+                    </div>
+
+
+                        <!-- Mobile Annotations List (For small screens) -->
+                        <div class="hidden col-span-1 space-y-3 pt-4 border-t border-slate-300">
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>1. </strong> Order summary as a confrimation to the users.
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>2. </strong> User billing informations form.
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>3. </strong> Payment Method (FPX & Card).
+                            </div>
+                            <div class="p-3 bg-white rounded-lg text-xs font-medium border border-boatmu-primary/30">
+                                <strong>4. </strong> Visible CTA button to the user.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Bottom Key Takeaways Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">Reduced Overload Effort:/h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                               To make checkout flow seamless, we only let the users fill the important details only.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-boatmu-lightBg border border-boatmu-primary/20 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-boatmu-navy text-white flex-shrink-0 flex items-center justify-center text-xl font-bold shadow-md">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold text-boatmu-navy">User Accessibility:</h4>
+                            <p class="text-xs text-boatmu-muted mt-1 leading-relaxed">
+                            Payment method options, FPX and card for user accessibility local or foreigner.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: FINAL NOTES & KEY TAKEAWAYS -->
+        <section id="sec-finalnotes" class="section-block min-h-screen py-24 px-6 md:px-16 border-b border-boatmu-border bg-white flex flex-col justify-center">
+            <div class="max-w-4xl mx-auto w-full text-center">
+                <span class="text-xs uppercase tracking-[0.3em] text-boatmu-primary font-extrabold">07. SUMMARY</span>
+                <!-- Main Header -->
+                <h2 class="text-4xl md:text-5xl font-extrabold text-boatmu-navy tracking-tight mb-8">
+                    
+                    FINAL NOTES
+                </h2>
+
+                <!-- Main Narrative Box -->
+                <p class="text-base md:text-lg text-boatmu-navy font-normal leading-relaxed max-w-3xl mx-auto mb-16">
+                    Completing Boatmu marks a significant milestone in my journey as a designer. As my first end-to-end UI/UX project, it served as a high-stakes training ground where I transitioned from theoretical knowledge to delivering a live, functional product for a startup.
+                </p>
+
+                <!-- Key Takeaway Subtitle -->
+                <h3 class="text-2xl md:text-3xl font-extrabold text-boatmu-navy tracking-wide uppercase mb-10">
+                    KEY TAKE AWAY
+                </h3>
+
+                <!-- 3 Light Green Cards Container -->
+                <div class="space-y-6 text-left">
+                    
+                    <!-- Card 1: Learning Experience -->
+                    <div class="p-8 rounded-2xl bg-boatmu-greenBg border border-boatmu-greenBorder flex flex-col sm:flex-row items-start gap-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 rounded-2xl bg-boatmu-greenBg flex items-center justify-center text-3xl text-boatmu-greenIcon flex-shrink-0">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-bold text-boatmu-greenText">
+                                Learning Experience:
+                            </h4>
+                            <p class="text-xs md:text-sm text-boatmu-navy leading-relaxed font-normal">
+                                Handling the entire lifecycle from initial UX research and user flow mapping to high-fidelity prototype taught me the importance of design consistency and how every small interaction impacts the overall user journey.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Problem-Solving Under Pressure -->
+                    <div class="p-8 rounded-2xl bg-boatmu-greenBg border border-boatmu-greenBorder flex flex-col sm:flex-row items-start gap-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 rounded-2xl bg-boatmu-greenBg flex items-center justify-center text-3xl text-boatmu-greenIcon flex-shrink-0">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-bold text-boatmu-greenText">
+                                Problem-Solving Under Pressure:
+                            </h4>
+                            <p class="text-xs md:text-sm text-boatmu-navy leading-relaxed font-normal">
+                                Building for a startup meant finding the "sweet spot" between user needs and business feasibility. I learned to prioritize features that reduced friction, such as a simplified the available date for trip selection logic.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Foundation for Growth -->
+                    <div class="p-8 rounded-2xl bg-boatmu-greenBg border border-boatmu-greenBorder flex flex-col sm:flex-row items-start gap-6 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-16 h-16 rounded-2xl bg-boatmu-greenBg flex items-center justify-center text-3xl text-boatmu-greenIcon flex-shrink-0">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="space-y-2">
+                            <h4 class="text-lg font-bold text-boatmu-greenText">
+                                Foundation for Growth:
+                            </h4>
+                            <p class="text-xs md:text-sm text-boatmu-navy leading-relaxed font-normal">
+                                This project provided me with the hands-on experience and confidence needed to tackle complex product design challenges in the future.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
     <!-- CONTACT SECTION -->
-        <section id="contact" class="py-24 sm:py-32 bg-white text-center">
+    <section id="contact" class="py-24 sm:py-32 bg-white text-center">
         <div class="max-w-[1700px] mx-auto px-6 lg:px-12">
             
             <div class="flex flex-col items-center justify-center max-w-3xl mx-auto space-y-12">
@@ -529,115 +1685,273 @@
         </div>
     </footer>
 
-    <!-- LIGHTBOX MODAL FOR HERO PILLARS AND PROJECTS -->
-    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-8">
-        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden relative shadow-2xl transform scale-95 transition-transform duration-300" id="lightboxContent">
-            <button onclick="closeLightbox()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/10 hover:bg-black/20 flex items-center justify-center text-black transition-colors">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
-            <div class="max-h-[60vh] overflow-hidden bg-neutral-100">
-                <img id="lightboxImg" src="" alt="Preview" class="w-full h-full object-cover">
-            </div>
-            <div class="p-6 sm:p-8">
-                <span class="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-1" id="lightboxSub">Category</span>
-                <h3 class="font-display text-2xl font-bold text-black mb-2" id="lightboxTitle">Title</h3>
-                <p class="text-neutral-600 text-sm">Visual showcase designed with custom grid layouts and interactive high-resolution assets.</p>
-            </div>
-        </div>
-    </div>
+    </main>
 
-    <!-- JAVASCRIPT LOGIC -->
-<!-- Load Lucide CDN once at the bottom -->
-<script src="https://unpkg.com/lucide@latest"></script>
 
-<script>
-    // 1. Initialize Lucide Icons for the main page content
-    lucide.createIcons();
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Store sections references
+        const sections = Array.from(document.querySelectorAll('.section-block'));
+        const navDots = document.querySelectorAll('.nav-dot');
+        const sectionNumEl = document.getElementById('current-section-num');
+        const sectionTitleEl = document.getElementById('current-section-title');
+        const prevBtn = document.getElementById('btn-prev-section');
+        const nextBtn = document.getElementById('btn-next-section');
 
-    // 2. Lightbox Modal Functions
-    const lightbox = document.getElementById('lightbox');
-    const lightboxContent = document.getElementById('lightboxContent');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxTitle = document.getElementById('lightboxTitle');
-    const lightboxSub = document.getElementById('lightboxSub');
+        const sectionTitles = [
+            "Overview & Objectives",
+            "Design Process",
+            "User Flow",
+            "Wireframes",
+            "Brand Identity",
+            "Design System",
+            "Prototype",
+            "Summary"
+        ];
 
-    function openLightbox(title, subtitle, imgUrl) {
-        if (!lightbox) return;
-        lightboxImg.src = imgUrl;
-        lightboxTitle.innerText = title;
-        lightboxSub.innerText = subtitle;
-        lightbox.classList.remove('hidden');
-        setTimeout(() => {
-            lightbox.classList.remove('opacity-0');
-            lightboxContent.classList.remove('scale-95');
-            lightboxContent.classList.add('scale-100');
-        }, 10);
-    }
+        let currentSectionIdx = 0;
 
-    function closeLightbox() {
-        if (!lightbox) return;
-        lightbox.classList.add('opacity-0');
-        lightboxContent.classList.remove('scale-100');
-        lightboxContent.classList.add('scale-95');
-        setTimeout(() => {
-            lightbox.classList.add('hidden');
-        }, 300);
-    }
+        // Intersection Observer to monitor active section on scroll
+        const observerOptions = {
+            root: null,
+            threshold: 0.35
+        };
 
-    if (lightbox) {
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const idx = sections.indexOf(entry.target);
+                    if (idx !== -1) {
+                        updateActiveSectionUI(idx);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(sec => sectionObserver.observe(sec));
+
+        function updateActiveSectionUI(idx) {
+            currentSectionIdx = idx;
+
+            // Update Counter & Title
+            if (sectionNumEl) sectionNumEl.textContent = String(idx + 1).padStart(2, '0');
+            if (sectionTitleEl && sectionTitles[idx]) sectionTitleEl.textContent = sectionTitles[idx];
+
+            // Update Nav Dots
+            navDots.forEach((dot, dIdx) => {
+                const inner = dot.querySelector('.dot-inner');
+                if (dIdx === idx) {
+                    inner.className = 'dot-inner w-2.5 h-2.5 rounded-full bg-boatmu-primary scale-125 transition-all duration-300';
+                } else {
+                    inner.className = 'dot-inner w-1.5 h-1.5 rounded-full bg-boatmu-muted/40 group-hover:bg-boatmu-primary transition-all duration-300';
+                }
+            });
+
+            // Enable/Disable Prev/Next Buttons
+            if (prevBtn) prevBtn.disabled = idx === 0;
+            if (nextBtn) nextBtn.disabled = idx === sections.length - 1;
+        }
+
+        // Section Jump Controls
+        function jumpToSection(idx) {
+            if (idx >= 0 && idx < sections.length) {
+                sections[idx].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => jumpToSection(currentSectionIdx - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => jumpToSection(currentSectionIdx + 1));
+
+        // Keyboard Navigation (Arrow Keys / J & K)
+        document.addEventListener('keydown', (e) => {
+            if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+
+            if (e.key === 'ArrowDown' || e.key === 'j' || e.key === 'J') {
+                e.preventDefault();
+                jumpToSection(currentSectionIdx + 1);
+            } else if (e.key === 'ArrowUp' || e.key === 'k' || e.key === 'K') {
+                e.preventDefault();
+                jumpToSection(currentSectionIdx - 1);
             }
         });
-    }
 
-    // 3. Form Handling
-    function handleFormSubmit(e) {
-        e.preventDefault();
-        document.getElementById('contactForm').classList.add('hidden');
-        document.getElementById('formSuccess').classList.remove('hidden');
-    }
+        // Index Drawer Trigger Toggle
+        const indexDrawer = document.getElementById('index-drawer');
+        const toggleIndexBtn = document.getElementById('btn-toggle-index');
+        const closeIndexBtn = document.getElementById('btn-close-index');
+        const drawerLinks = document.querySelectorAll('.drawer-link');
 
-    // 4. Fetch Header & Initialize Mobile Menu (All-in-One)
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            // Make sure your HTML has: <div id="site-header"></div>
-            document.getElementById('site-header').innerHTML = data;
+        function openIndex() {
+            indexDrawer.classList.remove('opacity-0', 'pointer-events-none');
+            indexDrawer.classList.add('opacity-100', 'pointer-events-auto');
+        }
+
+        function closeIndex() {
+            indexDrawer.classList.remove('opacity-100', 'pointer-events-auto');
+            indexDrawer.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        if (toggleIndexBtn) toggleIndexBtn.addEventListener('click', openIndex);
+        if (closeIndexBtn) closeIndexBtn.addEventListener('click', closeIndex);
+        drawerLinks.forEach(link => link.addEventListener('click', closeIndex));
+
+        // Interactive Passenger Counter logic for Product Page
+        let passengerCount = 1;
+        function updatePassengers(change) {
+            passengerCount = Math.max(1, passengerCount + change);
+            const countEl = document.getElementById('adult-count');
+            const priceEl = document.getElementById('total-price');
             
-            // Re-initialize Lucide Icons for the newly injected header
-            lucide.createIcons();
+            if (countEl) countEl.textContent = passengerCount;
+            if (priceEl) priceEl.innerHTML = `RM ${passengerCount * 120} <span class="text-[8px] font-normal text-stone-500">/ Total</span>`;
+        }
 
-            // Mobile Menu Drawer Logic (Runs safely after header elements are loaded)
-            const menuBtn = document.getElementById('menuBtn');
-            const menuIcon = document.getElementById('menuIcon');
-            const mobileDrawer = document.getElementById('mobileDrawer');
-            const drawerLinks = document.querySelectorAll('.drawer-link');
-            let isMenuOpen = false;
+        // Trigger Booking
+        function triggerBooking() {
+            showToast(`Booking initiated for ${passengerCount} adult passenger(s)!`);
+        }
 
-            if (menuBtn && mobileDrawer) {
-                menuBtn.addEventListener('click', () => {
-                    isMenuOpen = !isMenuOpen;
-                    if (isMenuOpen) {
-                        mobileDrawer.classList.remove('translate-x-full');
-                        if (menuIcon) menuIcon.style.transform = 'rotate(45deg)';
-                    } else {
-                        mobileDrawer.classList.add('translate-x-full');
-                        if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
-                    }
-                });
+        // Copy Hex Color Code Function
+        function copyHex(hex) {
+            navigator.clipboard ? navigator.clipboard.writeText(hex) : document.execCommand('copy');
+            showToast(`Copied Hex Token: ${hex}`);
+        }
 
-                drawerLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        isMenuOpen = false;
-                        mobileDrawer.classList.add('translate-x-full');
-                        if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
-                    });
-                });
+        // Toast Notification System
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            if (toast && toastMsg) {
+                toastMsg.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2500);
             }
-        })
-        .catch(error => console.error('Error loading header:', error));
-</script>
+        }
+
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu Drawer Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const menuIcon = document.getElementById('menuIcon');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileDrawer.classList.remove('translate-x-full');
+                menuIcon.style.transform = 'rotate(45deg)';
+            } else {
+                mobileDrawer.classList.add('translate-x-full');
+                menuIcon.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileDrawer.classList.add('translate-x-full');
+                menuIcon.style.transform = 'rotate(0deg)';
+            });
+        });
+    </script>
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        // 1. Initialize Lucide Icons for the main page content
+        lucide.createIcons();
+
+        // 2. Lightbox Modal Functions
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightboxContent');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxTitle = document.getElementById('lightboxTitle');
+        const lightboxSub = document.getElementById('lightboxSub');
+
+        function openLightbox(title, subtitle, imgUrl) {
+            if (!lightbox) return;
+            lightboxImg.src = imgUrl;
+            lightboxTitle.innerText = title;
+            lightboxSub.innerText = subtitle;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxContent.classList.remove('scale-95');
+                lightboxContent.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            if (!lightbox) return;
+            lightbox.classList.add('opacity-0');
+            lightboxContent.classList.remove('scale-100');
+            lightboxContent.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+        }
+
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        }
+
+        // 3. Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contactForm').classList.add('hidden');
+            document.getElementById('formSuccess').classList.remove('hidden');
+        }
+
+        // 4. Fetch Header & Initialize Mobile Menu (All-in-One)
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => {
+                // Make sure your HTML has: <div id="site-header"></div>
+                document.getElementById('site-header').innerHTML = data;
+                
+                // Re-initialize Lucide Icons for the newly injected header
+                lucide.createIcons();
+
+                // Mobile Menu Drawer Logic (Runs safely after header elements are loaded)
+                const menuBtn = document.getElementById('menuBtn');
+                const menuIcon = document.getElementById('menuIcon');
+                const mobileDrawer = document.getElementById('mobileDrawer');
+                const drawerLinks = document.querySelectorAll('.drawer-link');
+                let isMenuOpen = false;
+
+                if (menuBtn && mobileDrawer) {
+                    menuBtn.addEventListener('click', () => {
+                        isMenuOpen = !isMenuOpen;
+                        if (isMenuOpen) {
+                            mobileDrawer.classList.remove('translate-x-full');
+                            if (menuIcon) menuIcon.style.transform = 'rotate(45deg)';
+                        } else {
+                            mobileDrawer.classList.add('translate-x-full');
+                            if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    drawerLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            isMenuOpen = false;
+                            mobileDrawer.classList.add('translate-x-full');
+                            if (menuIcon) menuIcon.style.transform = 'rotate(0deg)';
+                        });
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
 </body>
 </html>
